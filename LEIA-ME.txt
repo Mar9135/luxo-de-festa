@@ -1,0 +1,269 @@
+==========================================================
+  SITE - LUXO DE FESTA 2026  [VERSAO RELEASE / TEASER]
+  Congresso Nacional de Festas & Eventos
+  Estado consolidado do projeto
+==========================================================
+
+>> ESTA E A VERSAO RELEASE (TEASER) <<
+A secao de palestrantes mostra uma mensagem de expectativa
+e uma contagem regressiva para o anuncio (01/06/2026), no
+lugar dos cards de palestrantes. As demais secoes - inclusive
+Embaixadores - sao iguais a versao oficial.
+Publicar esta versao ATE o anuncio; depois, substituir pelo
+pacote da versao oficial (com os palestrantes).
+
+
+--------------------------------------------------
+1. O QUE E ESTE PACOTE
+--------------------------------------------------
+Site institucional one-page do congresso "Luxo de Festa 2026",
+feito em HTML, CSS e JavaScript puros (sem frameworks, sem
+dependencias alem das fontes do Google).
+
+Evento: 9, 10 e 11 de novembro de 2026
+Local:  Unique Palace - Brasilia/DF
+Curador/idealizador: Cesar Serra
+
+--------------------------------------------------
+2. ESTRUTURA DOS ARQUIVOS
+--------------------------------------------------
+index.html        -> o site completo (HTML + CSS + JS num so arquivo)
+CNAME             -> dominio oficial (www.luxodefestabrasil.com)
+                     usado pelo GitHub Pages
+robots.txt        -> orienta os buscadores; aponta o sitemap
+sitemap.xml       -> mapa do site para indexacao (Google)
+LEIA-ME.txt       -> este arquivo
+logos/            -> logo e variacoes da coroa
+  logo_branca.png       logo completa (coroa + texto)
+  coroa_branca.png      so a coroa, branca   (usada na navbar / favicon)
+  coroa_nude.png        so a coroa, nude     (ornamento dos titulos, fundo escuro)
+  coroa_nude_deep.png   so a coroa, nude escuro (ornamento dos titulos, fundo claro)
+photos/           -> todas as fotos do site (ver item 6)
+
+Todos esses arquivos e pastas devem ir para a RAIZ do
+repositorio, mantendo a estrutura.
+
+--------------------------------------------------
+3. COMO PUBLICAR (GitHub Pages + dominio proprio)
+--------------------------------------------------
+DOMINIO OFICIAL: www.luxodefestabrasil.com
+
+Arquivos que devem ficar na RAIZ do repositorio:
+  index.html, CNAME, robots.txt, sitemap.xml
+  + as pastas logos/ e photos/ (mantendo a estrutura).
+
+Passo a passo:
+1. Suba TODO o conteudo do pacote para a raiz do
+   repositorio (recomendado: GitHub Desktop). O
+   repositorio precisa ser PUBLICO.
+2. Settings -> Pages -> Branch: main (pasta /root).
+3. Em Settings -> Pages -> Custom domain, confirme que
+   esta escrito: www.luxodefestabrasil.com
+   (o arquivo CNAME ja traz esse valor; o GitHub costuma
+   preencher o campo sozinho ao detectar o arquivo).
+4. Marque a opcao "Enforce HTTPS".
+5. No painel de DNS do dominio (onde foi registrado),
+   crie um registro CNAME:
+     Host/Nome: www
+     Aponta para: SEU-USUARIO.github.io
+   Para o dominio sem www redirecionar ao www, crie os
+   registros A do apex (luxodefestabrasil.com) com os
+   IPs do GitHub Pages:
+     185.199.108.153
+     185.199.109.153
+     185.199.110.153
+     185.199.111.153
+6. A propagacao do DNS pode levar de minutos a 24h.
+   Depois, o site abre em https://www.luxodefestabrasil.com
+
+- Apos cada novo envio, o site republica sozinho em
+  1-2 minutos. Use Ctrl+Shift+R (ou Cmd+Shift+R) para ver
+  a versao nova.
+- Apos a 1a publicacao, validar o compartilhamento no
+  Facebook Sharing Debugger para atualizar o preview do link.
+
+--------------------------------------------------
+4. ESTRUTURA DAS SECOES (ordem atual)
+--------------------------------------------------
+Hero -> Apresentacao -> Curadoria e Realizacao ->
+Curadoria Criativa -> Palestrantes Confirmados -> Cronograma ->
+Perfil do Publico -> Sucesso da Edicao 2025 (com Galeria
+integrada) -> Hospedagem -> Faixa de inscricao -> Rodape
+
+Os fundos das secoes alternam claro/escuro. As duas secoes de
+curadoria (Curadoria e Realizacao + Curadoria Criativa) ficam
+juntas com fundo claro, por formarem um par tematico.
+
+--------------------------------------------------
+5. PALESTRANTES - ESTADO ATUAL
+--------------------------------------------------
+O carrossel tem 24 vagas (6 paginas de 4 cards).
+
+CONFIRMADOS E NO AR (11):
+  - Roberto Cohen       - Cerimonial              - @cohencerimonial
+  - Patricia Vaks       - Decoradora              - @patriciavaks
+  - Chris Ayrosa        - Cenografa e Empresaria  - @chrisayrosa
+  - Bruna Veronezi      - Marketing Digital       - @brunaveronezi
+  - Picui               - Chef                    - @picui
+  - Milena Salvador     - Cerimonial Publico      - @sercerimonial
+  - Plinio Ricardo      - Fotografo               - @plinioricardo
+  - Sabrina Vasconcelos - Fotografa               - @sabrinavasconcelosphotos
+  - Carol Borges        - Chef                    - @carolborges.unique
+  - Manoela Cesar       - Especialista em Rituais - @manoelacesar_weddings
+  - Rodolfo Santos      - Fotografo               - @rodolfosantosfotografo
+Alem destes, Paulo Borges e destaque na "Palestra de Abertura".
+
+Todos os 11 confirmados possuem biografia (aparece no pop-up
+ao ampliar a foto). As bios ficam no atributo data-bio de
+cada card .palestrante-card no index.html.
+
+PENDENTE:
+  - Restam 13 cards "Foto em breve" a preencher.
+
+COMO PREENCHER UM CARD NOVO:
+  Cada palestrante precisa de: foto (vertical, recorte 3:4),
+  nome, funcao/profissao, @ do Instagram e biografia.
+
+--------------------------------------------------
+6. INVENTARIO DE FOTOS (photos/)
+--------------------------------------------------
+01-hero-salao.jpg          fundo do Hero
+02-flores.jpg              decorativa (reserva, sem uso atual)
+11-extra-1.jpg             Cesar Serra (Curadoria e Realizacao)
+13-publico-flores.jpg      Perfil do Publico
+16-paulo-borges.jpg        Palestra de Abertura
+17-roberto-cohen.jpg       palestrante
+18-patricia-vaks.jpg       palestrante
+19-jade-hotel.jpg          secao Hospedagem
+20-chris-ayrosa.jpg        palestrante (card do carrossel)
+21-bruna-veronezi.jpg      palestrante
+22-picui.jpg               palestrante
+23-milena-salvador.jpg     palestrante
+24-desfile-2025.jpg        carrossel Apresentacao
+25-cesar-gloria-kalil.jpg  carrossel Apresentacao
+26-chris-ayrosa-curadoria.jpg  secao Curadoria Criativa
+27-plinio-ricardo.jpg      palestrante
+28-sabrina-vasconcelos.jpg palestrante
+29-carol-borges.jpg        palestrante
+30-manoela-cesar.jpg       palestrante
+31-rodolfo-santos.jpg      palestrante
+case-02.jpg                carrossel Apresentacao
+g01..g21                   galeria (21 fotos da Edicao 2025)
+bg-original-dark.jpg       padrao de fundo (secoes escuras)
+bg-original-light.jpg      padrao de fundo (secoes claras)
+og-share.jpg               imagem de preview ao compartilhar
+                           o link (Open Graph, 1200x630)
+
+--------------------------------------------------
+7. RECURSOS INTERATIVOS
+--------------------------------------------------
+- Botao de zoom (lupa) em todas as fotos do site.
+  - Fotos comuns: abrem em tela cheia (lightbox).
+  - Fotos de palestrante: abrem um pop-up com a foto a
+    esquerda e a descricao (bio) a direita. No mobile (ate
+    720px) a foto fica em tela cheia e o texto aparece
+    sobreposto, sobre um veu de transparencia em degrade.
+  - Cesar Serra, Chris Ayrosa e Paulo Borges: a foto abre
+    ampliada com a etiqueta + nome no canto inferior esquerdo.
+  - Carrossel da Apresentacao e Galeria: zoom mostra a foto
+    ampliada com a etiqueta "Edicao 2025".
+- Fechar o zoom: botao X, tecla ESC ou clique fora.
+- Carrossel de palestrantes: 6 paginas, autoplay 8s.
+- Galeria da Edicao 2025: 21 fotos, com setas e dots.
+- Secao Hospedagem: mapa interativo do Google (iframe, sem
+  chave de API) com o endereco do Jade Hotel e botao
+  "Como chegar" (abre a rota no Google Maps).
+- Botoes de compartilhamento (so icones): barra fixa
+  flutuante (lateral no desktop, rodape no mobile) e bloco
+  no rodape do site. WhatsApp e Facebook compartilham o
+  link oficial; Instagram leva ao perfil do evento.
+- Meta tags Open Graph / Twitter Card no <head>: definem
+  titulo, descricao e imagem (photos/og-share.jpg) exibidos
+  ao compartilhar o link. Dominio oficial fixo:
+  https://www.luxodefestabrasil.com
+
+--------------------------------------------------
+8. CONSTANTES DO PROJETO
+--------------------------------------------------
+Inscricao no congresso:
+  https://app.codemyparty.com.br/evento/8ee5dab1-1384-46f0-add7-59749b10e5af
+
+Contatos no site:
+  Instagram: @luxodefestaoficial e @cesarserra
+  WhatsApp:  +55 11 5283-4125
+  E-mail:    luxodefestabrasil@gmail.com
+
+Hotel parceiro (secao Hospedagem):
+  Jade Hotel - jadehotel.com.br - @jadehotelbrasilia
+  Reservas: WhatsApp e reservas@jadehotel.com.br
+
+--------------------------------------------------
+9. PENDENCIAS E PROXIMOS PASSOS
+--------------------------------------------------
+- Adicionar os demais palestrantes conforme confirmacao
+  (restam 13 vagas no carrossel) - cada um precisa de foto,
+  nome, funcao, @ do Instagram e biografia.
+- Card "Picui": a biografia apresenta o chef Wanderson
+  Medeiros (do restaurante Picui). Definir se o nome do card
+  deve passar de "Picui" para "Wanderson Medeiros".
+- Falta a biografia do palestrante Rodolfo Santos (o card
+  dele ainda usa um texto provisorio).
+- Substituir a imagem de fundo (padrao geometrico) por uma
+  versao "seamless tile" correta - briefing ja passado ao
+  time de marketing. O fundo atual tem leve emenda ao repetir.
+- Conferir/atualizar a categoria "Quarto Superior" da
+  hospedagem (precos identicos a Suite King Deluxe - verificar
+  se e o correto na origem dos dados).
+- Buscar foto do Jade Hotel em resolucao maior (a atual e 800px).
+- Decisao pendente: aplicar a fonte da marca (Cinzel) em
+  "Luxo de Festa" nas demais mencoes do site (hoje aplicada
+  apenas na faixa de fechamento).
+
+--------------------------------------------------
+10. HISTORICO DAS ULTIMAS ATUALIZACOES
+--------------------------------------------------
+- Otimizacao de performance (sem alterar o visual):
+  * fotos da galeria redimensionadas (1800px -> 1500px)
+    e recomprimidas; demais imagens recomprimidas quando
+    havia ganho. Total de imagens ~10,3 MB -> ~7,9 MB.
+  * lazy loading: imagens carregam sob demanda; a galeria
+    baixa so a foto atual e as vizinhas, nao as 21 de uma vez.
+  * <head>: preconnect para Google Fonts, favicon, theme-color.
+  * atributos decoding/fetchpriority nas imagens.
+- Fundos seamless (sem quebra de continuidade), tratados
+  para o tom da identidade visual e em escala reduzida.
+- Botoes de compartilhamento (WhatsApp, Facebook,
+  Instagram) em barra fixa flutuante e no rodape.
+- Meta tags Open Graph / Twitter Card para preview ao
+  compartilhar o link; dominio oficial www.luxodefestabrasil.com.
+- Pop-up de palestrante no mobile: foto em tela cheia com a
+  descricao sobreposta sobre um veu de transparencia, no
+  lugar do layout anterior (foto em cima, texto embaixo).
+- Secao "Perfil do Publico": agora com 6 quadros (incluido
+  "Profissionais de hotelaria, espacos de eventos e
+  especialistas em gestao de servicos para destination
+  wedding"), todos padronizados na mesma altura e em nova
+  ordem (esquerda->direita, cima->baixo).
+- Foto do Paulo Borges (Palestra de Abertura): etiqueta
+  "Palestra de Abertura" + nome sobreposta no canto inferior
+  esquerdo, igual as fotos de Cesar Serra e Chris Ayrosa.
+  Aparece tanto na secao quanto no zoom.
+- Secao Hospedagem: novo bloco "Localizacao" com mapa
+  interativo do Google, endereco do Jade Hotel e botao
+  "Como chegar".
+- 11 palestrantes confirmados, todos com foto, funcao,
+  Instagram e biografia.
+- Nova secao "Curadoria Criativa" (Chris Ayrosa).
+- Carrossel da Apresentacao com desfile 2025 e foto de
+  Cesar Serra com Gloria Kalil.
+- Sistema de zoom/lightbox em todas as fotos, com pop-up
+  de descricao para os palestrantes.
+- Secao Hospedagem reorganizada: rotulo "Hotel Oficial"
+  acima da foto e "Jade Hotel" reequilibrado.
+- "Luxo de Festa" com fonte Cinzel na faixa de fechamento.
+- Galeria da Edicao 2025 com 21 fotos e etiqueta "Edicao
+  2025" sobreposta.
+- Diversas correcoes de layout no carrossel de palestrantes
+  (larguras iguais, barra de navegacao fixa).
+
+==========================================================
