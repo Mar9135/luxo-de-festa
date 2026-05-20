@@ -41,6 +41,7 @@
     --nude: #d4a896;             /* rosa nude principal (lettering, molduras) */
     --nude-soft: #e5c5b3;        /* rosa nude pálido (blocos, cards) */
     --nude-deep: #b8826a;        /* nude profundo (acentos, hover) */
+    --nude-darker: #8a5a40;      /* nude bem escuro (textos pequenos em fundo claro) */
     --nude-pale: #c9a888;        /* nude pálido (linhas do padrão) */
     --ink: #1a1a1a;
     --ink-soft: #3d3530;
@@ -1659,9 +1660,19 @@
 
   /* ===== CTA FINAL com foto ===== */
   /* ===== HOSPEDAGEM (Hotel parceiro) ===== */
+  .hospedagem-hotel-nome {
+    max-width: 760px;
+    margin: 0 auto 8px;
+    text-align: center;
+    font-family: var(--serif);
+    font-size: clamp(26px, 4vw, 46px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--bg-bege);
+  }
   .hospedagem-eyebrow {
     max-width: 760px;
-    margin: 0 auto 18px;
+    margin: 0 auto 26px;
     text-align: center;
     font-family: var(--sans);
     font-size: 12px;
@@ -1697,7 +1708,11 @@
     margin: 32px auto 16px;
     max-width: 440px;
     border: 1px solid var(--nude);
+    position: relative;
+    z-index: 1;
+    background: var(--bg-bege);
   }
+  .pattern-dark .hospedagem-datas { background: var(--bg-dark); }
   .hospedagem-data {
     flex: 1;
     padding: 20px 16px;
@@ -1707,7 +1722,7 @@
   .hospedagem-data .rotulo {
     display: block;
     font-family: var(--sans);
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--nude-soft);
@@ -1744,14 +1759,14 @@
   }
   .quarto-nome {
     font-family: var(--serif);
-    font-size: 19px;
+    font-size: 20px;
     color: var(--bg-bege);
     line-height: 1.3;
     margin-bottom: 4px;
   }
   .quarto-tipo {
     font-family: var(--sans);
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--nude);
@@ -1775,11 +1790,11 @@
     color: var(--bg-bege);
   }
   .quarto-precos li:last-child { border-bottom: none; }
-  .quarto-precos .reg { color: var(--nude-soft); letter-spacing: 1px; text-transform: uppercase; font-size: 11px; }
-  .quarto-precos .val { color: var(--nude); font-family: var(--serif); font-size: 17px; white-space: nowrap; }
+  .quarto-precos .reg { color: var(--nude-soft); letter-spacing: 1px; text-transform: uppercase; font-size: 12px; }
+  .quarto-precos .val { color: var(--nude); font-family: var(--serif); font-size: 18px; white-space: nowrap; }
   .quarto-obs {
     font-family: var(--sans);
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.5;
     color: var(--nude-soft);
     font-style: italic;
@@ -1817,7 +1832,7 @@
   }
   .hospedagem-reserva .reserva-titulo {
     font-family: var(--serif);
-    font-size: 24px;
+    font-size: 20px;
     color: var(--bg-bege);
     margin-bottom: 20px;
   }
@@ -1848,7 +1863,7 @@
     text-align: center;
     margin-top: 28px;
     font-family: var(--sans);
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 1px;
     color: var(--nude-soft);
   }
@@ -1868,7 +1883,7 @@
   }
   .hospedagem-mapa .mapa-rotulo {
     font-family: var(--sans);
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--nude-soft);
@@ -1876,7 +1891,7 @@
   }
   .hospedagem-mapa .mapa-endereco {
     font-family: var(--serif);
-    font-size: 17px;
+    font-size: 16px;
     color: var(--bg-bege);
     line-height: 1.55;
     margin-bottom: 22px;
@@ -1885,7 +1900,7 @@
     position: relative;
     aspect-ratio: 16 / 9;
     border: 1px solid var(--nude);
-    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
     overflow: hidden;
   }
   .hospedagem-mapa .mapa-frame iframe {
@@ -1896,37 +1911,42 @@
     border: 0;
     display: block;
   }
-  .hospedagem-mapa .mapa-btn-wrap { margin-top: 22px; }
+  .hospedagem-mapa .mapa-btn-wrap {
+    margin-top: 38px;
+    position: relative;
+    z-index: 1;
+  }
   /* Seção Hospedagem em fundo claro: ajusta os textos que por
      padrão são claros (pensados para o fundo escuro original). */
   .pattern-light .hospedagem-intro { color: var(--ink); }
-  .pattern-light .hospedagem-intro strong { color: var(--nude-deep); }
+  .pattern-light .hospedagem-intro strong { color: var(--nude-darker); }
+  .pattern-light .hospedagem-hotel-nome { color: var(--ink); }
   .pattern-light .hospedagem-eyebrow,
   .pattern-light .hospedagem-sub,
   .pattern-light .hospedagem-validade,
-  .pattern-light .hospedagem-conheca,
   .pattern-light .quarto-obs,
   .pattern-light .quarto-precos .reg,
   .pattern-light .hospedagem-data .rotulo,
-  .pattern-light .hospedagem-mapa .mapa-rotulo { color: var(--nude-deep); }
+  .pattern-light .hospedagem-mapa .mapa-rotulo { color: var(--nude-darker); }
+  .pattern-light .hospedagem-conheca { color: var(--ink-soft); }
   .pattern-light .hospedagem-data .valor,
   .pattern-light .quarto-tipo,
   .pattern-light .quarto-precos .val,
   .pattern-light .reserva-btn,
-  .pattern-light .hospedagem-conheca a { color: var(--nude-deep); }
+  .pattern-light .hospedagem-conheca a { color: var(--nude-darker); }
   .pattern-light .quarto-nome,
   .pattern-light .quarto-precos li,
   .pattern-light .hospedagem-observacoes li,
   .pattern-light .hospedagem-reserva .reserva-titulo,
   .pattern-light .hospedagem-mapa .mapa-endereco { color: var(--ink); }
-  .pattern-light .quarto-card { background: rgba(255, 255, 255, 0.45); border-color: var(--nude-deep); }
-  .pattern-light .hospedagem-datas { border-color: var(--nude-deep); }
-  .pattern-light .hospedagem-data + .hospedagem-data { border-left-color: var(--nude-deep); }
-  .pattern-light .reserva-btn { border-color: var(--nude-deep); }
-  .pattern-light .reserva-btn:hover { background: var(--nude-deep); color: #fff; }
-  .pattern-light .reserva-btn.primario { background: var(--nude-deep); color: #fff; }
+  .pattern-light .quarto-card { background: rgba(255, 255, 255, 0.45); border-color: var(--nude-darker); }
+  .pattern-light .hospedagem-datas { border-color: var(--nude-darker); }
+  .pattern-light .hospedagem-data + .hospedagem-data { border-left-color: var(--nude-darker); }
+  .pattern-light .reserva-btn { border-color: var(--nude-darker); }
+  .pattern-light .reserva-btn:hover { background: var(--nude-darker); color: #fff; }
+  .pattern-light .reserva-btn.primario { background: var(--nude-darker); color: #fff; }
   .pattern-light .reserva-btn.primario:hover { background: var(--ink); }
-  .pattern-light .hospedagem-observacoes li::before { color: var(--nude-deep); }
+  .pattern-light .hospedagem-observacoes li::before { color: var(--nude-darker); }
   .pattern-light .hospedagem-mapa { border-top-color: rgba(58, 42, 32, 0.18); }
   @media (max-width: 900px) {
     .quartos-grid { grid-template-columns: 1fr 1fr; }
@@ -3015,19 +3035,18 @@
 <section class="chapter pattern-light" id="hospedagem">
   <div class="container">
     <div class="chapter-header-inline centered">
-      <h2 class="chapter-title">HOSPEDAGEM</h2>
+      <h2 class="chapter-title">SUGESTÃO DE HOSPEDAGEM</h2>
     </div>
 
+    <h3 class="hospedagem-hotel-nome">Jade Hotel</h3>
     <p class="hospedagem-eyebrow">Hotel Oficial</p>
     <div style="max-width: 760px; margin: 0 auto 28px;">
-      <div class="photo-card landscape single-frame" style="box-shadow: 0 24px 56px rgba(0, 0, 0, 0.5);">
+      <div class="photo-card landscape single-frame" style="box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);">
         <div class="photo-card-inner">
           <img decoding="async" loading="lazy" src="photos/19-jade-hotel.jpg" alt="Jade Hotel — Brasília">
         </div>
       </div>
     </div>
-
-    <p class="hospedagem-intro"><strong>Jade Hotel</strong></p>
 
     <div class="hospedagem-datas">
       <div class="hospedagem-data">
@@ -3039,7 +3058,7 @@
         <span class="valor">12 nov 2025</span>
       </div>
     </div>
-    <p class="hospedagem-validade">Pacotes especiais · valores válidos até 31/05/2026</p>
+    <p class="hospedagem-validade">Condições especiais para congressistas · valores válidos até 31/05/2026</p>
 
     <div class="quartos-grid">
       <div class="quarto-card">
@@ -3152,7 +3171,7 @@
     <a href="#apresentacao">Apresentação</a>
     <a href="#curadoria">Curadoria</a>
     <a href="#palestrantes">Palestrantes 2026</a>
-    <a href="#embaixadores">Embaixadores</a>
+    <a href="#embaixadores">Embaixadores 2026</a>
     <a href="#formato">Cronograma</a>
     <a href="#publico">Público</a>
     <a href="#case">Edição 2025</a>
@@ -3586,6 +3605,7 @@
     //    Abre a imagem ativa, com a etiqueta "Edição 2025" sobreposta.
     document.querySelectorAll('.photo-card-inner').forEach((inner) => {
       if (inner.closest('.palestrante-card')) return;
+      if (inner.closest('.embaixador-card')) return;
       const imgs = inner.querySelectorAll('img.carousel-img');
       if (imgs.length > 1) {
         const card = inner.closest('.photo-card');
@@ -3601,6 +3621,7 @@
     //    - Demais fotos -> lightbox simples
     document.querySelectorAll('.photo-card-inner').forEach((inner) => {
       if (inner.closest('.palestrante-card')) return;
+      if (inner.closest('.embaixador-card')) return;
       if (inner.querySelectorAll('img.carousel-img').length > 1) return; // já tratado em (2)
       const img = inner.querySelector('img');
       if (!img) return;
