@@ -203,9 +203,6 @@ Hotel parceiro (secao Hospedagem):
 - Adicionar os demais palestrantes conforme confirmacao
   (restam 13 vagas no carrossel) - cada um precisa de foto,
   nome, funcao, @ do Instagram e biografia.
-- Card "Picui": a biografia apresenta o chef Wanderson
-  Medeiros (do restaurante Picui). Definir se o nome do card
-  deve passar de "Picui" para "Wanderson Medeiros".
 - Falta a biografia do palestrante Rodolfo Santos (o card
   dele ainda usa um texto provisorio).
 - Substituir a imagem de fundo (padrao geometrico) por uma
