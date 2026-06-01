@@ -65,7 +65,16 @@
     font-family: var(--sans);
     font-weight: 400;
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+  html {
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+  /* Defensive: media elements never break the layout */
+  img, iframe, video, embed, object, svg {
+    max-width: 100%;
   }
 
   /* ===== PADRÃO OFICIAL ===== */
@@ -188,9 +197,14 @@
     color: var(--bg-bege);
     padding: 0 0 44px;
     margin-bottom: 0;
-    line-height: 1.1;
+    line-height: 1.15;
     position: relative;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
   }
+  /* Quebra de linha apenas no mobile, para títulos longos */
+  .chapter-title .mobile-break { display: none; }
   /* Coroa ornamental abaixo do título */
   .chapter-title::after {
     content: "";
@@ -217,15 +231,25 @@
     align-items: center;
     text-align: center;
     margin: 0 auto 56px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .chapter-header-inline.centered {
     justify-content: center;
     text-align: center;
   }
   @media (max-width: 600px) {
-    .chapter-header-inline { margin-bottom: 36px; }
-    .chapter-title { font-size: 24px; letter-spacing: 1px; padding-bottom: 38px; }
+    .chapter-header-inline { margin-bottom: 36px; padding: 0 12px; }
+    .chapter-title { font-size: 26px; letter-spacing: 1.5px; padding-bottom: 38px; }
     .chapter-title::after { width: 44px; height: 26px; }
+    /* Ativa quebra de linha em títulos marcados para mobile */
+    .chapter-title .mobile-break { display: inline; }
+  }
+  @media (max-width: 400px) {
+    .chapter-title { font-size: 22px; letter-spacing: 1px; }
+  }
+  @media (max-width: 360px) {
+    .chapter-title { font-size: 20px; letter-spacing: 0.8px; }
   }
 
   /* ===== PHOTO CARD (estilo editorial com moldura interna) ===== */
@@ -2718,7 +2742,7 @@
 <section class="chapter pattern-dark" id="palestrantes">
   <div class="container">
     <div class="chapter-header-inline centered">
-      <h2 class="chapter-title">PALESTRANTES CONFIRMADOS</h2>
+      <h2 class="chapter-title">PALESTRANTES<br class="mobile-break"> CONFIRMADOS</h2>
     </div>
     <p class="palestrantes-intro">
       Conheça os profissionais e referências do mercado que compõem a curadoria de palestras da <strong style="color: var(--nude);">3ª Edição do Luxo de Festa</strong>. Nomes que vão compartilhar visão, repertório e cases ao longo dos três dias de imersão em Brasília.
