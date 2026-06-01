@@ -102,17 +102,18 @@
   }
   nav .logo { display: flex; align-items: center; text-decoration: none; }
   nav .logo img { height: 38px; width: auto; display: block; }
-  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links { display: flex; gap: 26px; list-style: none; }
   .nav-links a {
     color: var(--bg-bege);
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     opacity: 0.8;
     transition: all 0.3s;
     position: relative;
+    white-space: nowrap;
   }
   .nav-links a::after {
     content: "";
@@ -127,13 +128,14 @@
   .nav-cta {
     background: var(--nude);
     color: var(--ink);
-    padding: 13px 26px;
-    font-size: 11px;
-    letter-spacing: 2.5px;
+    padding: 11px 22px;
+    font-size: 10px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s;
+    white-space: nowrap;
   }
   .nav-cta:hover { background: var(--nude-soft); transform: translateY(-1px); }
   .menu-toggle {
@@ -150,9 +152,20 @@
       position: absolute; top: 76px; left: 0; right: 0;
       background: var(--bg-dark);
       padding: 28px 5%;
-      gap: 22px;
+      gap: 20px;
       border-bottom: 1px solid var(--line-dark);
+      max-height: calc(100vh - 76px);
+      overflow-y: auto;
     }
+    .nav-links.open + .nav-cta {
+      display: inline-block;
+      position: absolute;
+      top: auto;
+      left: 5%;
+      right: 5%;
+      margin-top: 8px;
+    }
+    .nav-links a { font-size: 12px; letter-spacing: 2px; padding: 4px 0; }
   }
 
   /* ===== UTILITÁRIOS ===== */
@@ -1203,111 +1216,47 @@
     max-width: 620px;
   }
   .pattern-light .palestrantes-nota { color: var(--ink-soft); opacity: 0.85; }
-
-  /* ===== TEASER — mensagem de expectativa + contagem regressiva ===== */
-  .teaser-bloco {
-    max-width: 880px;
-    margin: 0 auto;
+  /* Teaser (Fase Abertura): substitui o carrossel de palestrantes */
+  .palestrantes-teaser {
     text-align: center;
+    max-width: 720px;
+    margin: 0 auto 24px;
+    padding: 40px 24px 16px;
   }
-  .teaser-eyebrow {
+  .palestrantes-teaser-texto {
     font-family: var(--sans);
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--nude);
-    margin-bottom: 26px;
-  }
-  .teaser-mensagem {
-    font-family: var(--serif);
-    font-size: clamp(24px, 3.4vw, 38px);
-    font-weight: 400;
-    line-height: 1.5;
-    color: var(--bg-bege);
-    margin-bottom: 14px;
-  }
-  .teaser-mensagem .destaque {
-    font-style: italic;
-    color: var(--nude);
-  }
-  .teaser-sub {
-    font-family: var(--sans);
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.7;
     color: var(--bg-bege);
-    opacity: 0.78;
-    max-width: 600px;
-    margin: 0 auto 52px;
+    opacity: 0.9;
+    margin: 0 0 26px;
+    letter-spacing: 0.3px;
   }
-  .teaser-divisor {
-    display: flex;
+  .pattern-light .palestrantes-teaser-texto { color: var(--ink-soft); opacity: 0.95; }
+  .palestrantes-teaser-link {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 22px;
-    margin: 0 auto 46px;
-    max-width: 420px;
-  }
-  .teaser-divisor::before,
-  .teaser-divisor::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: rgba(184, 130, 106, 0.45);
-  }
-  .teaser-divisor span {
+    gap: 10px;
     font-family: var(--sans);
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--nude-soft);
-    white-space: nowrap;
-  }
-  .countdown {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-  .countdown-bloco {
-    min-width: 104px;
-    border: 1px solid var(--nude);
-    background: rgba(255, 255, 255, 0.03);
-    padding: 22px 14px 16px;
-  }
-  .countdown-num {
-    font-family: var(--serif);
-    font-size: clamp(38px, 5vw, 54px);
-    font-weight: 500;
-    line-height: 1;
-    color: var(--bg-bege);
-  }
-  .countdown-label {
-    font-family: var(--sans);
-    font-size: 10px;
+    font-size: 17px;
     letter-spacing: 2.5px;
-    text-transform: uppercase;
+    color: var(--nude);
+    text-decoration: none;
+    opacity: 0.95;
+    transition: opacity 0.3s, color 0.3s, transform 0.3s;
+  }
+  .palestrantes-teaser-link:hover {
+    opacity: 1;
     color: var(--nude-soft);
-    margin-top: 10px;
+    transform: translateY(-1px);
   }
-  .teaser-data {
-    font-family: var(--sans);
-    font-size: 13px;
-    letter-spacing: 1px;
-    color: var(--bg-bege);
-    opacity: 0.6;
-    margin-top: 34px;
+  .palestrantes-teaser-link svg { width: 22px; height: 22px; }
+  @media (max-width: 720px) {
+    .palestrantes-teaser { padding: 24px 16px 8px; }
+    .palestrantes-teaser-texto { font-size: 15px; margin-bottom: 22px; }
+    .palestrantes-teaser-link { font-size: 14px; letter-spacing: 2px; }
+    .palestrantes-teaser-link svg { width: 18px; height: 18px; }
   }
-  @media (max-width: 600px) {
-    .countdown { gap: 12px; }
-    .countdown-bloco { min-width: 0; flex: 1; padding: 18px 8px 13px; }
-    .countdown-label { font-size: 8.5px; letter-spacing: 1.5px; }
-  }
-  @media (max-width: 400px) {
-    .countdown { gap: 10px; }
-    /* 2x2 em telas muito estreitas: cada bloco ocupa ~metade */
-    .countdown-bloco { flex: 0 0 calc(50% - 5px); }
-  }
-
   /* Carrossel paginado de palestrantes — 4 por página */
   .palestrantes-carousel {
     position: relative;
@@ -1983,6 +1932,7 @@
     gap: 32px;
     margin: 28px 0;
     flex-wrap: wrap;
+    padding: 0 4%;
   }
   .footer-links a {
     color: var(--bg-bege);
@@ -1992,8 +1942,30 @@
     font-size: 11px;
     opacity: 0.7;
     transition: opacity 0.3s;
+    /* margin fallback for browsers that ignore gap */
+    margin: 4px 0;
   }
   .footer-links a:hover { opacity: 1; color: var(--nude); }
+  @media (max-width: 720px) {
+    .footer-links {
+      gap: 18px 22px;
+      margin: 24px 0;
+    }
+    .footer-links a {
+      font-size: 10px;
+      letter-spacing: 2px;
+      /* explicit horizontal margin for legacy mobile browsers */
+      margin: 4px 11px;
+    }
+    footer { padding: 60px 5% 28px; }
+    footer .footer-logo { height: 140px; margin-bottom: 32px; }
+    .footer-contact { font-size: 13px; line-height: 1.9; padding: 0 4%; }
+  }
+  @media (max-width: 480px) {
+    .footer-links { gap: 14px 18px; }
+    .footer-links a { font-size: 9.5px; letter-spacing: 1.8px; margin: 4px 9px; }
+    footer .footer-logo { height: 110px; }
+  }
 
   /* ===== COMPARTILHAR — barra fixa + rodapé ===== */
   .share-fixed {
@@ -2368,6 +2340,239 @@
     }
     .lf-close { top: 14px; right: 16px; width: 42px; height: 42px; }
   }
+
+  /* ============================================================
+     SEÇÃO: PATROCINADORES E APOIADORES
+     ============================================================ */
+  .patrocinadores-intro {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 1.7;
+    max-width: 780px;
+    margin: 0 auto 56px;
+    color: var(--ink-soft);
+  }
+  .pattern-dark .patrocinadores-intro { color: var(--bg-bege); opacity: 0.85; }
+
+  .patrocinadores-divisor {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    margin: 0 auto 36px;
+    max-width: 780px;
+  }
+  .patrocinadores-divisor::before,
+  .patrocinadores-divisor::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(184, 130, 106, 0.5);
+  }
+  .patrocinadores-divisor span {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.6vw, 28px);
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .pattern-dark .patrocinadores-divisor span { color: var(--nude); }
+  .pattern-dark .patrocinadores-divisor::before,
+  .pattern-dark .patrocinadores-divisor::after { background: rgba(212, 168, 150, 0.4); }
+
+  /* Grids de logos */
+  .logos-grid {
+    display: grid;
+    gap: 24px;
+    margin: 0 auto 72px;
+    max-width: 1100px;
+  }
+  .logos-grid.patrocinadores { grid-template-columns: repeat(3, 1fr); }
+  .logos-grid.apoiadores     { grid-template-columns: repeat(5, 1fr); }
+
+  .logo-card {
+    aspect-ratio: 4 / 3;
+    background: #ffffff;
+    border: 1px solid rgba(184, 130, 106, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 28px;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  .logo-card:hover {
+    border-color: rgba(184, 130, 106, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+  }
+  .logo-card img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  .logo-card.empty {
+    background: transparent;
+    border-style: dashed;
+    border-color: rgba(184, 130, 106, 0.4);
+    color: var(--nude-deep);
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0.7;
+  }
+  .pattern-dark .logo-card.empty {
+    color: var(--nude);
+    border-color: rgba(212, 168, 150, 0.35);
+  }
+
+  /* Bloco destaque para Companhia Aérea Oficial
+     (mesmo tratamento visual dos quarto-card da seção Hospedagem) */
+  .aerea-oficial-bloco {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 56px 48px;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid var(--nude-darker);
+    text-align: center;
+  }
+  .aerea-oficial-bloco .azul-logo {
+    max-width: 240px;
+    max-height: 96px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 32px;
+    display: block;
+  }
+  .azul-texto {
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin: 0 auto 36px;
+  }
+  .azul-texto strong {
+    color: var(--nude-deep);
+    font-weight: 600;
+  }
+  .azul-promocode {
+    border: 1px solid rgba(184, 130, 106, 0.55);
+    padding: 24px 32px;
+    max-width: 520px;
+    margin: 0 auto;
+    background: rgba(184, 130, 106, 0.06);
+  }
+  .azul-promocode-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--nude-deep);
+    margin-bottom: 12px;
+  }
+  .azul-promocode-codigo {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--nude-deep);
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+  .azul-promocode-desconto {
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+  .azul-promocode-validade {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: var(--ink-soft);
+    opacity: 0.65;
+    font-style: italic;
+  }
+  .azul-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 28px auto 16px;
+    padding: 14px 28px;
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--nude-darker);
+    border: 1px solid var(--nude-darker);
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+  }
+  .azul-cta:hover {
+    background: transparent;
+    color: var(--nude-darker);
+    transform: translateY(-1px);
+  }
+  .azul-cta svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+  }
+  .azul-cta:hover svg { transform: translateX(3px); }
+  .azul-instrucao {
+    font-family: var(--sans);
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    opacity: 0.78;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .azul-instrucao strong {
+    color: var(--nude-darker);
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 900px) {
+    .logos-grid.patrocinadores { grid-template-columns: repeat(2, 1fr); }
+    .logos-grid.apoiadores     { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .logos-grid.patrocinadores,
+    .logos-grid.apoiadores     { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .aerea-oficial-bloco { padding: 36px 20px; }
+    .aerea-oficial-bloco .azul-logo { max-width: 170px; max-height: 80px; margin-bottom: 22px; }
+    .azul-texto { font-size: 13.5px; line-height: 1.65; margin-bottom: 26px; }
+    .azul-promocode { padding: 20px 18px; }
+    .azul-promocode-label { font-size: 9px; letter-spacing: 2px; }
+    .azul-promocode-codigo { font-size: 26px; letter-spacing: 3px; }
+    .azul-promocode-desconto { font-size: 12px; }
+    .azul-promocode-validade { font-size: 10px; }
+    .azul-cta {
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      padding: 13px 18px;
+      margin-top: 22px;
+      /* let the button respect the container width to avoid overflow on very narrow screens */
+      width: 100%;
+      justify-content: center;
+    }
+    .azul-cta svg { width: 13px; height: 13px; }
+    .azul-instrucao { font-size: 11px; line-height: 1.55; }
+    .patrocinadores-divisor { gap: 18px; margin-bottom: 28px; }
+  }
+
 </style>
 </head>
 <body>
@@ -2385,6 +2590,7 @@
     <li><a href="#formato">Cronograma</a></li>
     <li><a href="#publico">Público</a></li>
     <li><a href="#case">Edição 2025</a></li>
+    <li><a href="#patrocinadores">Companhia Aérea</a></li>
     <li><a href="#hospedagem">Hospedagem</a></li>
   </ul>
   <a href="https://app.codemyparty.com.br/evento/8ee5dab1-1384-46f0-add7-59749b10e5af" class="nav-cta" target="_blank" rel="noopener">Garantir meu Passaporte</a>
@@ -2512,44 +2718,56 @@
 <section class="chapter pattern-dark" id="palestrantes">
   <div class="container">
     <div class="chapter-header-inline centered">
-      <h2 class="chapter-title">PALESTRANTES</h2>
+      <h2 class="chapter-title">PALESTRANTES CONFIRMADOS</h2>
     </div>
+    <p class="palestrantes-intro">
+      Conheça os profissionais e referências do mercado que compõem a curadoria de palestras da <strong style="color: var(--nude);">3ª Edição do Luxo de Festa</strong>. Nomes que vão compartilhar visão, repertório e cases ao longo dos três dias de imersão em Brasília.
+    </p>
 
-    <div class="teaser-bloco">
-      <div class="teaser-eyebrow">3ª Edição · 2026</div>
-      <p class="teaser-mensagem">
-        Grandes nomes. Grandes ideias. Uma curadoria à altura do <span class="destaque">evento mais esperado do ano</span>.
-      </p>
-      <p class="teaser-sub">
-        A revelação está próxima — e vale a espera. Os palestrantes da 3ª Edição do Luxo de Festa serão anunciados em breve.
-      </p>
-
-      <div class="teaser-divisor"><span>Contagem para o anúncio</span></div>
-
-      <div class="countdown" id="countdown">
-        <div class="countdown-bloco">
-          <div class="countdown-num" data-cd="dias">--</div>
-          <div class="countdown-label">Dias</div>
+    <!-- Destaque: Palestra de Abertura -->
+    <div class="palestrante-destaque">
+      <div class="two-col-with-photo">
+        <div class="col-photo">
+          <div class="photo-card portrait single-frame">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/16-paulo-borges.jpg" alt="Paulo Borges">
+            </div>
+            <div class="photo-card-label">
+              <div class="eyebrow">Palestra de Abertura</div>
+              <div class="name">Paulo Borges</div>
+            </div>
+          </div>
         </div>
-        <div class="countdown-bloco">
-          <div class="countdown-num" data-cd="horas">--</div>
-          <div class="countdown-label">Horas</div>
-        </div>
-        <div class="countdown-bloco">
-          <div class="countdown-num" data-cd="min">--</div>
-          <div class="countdown-label">Minutos</div>
-        </div>
-        <div class="countdown-bloco">
-          <div class="countdown-num" data-cd="seg">--</div>
-          <div class="countdown-label">Segundos</div>
+        <div class="col-text">
+          <h3 class="palestrante-titulo-inline">
+            <span class="palestrante-eyebrow">Palestra de Abertura</span>
+            Paulo Borges
+          </h3>
+          <p>Com 43 anos dedicados à moda, <strong>Paulo Borges</strong> é o nome que liderou a organização da Moda no país como setor criativo, econômico e cultural.</p>
+          <p>Criador e fundador do <strong>SPFW</strong> — Calendário Oficial da Moda Brasileira — e do <strong>IN-MODE</strong>, Instituto Nacional de Moda, Design e Economia Criativa.</p>
+          <p>Sua visão única, inovadora e transversal sobre Moda revolucionou seu desenvolvimento, projetando o mercado brasileiro ao reconhecimento mundial.</p>
+          <a href="https://instagram.com/pborgesj" target="_blank" rel="noopener" class="palestrante-instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            @pborgesj
+          </a>
         </div>
       </div>
+    </div>
 
-      <p class="teaser-data">Anúncio oficial em 01 de Junho de 2026</p>
+    <div class="palestrantes-divisor"><span>Palestrantes confirmados</span></div>
+    <div class="palestrantes-teaser">
+      <p class="palestrantes-teaser-texto">
+        Acompanhe a divulgação completa dos palestrantes no nosso instagram oficial
+      </p>
+      <a href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener" class="palestrantes-teaser-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        @luxodefestaoficial
+      </a>
     </div>
   </div>
 </section>
 
+<!-- EMBAIXADORES -->
 <section class="chapter pattern-light" id="embaixadores">
   <div class="container">
     <div class="chapter-header-inline centered">
@@ -3046,6 +3264,82 @@
   </div>
 </section>
 
+
+<!-- COMPANHIA AÉREA OFICIAL
+     (A seção completa "Patrocinadores e Apoiadores" será reativada quando a curadoria
+     comercial estiver consolidada. O HTML original ficou preservado no comentário abaixo.) -->
+<section class="chapter pattern-light" id="patrocinadores">
+  <div class="container">
+    <div class="chapter-header-inline centered">
+      <h2 class="chapter-title">COMPANHIA AÉREA OFICIAL</h2>
+    </div>
+
+    <div class="aerea-oficial-bloco">
+      <img class="azul-logo" src="photos/aerea-oficial-azul-colorida.png" alt="Azul Linhas Aéreas — Companhia Aérea Oficial">
+      <p class="azul-texto">
+        <strong>Azul Linhas Aéreas</strong> é a Companhia Aérea Oficial do <strong>Luxo de Festa 2026</strong>. Uma parceria que reflete os mesmos valores de excelência, hospitalidade brasileira e cuidado com cada detalhe da experiência — desde o voo até o congresso.
+      </p>
+      <div class="azul-promocode">
+        <div class="azul-promocode-label">Promocode exclusivo para o congresso</div>
+        <div class="azul-promocode-codigo">EVLUXO26</div>
+        <div class="azul-promocode-desconto">20% de desconto em passagens</div>
+        <div class="azul-promocode-validade">Válido para viagens entre 07/11/2026 e 14/11/2026</div>
+      </div>
+      <a href="https://www.voeazul.com.br" target="_blank" rel="noopener" class="azul-cta">
+        Comprar passagem em voeazul.com.br
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+      </a>
+      <p class="azul-instrucao">Aplique o promocode <strong>EVLUXO26</strong> no momento da compra para garantir o desconto.</p>
+    </div>
+
+    <!-- ===== BLOCO OCULTO: Patrocinadores e Apoiadores =====
+         Para reativar: remover este comentário (linha de abertura e o fechamento -->
+    <!--
+    <p class="patrocinadores-intro">
+      O <strong>Luxo de Festa 2026</strong> se realiza com o apoio de marcas que partilham da mesma visão de excelência, sofisticação e protagonismo no mercado de festas e eventos. Conheça os parceiros que tornam o congresso possível.
+    </p>
+
+    <div class="patrocinadores-divisor"><span>Patrocinadores</span></div>
+    <div class="logos-grid patrocinadores">
+        <div class="logo-card">
+          <img src="photos/patrocinador-unique-palace.png" alt="Unique Palace" loading="lazy">
+        </div>
+        <div class="logo-card">
+          <img src="photos/patrocinador-lona-branca.png" alt="Lona Branca" loading="lazy">
+        </div>
+        <div class="logo-card">
+          <img src="photos/patrocinador-plinio-ricardo.png" alt="Plinio Ricardo" loading="lazy">
+        </div>
+        <div class="logo-card">
+          <img src="photos/patrocinador-luiz-pedro.png" alt="Luiz Pedro" loading="lazy">
+        </div>
+        <div class="logo-card">
+          <img src="photos/patrocinador-mauricio-cortez.png" alt="Maurício Cortez" loading="lazy">
+        </div>
+        <div class="logo-card">
+          <img src="photos/patrocinador-duo-design-drinks.png" alt="Duo Design Drinks" loading="lazy">
+        </div>
+    </div>
+
+    <div class="patrocinadores-divisor"><span>Apoiadores</span></div>
+    <div class="logos-grid apoiadores">
+        <div class="logo-card empty"><span>Em breve</span></div>
+        <div class="logo-card empty"><span>Em breve</span></div>
+        <div class="logo-card empty"><span>Em breve</span></div>
+        <div class="logo-card empty"><span>Em breve</span></div>
+        <div class="logo-card empty"><span>Em breve</span></div>
+        <div class="logo-card empty"><span>Em breve</span></div>
+        <div class="logo-card empty"><span>Em breve</span></div>
+        <div class="logo-card empty"><span>Em breve</span></div>
+        <div class="logo-card empty"><span>Em breve</span></div>
+        <div class="logo-card empty"><span>Em breve</span></div>
+    </div>
+
+    <div class="patrocinadores-divisor"><span>Companhia Aérea Oficial</span></div>
+    -->
+  </div>
+</section>
+
 <!-- HOSPEDAGEM -->
 <section class="chapter pattern-light" id="hospedagem">
   <div class="container">
@@ -3053,12 +3347,12 @@
       <h2 class="chapter-title">SUGESTÃO DE HOSPEDAGEM</h2>
     </div>
 
-    <h3 class="hospedagem-hotel-nome">Jade Hotel</h3>
+    <h3 class="hospedagem-hotel-nome">JADE HOTEL</h3>
     <p class="hospedagem-eyebrow">Hotel Oficial</p>
     <div style="max-width: 760px; margin: 0 auto 28px;">
       <div class="photo-card landscape single-frame" style="box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);">
         <div class="photo-card-inner">
-          <img decoding="async" loading="lazy" src="photos/19-jade-hotel.jpg" alt="Jade Hotel — Brasília">
+          <img decoding="async" loading="lazy" src="photos/19-jade-hotel.jpg" alt="JADE HOTEL — Brasília">
         </div>
       </div>
     </div>
@@ -3066,14 +3360,14 @@
     <div class="hospedagem-datas">
       <div class="hospedagem-data">
         <span class="rotulo">Check-in</span>
-        <span class="valor">09 nov 2025</span>
+        <span class="valor">09 nov 2026</span>
       </div>
       <div class="hospedagem-data">
         <span class="rotulo">Check-out</span>
-        <span class="valor">12 nov 2025</span>
+        <span class="valor">12 nov 2026</span>
       </div>
     </div>
-    <p class="hospedagem-validade">Condições especiais para congressistas · valores válidos até 31/05/2026</p>
+    <p class="hospedagem-validade">Condições especiais para congressistas · valores válidos até 30/06/2026</p>
 
     <div class="quartos-grid">
       <div class="quarto-card">
@@ -3134,7 +3428,7 @@
       <li>Café da manhã, estacionamento, wi-fi e área de lazer inclusos.</li>
       <li>Check-in às 15h e check-out até às 12h.</li>
       <li>Tarifa não reembolsável e irrevogável.</li>
-      <li>Pagamento de 100% no ato da reserva.</li>
+      <li>Pagamento de 50% no ato da reserva, como garantia.</li>
     </ul>
 
     <div class="hospedagem-reserva">
@@ -3154,7 +3448,7 @@
         <div class="mapa-frame">
           <iframe
             src="https://maps.google.com/maps?q=Jade%20Hotel%20SQPS%20102%20Park%20Sul%20Bras%C3%ADlia%20DF&z=16&output=embed"
-            title="Mapa — Jade Hotel, Brasília"
+            title="Mapa — JADE HOTEL, Brasília"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             allowfullscreen></iframe>
@@ -3190,6 +3484,7 @@
     <a href="#formato">Cronograma</a>
     <a href="#publico">Público</a>
     <a href="#case">Edição 2025</a>
+    <a href="#patrocinadores">Companhia Aérea</a>
     <a href="#hospedagem">Hospedagem</a>
     <a href="https://app.codemyparty.com.br/evento/8ee5dab1-1384-46f0-add7-59749b10e5af" target="_blank" rel="noopener">Inscrição</a>
   </div>
@@ -3209,38 +3504,6 @@
 </footer>
 
 <script>
-  // Contagem regressiva para o anúncio oficial dos palestrantes
-  (function () {
-    var alvo = new Date('2026-06-01T00:00:00-03:00').getTime();
-    var box = document.getElementById('countdown');
-    if (!box) return;
-    var campos = {
-      dias:  box.querySelector('[data-cd="dias"]'),
-      horas: box.querySelector('[data-cd="horas"]'),
-      min:   box.querySelector('[data-cd="min"]'),
-      seg:   box.querySelector('[data-cd="seg"]')
-    };
-    function pad(n) { return (n < 10 ? '0' : '') + n; }
-    function tick() {
-      var resta = alvo - Date.now();
-      if (resta <= 0) {
-        campos.dias.textContent = '00';
-        campos.horas.textContent = '00';
-        campos.min.textContent = '00';
-        campos.seg.textContent = '00';
-        clearInterval(timer);
-        return;
-      }
-      var s = Math.floor(resta / 1000);
-      campos.dias.textContent  = pad(Math.floor(s / 86400));
-      campos.horas.textContent = pad(Math.floor((s % 86400) / 3600));
-      campos.min.textContent   = pad(Math.floor((s % 3600) / 60));
-      campos.seg.textContent   = pad(s % 60);
-    }
-    tick();
-    var timer = setInterval(tick, 1000);
-  })();
-
   // Links de compartilhamento (WhatsApp / Facebook) — domínio oficial fixo
   (function () {
     var url = 'https://www.luxodefestabrasil.com/';
