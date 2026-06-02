@@ -1228,6 +1228,20 @@
   .pattern-light .palestrantes-divisor::after {
     background: rgba(184, 130, 106, 0.5);
   }
+  /* Responsivo: impede que o texto do divisor (nowrap) estoure a largura no mobile */
+  @media (max-width: 600px) {
+    .palestrantes-divisor { gap: 16px; max-width: 100%; }
+    .palestrantes-divisor span {
+      font-size: clamp(15px, 4.4vw, 22px);
+      letter-spacing: 1.5px;
+      white-space: normal;
+      text-align: center;
+    }
+  }
+  @media (max-width: 400px) {
+    .palestrantes-divisor { gap: 12px; }
+    .palestrantes-divisor span { font-size: 14px; letter-spacing: 1px; }
+  }
   .palestrantes-nota {
     text-align: center;
     font-family: var(--sans);
