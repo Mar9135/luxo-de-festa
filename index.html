@@ -1254,47 +1254,6 @@
     max-width: 620px;
   }
   .pattern-light .palestrantes-nota { color: var(--ink-soft); opacity: 0.85; }
-  /* Teaser (Fase Abertura): substitui o carrossel de palestrantes */
-  .palestrantes-teaser {
-    text-align: center;
-    max-width: 720px;
-    margin: 0 auto 24px;
-    padding: 40px 24px 16px;
-  }
-  .palestrantes-teaser-texto {
-    font-family: var(--sans);
-    font-size: 17px;
-    line-height: 1.7;
-    color: var(--bg-bege);
-    opacity: 0.9;
-    margin: 0 0 26px;
-    letter-spacing: 0.3px;
-  }
-  .pattern-light .palestrantes-teaser-texto { color: var(--ink-soft); opacity: 0.95; }
-  .palestrantes-teaser-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-family: var(--sans);
-    font-size: 17px;
-    letter-spacing: 2.5px;
-    color: var(--nude);
-    text-decoration: none;
-    opacity: 0.95;
-    transition: opacity 0.3s, color 0.3s, transform 0.3s;
-  }
-  .palestrantes-teaser-link:hover {
-    opacity: 1;
-    color: var(--nude-soft);
-    transform: translateY(-1px);
-  }
-  .palestrantes-teaser-link svg { width: 22px; height: 22px; }
-  @media (max-width: 720px) {
-    .palestrantes-teaser { padding: 24px 16px 8px; }
-    .palestrantes-teaser-texto { font-size: 15px; margin-bottom: 22px; }
-    .palestrantes-teaser-link { font-size: 14px; letter-spacing: 2px; }
-    .palestrantes-teaser-link svg { width: 18px; height: 18px; }
-  }
   /* Carrossel paginado de palestrantes — 4 por página */
   .palestrantes-carousel {
     position: relative;
@@ -2793,14 +2752,226 @@
     </div>
 
     <div class="palestrantes-divisor"><span>Palestrantes confirmados</span></div>
-    <div class="palestrantes-teaser">
-      <p class="palestrantes-teaser-texto">
-        Acompanhe a divulgação completa dos palestrantes no nosso instagram oficial
-      </p>
-      <a href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener" class="palestrantes-teaser-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        @luxodefestaoficial
-      </a>
+    <p class="palestrantes-nota">Conheça os palestrantes confirmados na terceira edição do Luxo de Festa. Acompanhe os próximos anúncios no nosso <a href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener" class="inline-link">instagram oficial</a>.</p>
+
+    <div class="palestrantes-carousel" id="palestrantesCarousel">
+      <div class="palestrantes-viewport">
+      <div class="palestrantes-pagina active">
+        <div class="palestrante-card" data-bio="César Serra é um dos cerimonialistas mais reconhecidos do Brasil, com mais de 40 anos de atuação nos segmentos de eventos sociais, corporativos e diplomáticos. Natural de Fortaleza, iniciou sua trajetória profissional em Brasília, integrando o cerimonial do Palácio do Itamaraty, onde participou de recepções oficiais de grande relevância, como a visita da Princesa Diana e do Príncipe Charles ao Brasil, na década de 1990. Idealizador do Luxo de Festa, uma das maiores e mais tradicionais exposições do setor de casamentos e festas do país, é também referência nacional em destination wedding, assinando cerimônias exclusivas no Brasil e no exterior. Sua trajetória foi destaque em programas nacionais, como o Programa do Jô.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/11-extra-1.jpg" alt="César Serra">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">César Serra</div>
+            <div class="palestrante-funcao">Cerimonial</div>
+            <a href="https://instagram.com/cesarserra" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @cesarserra
+            </a>
+          </div>
+        </div>
+        <div class="palestrante-card" data-bio="Com mais de 40 anos de experiência, Chris Ayrosa é uma designer de experiências e empresária, sempre vista como uma mulher à frente do seu tempo. Seu trabalho inovador, referência no mercado de eventos, atende às maiores marcas de luxo e design do país, sempre buscando o novo e o belo, com um estilo único e impactante. Sua busca constante por descobertas e experiências enriquecedoras resulta em projetos exclusivos e conteúdos relevantes, inspirando a todos a não se contentarem com o comum, mas a ir além em busca do extraordinário.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/20-chris-ayrosa.jpg" alt="Chris Ayrosa">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Chris Ayrosa</div>
+            <div class="palestrante-funcao">Cenógrafa e Empresária</div>
+            <a href="https://instagram.com/chrisayrosa" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @chrisayrosa
+            </a>
+          </div>
+        </div>
+        <div class="palestrante-card" data-bio="Manoela Cesar é uma das grandes referências do mercado de casamentos. Após deixar sua carreira anterior para empreender, ela fundou o portal Colher de Chá Noivas, rapidamente se destacando como uma autoridade no setor. Para conectar noivas, fornecedores e wedding planners, criou o Wedding Lab, um evento de networking que virou um marco no mercado. Sua visão inovadora a levou a criar o Wedding Destination Lab em Portugal, um congresso pioneiro que conecta o mercado de casamentos entre Brasil e Portugal. O evento inclui B2B meetings, palestras e tours de imersão, consolidando Manoela como uma líder na criação de experiências exclusivas e de alto impacto no universo dos casamentos.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/30-manoela-cesar.jpg" alt="Manoela Cesar">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Manoela Cesar</div>
+            <div class="palestrante-funcao">Especialista em Rituais</div>
+            <a href="https://instagram.com/manoelacesar_weddings" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @manoelacesar_weddings
+            </a>
+          </div>
+        </div>
+        <div class="palestrante-card" data-bio="Milena Salvador Santos é Assessora de Cerimonial e Medalhística do Superior Tribunal Militar. Atua na área de Cerimonial Público há mais de 25 anos, com mais de 3 mil eventos organizados. Mentora e criadora do Método SER: seja Seguro, seja Elegante e seja Resiliente em seus eventos. Idealizadora e apresentadora do VideoCast SER Cerimonial, no YouTube.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/23-milena-salvador.jpg" alt="Milena Salvador">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Milena Salvador</div>
+            <div class="palestrante-funcao">Cerimonial Público</div>
+            <a href="https://instagram.com/sercerimonial" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @sercerimonial
+            </a>
+          </div>
+        </div>
+        <div class="palestrante-card" data-bio="Dentista por profissão e cerimonialista por paixão, Roberto Cohen transformou um simples pedido de ajuda de uma amiga em 1985 em uma carreira de sucesso que hoje ultrapassa a marca de quatro mil festas realizadas. Reconhecido por sua habilidade e dedicação, Roberto tem no seu portfólio clientes como Juliana Paes, Carolina Dieckmmann, Marcelo Serrado, Paulo Gustavo, Fatima Bernardes, William Bonner, entre muitos outros nomes de destaque no Brasil. Sua trajetória é marcada pela excelência na criação de eventos únicos e personalizados, atendendo a clientes de alto padrão e celebridades.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/17-roberto-cohen.jpg" alt="Roberto Cohen">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Roberto Cohen</div>
+            <div class="palestrante-funcao">Cerimonial</div>
+            <a href="https://instagram.com/cohencerimonial" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @cohencerimonial
+            </a>
+          </div>
+        </div>
+        <div class="palestrante-card" data-bio="Rodolfo começou sua trajetória na fotografia de eventos e arquitetura antes de se dedicar integralmente a casamentos. Seu trabalho é caracterizado pelo fotojornalismo e pela captura de imagens espontâneas e reais, com forte influência da linguagem cinematográfica na edição. Como Destination Photographer, ele já realizou trabalhos em diversos países, como Suíça, Áustria, Alemanha e República Dominicana.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/31-rodolfo-santos.jpg" alt="Rodolfo Santos">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Rodolfo Santos</div>
+            <div class="palestrante-funcao">Fotógrafo</div>
+            <a href="https://instagram.com/rodolfosantosfotografo" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @rodolfosantosfotografo
+            </a>
+          </div>
+        </div>
+        <div class="palestrante-card" data-bio="Suze Lino é especialista em inclusão, acessibilidade e diversidade no universo dos eventos e casamentos. Fundadora das empresas Casamento Inclusivo e Petit Enfant Recreação Consciente, dedica sua trajetória a ampliar o olhar do mercado para além das barreiras físicas, promovendo empatia profunda, respeito às diferenças e experiências verdadeiramente acolhedoras. Palestrante e mentora, inspira profissionais e destinos a transformarem celebrações em espaços onde todas as pessoas possam pertencer.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/32-suze-lino.jpg" alt="Suze Lino">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Suze Lino</div>
+            <div class="palestrante-funcao">Inclusão e Acessibilidade</div>
+            <a href="https://instagram.com/casamentoinclusivo" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @casamentoinclusivo
+            </a>
+          </div>
+        </div>
+      </div>
+
+        <!-- ================================================================
+             PALESTRANTES OCULTOS ATÉ ANÚNCIO OFICIAL NO INSTAGRAM
+             Para reativar um palestrante: recorte o card correspondente
+             deste comentário e cole junto aos cards visíveis acima.
+             O carrossel reagrupa automaticamente em páginas de 4.
+             ================================================================
+        <div class="palestrante-card" data-bio="Uma das decoradoras mais reconhecidas do Brasil, Patricia Vaks acumula mais de 18 anos de carreira, marcada por sua criatividade, sofisticação e exclusividade, seu trabalho é uma verdadeira obra de arte. Com atenção meticulosa aos detalhes e uma habilidade única de transformar eventos em experiências inesquecíveis e personalizadas, Patricia já realizou mais de 750 decorações no Brasil e no exterior.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/18-patricia-vaks.jpg" alt="Patricia Vaks">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Patricia Vaks</div>
+            <div class="palestrante-funcao">Decoradora</div>
+            <a href="https://instagram.com/patriciavaks" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @patriciavaks
+            </a>
+          </div>
+        </div>
+
+        <div class="palestrante-card" data-bio="Bruna Veronezi é estrategista de marca, empresária e especialista em marketing de influência. Como fundadora da NAME e VOX, ela é reconhecida por seu trabalho no planejamento de marcas e estratégias de influência, sempre com foco em ética, clareza e resultados práticos. Com sua experiência única, Bruna compartilhará valiosos insights sobre como construir e fortalecer marcas no setor de festas e eventos de luxo, trazendo novas perspectivas sobre marketing e influências no mercado.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/21-bruna-veronezi.jpg" alt="Bruna Veronezi">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Bruna Veronezi</div>
+            <div class="palestrante-funcao">Marketing Digital</div>
+            <a href="https://instagram.com/brunaveronezi" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @brunaveronezi
+            </a>
+          </div>
+        </div>
+
+        <div class="palestrante-card" data-bio="Wanderson Medeiros é um renomado chef especializado na Nova Cozinha Nordestina, que mistura técnicas clássicas com os sabores autênticos da culinária regional. Natural de Picuí, na Paraíba, ele transformou o restaurante da família, o Picuí, em Maceió, em um verdadeiro ícone da gastronomia brasileira. Com diversos prêmios nacionais e internacionais, Wanderson é o responsável pela gastronomia de eventos de destaque, como o Réveillon de Milagres, e assina os cardápios das famosas pousadas Haya e Zai, no litoral de Alagoas. Ele também é um dos chefs mais requisitados para Destination Weddings na região.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/22-picui.jpg" alt="Picuí">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Picuí</div>
+            <div class="palestrante-funcao">Chef</div>
+            <a href="https://instagram.com/picui" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @picui
+            </a>
+          </div>
+        </div>
+
+        <div class="palestrante-card" data-bio="Com mais de 15 anos de carreira, Plínio Ricardo é um fotógrafo especializado em capturar o charme, a alegria e a elegância de casamentos ao redor do mundo. Seu trabalho vai além da simples documentação, criando cápsulas de significado que capturam não apenas os momentos, mas a verdadeira essência das relações e comportamentos humanos. Plínio construiu ao longo dos anos um arquivo visual impressionante, reconhecido pela sua habilidade em transformar cada imagem em uma história única e emocionante.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/27-plinio-ricardo.jpg" alt="Plínio Ricardo">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Plínio Ricardo</div>
+            <div class="palestrante-funcao">Fotógrafo</div>
+            <a href="https://instagram.com/plinioricardo" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @plinioricardo
+            </a>
+          </div>
+        </div>
+
+        <div class="palestrante-card" data-bio="Com um olhar único voltado para a beleza feminina, Sabrina Vasconcelos é uma fotógrafa especializada em casamentos, sentimentos e emoções. Seu trabalho é reconhecido pela harmonia, luz, composição e espontaneidade, capturando momentos verdadeiramente inesquecíveis. Nascida em Porto Alegre e atualmente residente no Rio de Janeiro, Sabrina tem uma trajetória única. Após 15 anos de carreira como advogada, ela decidiu seguir sua verdadeira paixão pela fotografia, uma arte que vem encantando e emocionando seus clientes há 8 anos.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/28-sabrina-vasconcelos.jpg" alt="Sabrina Vasconcelos">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Sabrina Vasconcelos</div>
+            <div class="palestrante-funcao">Fotógrafa</div>
+            <a href="https://instagram.com/sabrinavasconcelosphotos" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @sabrinavasconcelosphotos
+            </a>
+          </div>
+        </div>
+
+        <div class="palestrante-card" data-bio="Caroline Borges, empreendedora e especialista em eventos e gastronomia, é sócia fundadora do Grupo Unique, que engloba o Unique Palace – Centro de Eventos, o Unique Buffet – Catering para Eventos e o Unique em Casa – Empório de Comidas. Com uma sólida formação em Letras e Gastronomia, além de especializações em Gestão de Eventos e Gestão de Negócios, Caroline se destaca pela liderança inovadora e pela criação de experiências gastronômicas e festivas inesquecíveis. Com um olhar atento às tendências e um compromisso com a excelência, ela é uma referência no setor de eventos de luxo, oferecendo experiências únicas para seus clientes.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/29-carol-borges.jpg" alt="Carol Borges">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Carol Borges</div>
+            <div class="palestrante-funcao">Chef</div>
+            <a href="https://instagram.com/carolborges.unique" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @carolborges.unique
+            </a>
+          </div>
+        </div>
+        -->
+      </div>
+      <div class="palestrantes-nav">
+        <button class="palestrantes-arrow prev" aria-label="Página anterior">&#10094;</button>
+        <div class="palestrantes-dots"></div>
+        <button class="palestrantes-arrow next" aria-label="Próxima página">&#10095;</button>
+      </div>
     </div>
   </div>
 </section>
@@ -3382,7 +3553,7 @@
 <section class="chapter pattern-light" id="hospedagem">
   <div class="container">
     <div class="chapter-header-inline centered">
-      <h2 class="chapter-title">SUGESTÃO DE HOSPEDAGEM</h2>
+      <h2 class="chapter-title">HOSPEDAGEM OFICIAL DO CONGRESSO</h2>
     </div>
 
     <h3 class="hospedagem-hotel-nome">JADE HOTEL</h3>

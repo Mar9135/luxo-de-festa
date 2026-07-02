@@ -1,18 +1,13 @@
 ==========================================================
-  SITE - LUXO DE FESTA 2026  [VERSAO OFICIAL / FASE ABERTURA]
+  SITE - LUXO DE FESTA 2026  [VERSAO OFICIAL / COMPLETA]
   Congresso Nacional de Festas & Eventos
   Estado consolidado do projeto
 ==========================================================
 
->> ESTA E A VERSAO OFICIAL - FASE ABERTURA <<
-Versao para publicar em 01/06/2026, substituindo a release/teaser.
-A secao "Palestrantes confirmados" mantem o titulo e o bloco da
-Palestra de Abertura (Paulo Borges); no lugar do carrossel,
-aparece um texto curto encaminhando para o Instagram oficial
-(@luxodefestaoficial), onde cada palestrante sera revelado.
-A cada postagem oficial no Instagram, o card correspondente
-e reativado no site. Quando todos estiverem revelados, este
-pacote e substituido pelo OFICIAL COMPLETA.
+>> ESTA E A VERSAO OFICIAL (COMPLETA) <<
+Contem a secao de palestrantes com todos os cards.
+Publicar esta versao A PARTIR do anuncio dos palestrantes
+(01/06/2026), substituindo a versao release/teaser.
 
 
 --------------------------------------------------
@@ -97,20 +92,11 @@ curadoria (Curadoria e Realizacao + Curadoria Criativa) ficam
 juntas com fundo claro, por formarem um par tematico.
 
 --------------------------------------------------
-5. PALESTRANTES - ESTADO ATUAL (FASE ABERTURA)
+5. PALESTRANTES - ESTADO ATUAL
 --------------------------------------------------
-NO AR NESTA FASE:
-  - Paulo Borges - Palestra de Abertura - @pborgesj
-    (Bloco destaque no topo da secao "Palestrantes confirmados".)
+O carrossel tem 24 vagas (6 paginas de 4 cards).
 
-Logo abaixo, no lugar do carrossel, um texto curto encaminha
-para o Instagram oficial:
-  "Acompanhe a divulgacao completa dos palestrantes no nosso
-   instagram oficial @luxodefestaoficial"
-
-AGUARDANDO REVELACAO NO INSTAGRAM (11 confirmados, ja com foto
-e biografia preparadas - estao prontos para entrar no carrossel
-assim que cada um for anunciado):
+CONFIRMADOS E NO AR (11):
   - Roberto Cohen       - Cerimonial              - @cohencerimonial
   - Patricia Vaks       - Decoradora              - @patriciavaks
   - Chris Ayrosa        - Cenografa e Empresaria  - @chrisayrosa
@@ -122,26 +108,14 @@ assim que cada um for anunciado):
   - Carol Borges        - Chef                    - @carolborges.unique
   - Manoela Cesar       - Especialista em Rituais - @manoelacesar_weddings
   - Rodolfo Santos      - Fotografo               - @rodolfosantosfotografo
-  + Cesar Serra (Cerimonial, @cesarserra) tambem aparece como
-    card de palestrante apos a abertura.
+Alem destes, Paulo Borges e destaque na "Palestra de Abertura".
 
-O carrossel completo tem 24 vagas (6 paginas de 4 cards). Nesta
-fase o markup do carrossel NAO esta no index.html - quando o
-primeiro palestrante for revelado, o carrossel volta, substituindo
-o texto-teaser, e cada card entra no ar conforme anunciado.
+Todos os 11 confirmados possuem biografia (aparece no pop-up
+ao ampliar a foto). As bios ficam no atributo data-bio de
+cada card .palestrante-card no index.html.
 
-COMO REVELAR UM PALESTRANTE (workflow):
-  1. Apos a postagem oficial no Instagram, informe o nome do
-     palestrante revelado.
-  2. Um novo pacote e entregue com:
-     - O texto-teaser substituido pelo divisor + nota +
-       carrossel.
-     - Apenas os cards ja revelados ficam visiveis; os demais
-       ficam ocultos ate o anuncio.
-  3. Republicar o pacote (mesmo processo do item 3 deste arquivo).
-
-PENDENTE (apos as 11 revelacoes):
-  - Restam 13 cards "Foto em breve" a preencher no carrossel.
+PENDENTE:
+  - Restam 13 cards "Foto em breve" a preencher.
 
 COMO PREENCHER UM CARD NOVO:
   Cada palestrante precisa de: foto (vertical, recorte 3:4),
@@ -223,8 +197,6 @@ Hotel parceiro (secao Hospedagem):
 --------------------------------------------------
 9. PENDENCIAS E PROXIMOS PASSOS
 --------------------------------------------------
-- Revelar os 11 palestrantes ja confirmados conforme as
-  postagens oficiais no Instagram (workflow descrito na secao 5).
 - Adicionar os demais palestrantes conforme confirmacao
   (restam 13 vagas no carrossel) - cada um precisa de foto,
   nome, funcao, @ do Instagram e biografia.
