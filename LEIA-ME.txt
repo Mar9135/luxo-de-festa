@@ -96,6 +96,25 @@ juntas com fundo claro, por formarem um par tematico.
 --------------------------------------------------
 O carrossel tem 24 vagas (6 paginas de 4 cards).
 
+>>> ATUALIZACAO - Andrea Bisker adicionada ao carrossel.
+    ORDEM DO CARROSSEL: Cesar Serra e SEMPRE o primeiro; os demais
+    em ordem alfabetica. Cards ATUALMENTE NO AR (pagina ativa):
+      1. Cesar Serra      - Cerimonial              - @cesarserra   (fixo em 1o)
+      2. Andrea Bisker    - Inovacao e Tendencias   - @andreabisker
+      3. Chris Ayrosa     - Cenografa e Empresaria  - @chrisayrosa
+      4. Manoela Cesar    - Especialista em Rituais - @manoelacesar_weddings
+      5. Milena Salvador  - Cerimonial Publico      - @sercerimonial
+      6. Roberto Cohen    - Cerimonial              - @cohencerimonial
+      7. Rodolfo Santos   - Fotografo               - @rodolfosantosfotografo
+      8. Suze Lino        - Inclusao e Acessibilidade - @casamentoinclusivo
+    A foto da Andrea Bisker traz, no canto superior esquerdo, o selo
+    "Apresentado por:" + logo da 100% Eventos (patrocinadora da
+    palestra) CENTRALIZADO na parte inferior, com sombra para
+    destacar sobre a roupa branca (photos/33-andrea-bisker.jpg).
+    Os demais palestrantes seguem preservados no bloco comentado do
+    carrossel e entram (fora do comentario, em ordem alfabetica)
+    conforme forem anunciados no Instagram.
+
 CONFIRMADOS E NO AR (11):
   - Roberto Cohen       - Cerimonial              - @cohencerimonial
   - Patricia Vaks       - Decoradora              - @patriciavaks
