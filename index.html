@@ -2541,6 +2541,74 @@
     letter-spacing: 1px;
   }
 
+  /* Companhia Aérea (Azul) sobre fundo ESCURO — clareia o lettering */
+  .pattern-dark .azul-texto { color: var(--bg-bege); }
+  .pattern-dark .azul-texto strong { color: var(--nude); }
+  .pattern-dark .azul-promocode { border-color: rgba(212, 168, 150, 0.5); background: rgba(212, 168, 150, 0.08); }
+  .pattern-dark .azul-promocode-label { color: var(--nude); }
+  .pattern-dark .azul-promocode-codigo { color: var(--nude); }
+  .pattern-dark .azul-promocode-desconto { color: var(--bg-bege); }
+  .pattern-dark .azul-promocode-validade { color: var(--bg-bege); }
+  .pattern-dark .azul-cta { color: var(--bg-dark); background: var(--nude); border-color: var(--nude); }
+  .pattern-dark .azul-cta:hover { background: transparent; color: var(--nude); }
+  .pattern-dark .azul-instrucao { color: var(--bg-bege); }
+  .pattern-dark .azul-instrucao strong { color: var(--nude); }
+  .pattern-dark .aerea-oficial-bloco { background: transparent; border-color: rgba(212, 168, 150, 0.3); }
+
+  /* ===== FEIRA DE NEGÓCIOS — cards de lounges (layout próprio) ===== */
+  .feira-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 22px;
+    max-width: 1140px;
+    margin: 4px auto 0;
+  }
+  .feira-card {
+    background: rgba(212, 168, 150, 0.05);
+    border: 1px solid rgba(212, 168, 150, 0.28);
+    overflow: hidden;
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  }
+  .feira-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--nude);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  }
+  .feira-card-foto { position: relative; aspect-ratio: 4 / 3; overflow: hidden; }
+  .feira-card-foto img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+  .feira-card:hover .feira-card-foto img { transform: scale(1.05); }
+  .feira-card-foto--vazio {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+    background: repeating-linear-gradient(45deg, rgba(212,168,150,0.06) 0 10px, rgba(212,168,150,0.02) 10px 20px), var(--bg-dark-soft);
+    color: var(--nude);
+  }
+  .feira-card-foto--vazio svg { width: 30px; height: 30px; opacity: 0.55; }
+  .feira-card-ph-text { font-family: var(--sans); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.7; }
+  .feira-card-num {
+    position: absolute; top: 10px; left: 10px; z-index: 2;
+    font-family: var(--sans); font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--bg-dark); background: var(--nude); padding: 4px 9px;
+  }
+  .feira-card-info { padding: 18px 14px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .feira-card-logo { max-height: 46px; max-width: 78%; object-fit: contain; }
+  .feira-card-logo-ph {
+    font-family: var(--serif); font-size: 15px; letter-spacing: 1px; color: var(--nude); opacity: 0.85;
+    border: 1px dashed rgba(212,168,150,0.4); padding: 8px 16px;
+  }
+  .feira-card-instagram {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--sans); font-size: 12px; letter-spacing: 0.5px; color: var(--bg-bege);
+    text-decoration: none; opacity: 0.9; transition: color 0.3s;
+  }
+  .feira-card-instagram:hover { color: var(--nude); }
+  .feira-card-instagram svg { width: 14px; height: 14px; }
+  .feira-card-instagram--ph { opacity: 0.45; }
+  .feira-card--vazio { display: flex; flex-direction: column; }
+  .feira-card--vazio .feira-card-foto--vazio { aspect-ratio: auto; flex: 1; min-height: 250px; }
+  @media (max-width: 900px) { .feira-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; } }
+  @media (max-width: 520px) { .feira-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } .feira-card-info { padding: 14px 10px 16px; } }
+
   @media (max-width: 900px) {
     .logos-grid.patrocinadores { grid-template-columns: repeat(2, 1fr); }
     .logos-grid.apoiadores     { grid-template-columns: repeat(3, 1fr); }
@@ -2582,8 +2650,9 @@
   <ul class="nav-links" id="navLinks">
     <li><a href="#apresentacao">Apresentação</a></li>
     <li><a href="#curadoria">Curadoria</a></li>
-    <li><a href="#palestrantes">Palestrantes 2026</a></li>
-    <li><a href="#embaixadores">Embaixadores 2026</a></li>
+    <li><a href="#palestrantes">Palestrantes</a></li>
+    <li><a href="#embaixadores">Embaixadores</a></li>
+    <li><a href="#feira-negocios">Feira de Negócios</a></li>
     <li><a href="#formato">Cronograma</a></li>
     <li><a href="#publico">Público</a></li>
     <li><a href="#case">Edição 2025</a></li>
@@ -2832,6 +2901,36 @@
             </a>
           </div>
         </div>
+        <div class="palestrante-card" data-bio="Designer de formação, estrategista de marca e especialista em branding de prestígio. Com uma trajetória que começou em grandes emissoras de televisão e evoluiu para projetos de design e estratégia, Monica desenvolveu uma abordagem única que une pensamento estratégico, cultura visual e construção de reputação de marca. Ao longo de sua carreira, colaborou com organizações e empresas como Microsoft, HP, Epson, Canon, Corel e USP. Também é autora de livros, criadora de soluções digitais e referência em projetos que conectam design, estratégia e posicionamento de alto nível. Hoje atua ajudando empresas e profissionais a transformarem marca em ativo estratégico e legado de longo prazo.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/34-monica-rayol.jpg" alt="Monica Rayol">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Monica Rayol</div>
+            <div class="palestrante-funcao">Branding e Estratégia de Marca</div>
+            <a href="https://instagram.com/monicarayolbrand" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @monicarayolbrand
+            </a>
+          </div>
+        </div>
+        <div class="palestrante-card" data-bio="Uma das decoradoras mais reconhecidas do Brasil, Patricia Vaks acumula mais de 18 anos de carreira, marcada por sua criatividade, sofisticação e exclusividade, seu trabalho é uma verdadeira obra de arte. Com atenção meticulosa aos detalhes e uma habilidade única de transformar eventos em experiências inesquecíveis e personalizadas, Patricia já realizou mais de 750 decorações no Brasil e no exterior.">
+          <div class="photo-card portrait">
+            <div class="photo-card-inner">
+              <img decoding="async" loading="lazy" src="photos/18-patricia-vaks.jpg" alt="Patricia Vaks">
+            </div>
+          </div>
+          <div class="palestrante-info">
+            <div class="palestrante-nome">Patricia Vaks</div>
+            <div class="palestrante-funcao">Decoradora</div>
+            <a href="https://instagram.com/patriciavaks" target="_blank" rel="noopener" class="palestrante-instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @patriciavaks
+            </a>
+          </div>
+        </div>
         <div class="palestrante-card" data-bio="Dentista por profissão e cerimonialista por paixão, Roberto Cohen transformou um simples pedido de ajuda de uma amiga em 1985 em uma carreira de sucesso que hoje ultrapassa a marca de quatro mil festas realizadas. Reconhecido por sua habilidade e dedicação, Roberto tem no seu portfólio clientes como Juliana Paes, Carolina Dieckmmann, Marcelo Serrado, Paulo Gustavo, Fatima Bernardes, William Bonner, entre muitos outros nomes de destaque no Brasil. Sua trajetória é marcada pela excelência na criação de eventos únicos e personalizados, atendendo a clientes de alto padrão e celebridades.">
           <div class="photo-card portrait">
             <div class="photo-card-inner">
@@ -2885,21 +2984,6 @@
              deste comentário e cole junto aos cards visíveis acima.
              O carrossel reagrupa automaticamente em páginas de 4.
              ================================================================
-        <div class="palestrante-card" data-bio="Uma das decoradoras mais reconhecidas do Brasil, Patricia Vaks acumula mais de 18 anos de carreira, marcada por sua criatividade, sofisticação e exclusividade, seu trabalho é uma verdadeira obra de arte. Com atenção meticulosa aos detalhes e uma habilidade única de transformar eventos em experiências inesquecíveis e personalizadas, Patricia já realizou mais de 750 decorações no Brasil e no exterior.">
-          <div class="photo-card portrait">
-            <div class="photo-card-inner">
-              <img decoding="async" loading="lazy" src="photos/18-patricia-vaks.jpg" alt="Patricia Vaks">
-            </div>
-          </div>
-          <div class="palestrante-info">
-            <div class="palestrante-nome">Patricia Vaks</div>
-            <div class="palestrante-funcao">Decoradora</div>
-            <a href="https://instagram.com/patriciavaks" target="_blank" rel="noopener" class="palestrante-instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              @patriciavaks
-            </a>
-          </div>
-        </div>
 
         <div class="palestrante-card" data-bio="Bruna Veronezi é estrategista de marca, empresária e especialista em marketing de influência. Como fundadora da NAME e VOX, ela é reconhecida por seu trabalho no planejamento de marcas e estratégias de influência, sempre com foco em ética, clareza e resultados práticos. Com sua experiência única, Bruna compartilhará valiosos insights sobre como construir e fortalecer marcas no setor de festas e eventos de luxo, trazendo novas perspectivas sobre marketing e influências no mercado.">
           <div class="photo-card portrait">
@@ -3300,8 +3384,158 @@
   </div>
 </section>
 
+<!-- FEIRA DE NEGÓCIOS -->
+<section class="chapter pattern-dark" id="feira-negocios">
+  <div class="container">
+    <div class="chapter-header-inline centered">
+      <h2 class="chapter-title">FEIRA DE NEGÓCIOS</h2>
+    </div>
+    <p class="palestrantes-intro" style="max-width: 880px; margin: 0 auto;">
+      A Feira de Negócios reúne as principais marcas de <strong style="color: var(--nude-deep);">destination wedding</strong> do país em lounges exclusivos. Nesses espaços, cada marca apresenta aos congressistas sua estrutura, seus serviços e as condições para a realização de eventos &mdash; do primeiro contato ao fechamento.
+    </p>
+    <p class="palestrantes-intro" style="max-width: 880px; margin: 24px auto 0;">
+      Mais do que uma exposição, a feira de negócios funciona como um grande ambiente de relacionamento e <strong style="color: var(--nude-deep);">networking</strong>, conectando marcas de referência e profissionais do mercado de festas e eventos de todo o país, gerando parcerias e oportunidades reais de negócio.
+    </p>
+    <p class="palestrantes-intro" style="max-width: 880px; margin: 24px auto 0;">
+      A Feira de Negócios acontece em paralelo à programação, seguindo o mesmo cronograma do congresso &mdash;<br><strong style="color: var(--nude-deep);">9, 10 e 11 de novembro de 2026</strong>, no Unique Palace, em Brasília/DF.
+    </p>
+    <p class="palestrantes-intro" style="max-width: 880px; margin: 24px auto 0;">
+      Acompanhe a divulgação completa no nosso <a href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener" class="inline-link">instagram oficial</a>.
+    </p>
+
+    <div class="palestrantes-divisor" style="margin-top:44px;"><span>Marcas participantes</span></div>
+    <div class="feira-grid">
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="https://fasano.com.br/wp-content/uploads/2023/10/Hotel-Fasano-Angra-dos-Reis-01.jpg" alt="Fasano Angra dos Reis">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" src="photos/feira-01-fasano-logo.png" alt="Fasano Angra dos Reis">
+            <a class="feira-card-instagram" href="https://instagram.com/fasanoangra" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@fasanoangra</a>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+        <div class="feira-card feira-card--vazio">
+          <div class="feira-card-foto feira-card-foto--vazio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+            <span class="feira-card-ph-text">Divulgação em breve</span>
+          </div>
+        </div>
+    </div>
+
+    <!-- FEIRA — cards de lounges. Para preencher uma marca: trocar o bloco do card vazio (foto do espaco, logo da marca e link do Instagram), no modelo do card do Fasano. -->
+  </div>
+</section>
+
 <!-- CRONOGRAMA -->
-<section class="chapter pattern-dark" id="formato">
+<section class="chapter pattern-light" id="formato">
   <div class="container">
     <div class="chapter-header-inline centered">
       <h2 class="chapter-title">CRONOGRAMA</h2>
@@ -3368,7 +3602,7 @@
 </section>
 
 <!-- PERFIL DO PÚBLICO -->
-<section class="chapter pattern-light" id="publico">
+<section class="chapter pattern-dark" id="publico">
   <div class="container">
     <div class="chapter-header-inline centered">
       <h2 class="chapter-title">PERFIL DO PÚBLICO</h2>
@@ -3402,14 +3636,14 @@
 </section>
 
 <!-- SUCESSO DA EDIÇÃO 2025 -->
-<section class="chapter pattern-dark" id="case">
+<section class="chapter pattern-light" id="case">
   <div class="container">
     <div class="chapter-header-inline centered">
       <h2 class="chapter-title">SUCESSO DA EDIÇÃO 2025</h2>
     </div>
 
     <div style="max-width: 820px; margin: 0 auto 72px; text-align: left;">
-      <p style="font-size: 16px; line-height: 1.85; color: var(--bg-bege); opacity: 0.92;">A edição de <strong style="color: var(--nude);">2025</strong> marcou um divisor de águas para os profissionais do mercado de eventos no Brasil, consolidando o <strong style="color: var(--nude);">Luxo de Festa</strong> como um congresso de alto impacto, tanto no ambiente presencial quanto no digital. Os resultados alcançados comprovam a força do evento como uma <strong style="color: var(--nude);">plataforma estratégica de conteúdo, relacionamento e negócios</strong>, com público qualificado, marcas estratégicas e cobertura de mídia de alto nível. Os números a seguir refletem não apenas a dimensão do evento, mas, principalmente, sua capacidade de engajamento, entrega de experiência e geração de valor para marcas parceiras e patrocinadores, tornando a edição 2026 uma oportunidade ainda maior de visibilidade, posicionamento e negócios.</p>
+      <p style="font-size: 16px; line-height: 1.85; color: var(--ink-soft);">A edição de <strong style="color: var(--nude-deep);">2025</strong> marcou um divisor de águas para os profissionais do mercado de eventos no Brasil, consolidando o <strong style="color: var(--nude-deep);">Luxo de Festa</strong> como um congresso de alto impacto, tanto no ambiente presencial quanto no digital. Os resultados alcançados comprovam a força do evento como uma <strong style="color: var(--nude-deep);">plataforma estratégica de conteúdo, relacionamento e negócios</strong>, com público qualificado, marcas estratégicas e cobertura de mídia de alto nível. Os números a seguir refletem não apenas a dimensão do evento, mas, principalmente, sua capacidade de engajamento, entrega de experiência e geração de valor para marcas parceiras e patrocinadores, tornando a edição 2026 uma oportunidade ainda maior de visibilidade, posicionamento e negócios.</p>
     </div>
 
     <div style="text-align: center;">
@@ -3492,14 +3726,14 @@
 <!-- COMPANHIA AÉREA OFICIAL
      (A seção completa "Patrocinadores e Apoiadores" será reativada quando a curadoria
      comercial estiver consolidada. O HTML original ficou preservado no comentário abaixo.) -->
-<section class="chapter pattern-light" id="patrocinadores">
+<section class="chapter pattern-dark" id="patrocinadores">
   <div class="container">
     <div class="chapter-header-inline centered">
       <h2 class="chapter-title">COMPANHIA AÉREA OFICIAL</h2>
     </div>
 
     <div class="aerea-oficial-bloco">
-      <img class="azul-logo" src="photos/aerea-oficial-azul-colorida.png" alt="Azul Linhas Aéreas — Companhia Aérea Oficial">
+      <img class="azul-logo" src="photos/aerea-oficial-azul-branca.png" alt="Azul Linhas Aéreas — Companhia Aérea Oficial">
       <p class="azul-texto">
         <strong>Azul Linhas Aéreas</strong> é a Companhia Aérea Oficial do <strong>Luxo de Festa 2026</strong>. Uma parceria que reflete os mesmos valores de excelência, hospitalidade brasileira e cuidado com cada detalhe da experiência — desde o voo até o congresso.
       </p>
@@ -3703,8 +3937,9 @@
   <div class="footer-links">
     <a href="#apresentacao">Apresentação</a>
     <a href="#curadoria">Curadoria</a>
-    <a href="#palestrantes">Palestrantes 2026</a>
-    <a href="#embaixadores">Embaixadores 2026</a>
+    <a href="#palestrantes">Palestrantes</a>
+    <a href="#embaixadores">Embaixadores</a>
+    <a href="#feira-negocios">Feira de Negócios</a>
     <a href="#formato">Cronograma</a>
     <a href="#publico">Público</a>
     <a href="#case">Edição 2025</a>
