@@ -111,7 +111,7 @@
   }
   nav .logo { display: flex; align-items: center; text-decoration: none; }
   nav .logo img { height: 38px; width: auto; display: block; }
-  .nav-links { display: flex; gap: 26px; list-style: none; }
+  .nav-links { display: flex; gap: 18px; list-style: none; }
   .nav-links a {
     color: var(--bg-bege);
     text-decoration: none;
@@ -152,7 +152,7 @@
     background: none; border: none; cursor: pointer;
     color: var(--bg-bege); font-size: 26px;
   }
-  @media (max-width: 950px) {
+  @media (max-width: 1240px) {
     .nav-links, .nav-cta { display: none; }
     .menu-toggle { display: block; }
     nav .logo img { height: 32px; }
@@ -2142,6 +2142,19 @@
   }
   .lf-overlay.open .lf-image { transform: scale(1); }
 
+  /* Lightbox da Feira: foto grande + logo da marca no canto inferior direito */
+  .lf-feira { position: relative; display: inline-block; line-height: 0; }
+  .lf-feira-logo {
+    position: absolute; right: 20px; bottom: 20px;
+    max-width: 34%; max-height: 78px; width: auto; height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));
+    pointer-events: none;
+  }
+  @media (max-width: 600px) {
+    .lf-feira-logo { right: 12px; bottom: 12px; max-height: 54px; max-width: 42%; }
+  }
+
   /* Pop-up de palestrante — foto à esquerda, descrição à direita */
   .lf-palestrante {
     display: grid;
@@ -2591,7 +2604,7 @@
     color: var(--bg-dark); background: var(--nude); padding: 4px 9px;
   }
   .feira-card-info { padding: 18px 14px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-  .feira-card-logo { max-height: 46px; max-width: 78%; object-fit: contain; }
+  .feira-card-logo { max-height: 64px; max-width: 85%; object-fit: contain; }
   .feira-card-logo-ph {
     font-family: var(--serif); font-size: 15px; letter-spacing: 1px; color: var(--nude); opacity: 0.85;
     border: 1px dashed rgba(212,168,150,0.4); padding: 8px 16px;
@@ -2608,6 +2621,12 @@
   .feira-card--vazio .feira-card-foto--vazio { aspect-ratio: auto; flex: 1; min-height: 250px; }
   @media (max-width: 900px) { .feira-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; } }
   @media (max-width: 520px) { .feira-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } .feira-card-info { padding: 14px 10px 16px; } }
+  @media (max-width: 400px) {
+    .feira-card-logo { max-height: 48px; max-width: 90%; }
+    .feira-card-ph-text { font-size: 9px; letter-spacing: 1px; }
+    .feira-card-instagram { font-size: 11px; }
+    .feira-card--vazio .feira-card-foto--vazio { min-height: 180px; }
+  }
 
   @media (max-width: 900px) {
     .logos-grid.patrocinadores { grid-template-columns: repeat(2, 1fr); }
@@ -2909,7 +2928,7 @@
           </div>
           <div class="palestrante-info">
             <div class="palestrante-nome">Monica Rayol</div>
-            <div class="palestrante-funcao">Branding e Estratégia de Marca</div>
+            <div class="palestrante-funcao">Estrategista de Marca</div>
             <a href="https://instagram.com/monicarayolbrand" target="_blank" rel="noopener" class="palestrante-instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               @monicarayolbrand
@@ -3414,10 +3433,13 @@
             <a class="feira-card-instagram" href="https://instagram.com/fasanoangra" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@fasanoangra</a>
           </div>
         </div>
-        <div class="feira-card feira-card--vazio">
-          <div class="feira-card-foto feira-card-foto--vazio">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
-            <span class="feira-card-ph-text">Divulgação em breve</span>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-02-nanii-espaco.jpg" alt="Nanii Hotel">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" src="photos/feira-02-nanii-logo.png" alt="Nanii Hotel">
+            <a class="feira-card-instagram" href="https://instagram.com/nanii.hotel" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@nanii.hotel</a>
           </div>
         </div>
         <div class="feira-card feira-card--vazio">
@@ -4390,6 +4412,24 @@
         const src = srcDoSlideAtivo();
         if (src) openOverlay(retratoHtml(src, '', 'Edição 2025'));
       }, viewport);
+    });
+
+    // 5) Cards da Feira -> foto grande com a logo da marca no canto inferior direito
+    document.querySelectorAll('.feira-card .feira-card-foto').forEach((foto) => {
+      const img = foto.querySelector('img');
+      if (!img) return; // ignora os cards sem foto ("Divulgação em breve")
+      const card = foto.closest('.feira-card');
+      const logoEl = card ? card.querySelector('.feira-card-logo') : null;
+      const logoSrc = logoEl ? logoEl.getAttribute('src') : '';
+      addZoom(foto, () => {
+        const alt = img.getAttribute('alt') || '';
+        openOverlay(
+          '<div class="lf-feira">' +
+            '<img class="lf-image" src="' + img.getAttribute('src') + '" alt="' + escapeHtml(alt) + '">' +
+            (logoSrc ? '<img class="lf-feira-logo" src="' + logoSrc + '" alt="' + escapeHtml(alt) + '">' : '') +
+          '</div>'
+        );
+      });
     });
   })();
 
