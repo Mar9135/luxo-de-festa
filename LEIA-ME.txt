@@ -96,56 +96,83 @@ juntas com fundo claro, por formarem um par tematico.
 --------------------------------------------------
 O carrossel tem 24 vagas (6 paginas de 4 cards).
 
->>> ATUALIZACAO - Palestrantes e nova secao Feira de Negocios.
-    Regra de ordem do carrossel: Cesar Serra SEMPRE em primeiro
-    (realizador/curador); os demais em ordem alfabetica.
+>>> ATUALIZACAO - Palestrantes, Feira de Negocios e revisao de textos.
+
+    CARROSSEL DE PALESTRANTES
+    Regra de ordem: Cesar Serra SEMPRE em primeiro (realizador/
+    curador); os demais em ordem alfabetica.
     Cards NO AR (pagina ativa):
       1. Cesar Serra      - Curadoria e Realizacao  - @cesarserra
       2. Andrea Bisker    - Inovacao e Tendencias   - @andreabisker
-      3. Chris Ayrosa     - Cenografa e Empresaria  - @chrisayrosa
-      4. Manoela Cesar    - Especialista em Rituais - @manoelacesar_weddings
-      5. Milena Salvador  - Cerimonial Publico      - @sercerimonial
-      6. Monica Rayol     - Estrategista de Marca   - @monicarayolbrand
-      7. Patricia Vaks    - Decoradora              - @patriciavaks
-      8. Roberto Cohen    - Cerimonial              - @cohencerimonial
-      9. Rodolfo Santos   - Fotografo               - @rodolfosantosfotografo
-     10. Suze Lino        - Inclusao e Acessibilidade - @casamentoinclusivo
+      3. Bruna Veronezi   - Marketing Digital       - @brunaveronezi
+      4. Chris Ayrosa     - Cenografa e Empresaria  - @chrisayrosa
+      5. Manoela Cesar    - Especialista em Rituais - @manoelacesar_weddings
+      6. Milena Salvador  - Cerimonial Publico      - @sercerimonial
+      7. Monica Rayol     - Estrategista de Marca   - @monicarayolbrand
+      8. Patricia Vaks    - Decoradora              - @patriciavaks
+      9. Picui            - Chef                    - @picui
+     10. Roberto Cohen    - Cerimonial              - @cohencerimonial
+     11. Rodolfo Santos   - Fotografo               - @rodolfosantosfotografo
+     12. Suze Lino        - Inclusao e Acessibilidade - @casamentoinclusivo
     + Paulo Borges (@pborgesj) no destaque de Palestra de Abertura.
-    ATENCAO: "Monica Rayol" e escrito SEM acento.
+    ATENCAO: "Monica Rayol" e escrito SEM acento. O card do
+    "Picui" deve permanecer com esse nome.
     Fotos com selo "Apresentado por:" + logo do patrocinador
     embutido na propria imagem (centro inferior, com sombra forte
     na base): Andrea Bisker (photos/33-andrea-bisker.jpg, 100%
     Eventos) e Monica Rayol (photos/34-monica-rayol.jpg, Festah).
+    Fotos definitivas de Bruna Veronezi (photos/21-bruna-veronezi.jpg)
+    e Picui (photos/22-picui.jpg), ambas em 1200x1600 (3:4).
     PENDENTES no bloco comentado (entram em ordem alfabetica
-    conforme anunciados no Instagram): Bruna Veronezi, Picui,
-    Plinio Ricardo, Sabrina Vasconcelos, Carol Borges.
+    conforme anunciados no Instagram): Plinio Ricardo,
+    Sabrina Vasconcelos, Carol Borges.
 
->>> NOVA SECAO: FEIRA DE NEGOCIOS (id="feira-negocios")
+>>> SECAO FEIRA DE NEGOCIOS (id="feira-negocios")
     Posicionada logo apos EMBAIXADORES. Traz o texto institucional
     e a grade "Marcas participantes" com 20 cards de lounges.
-    Cards preenchidos: Fasano Angra dos Reis (@fasanoangra) e
-    Nanii Hotel (@nanii.hotel). Os demais exibem "Divulgacao em
-    breve" e nao tem botao de zoom.
-    Para preencher um card, use o modelo de um card ja pronto:
-      - foto:      <div class="feira-card-foto"><img src="photos/feira-XX-espaco.jpg" alt="Marca"></div>
-      - logo:      <img class="feira-card-logo" src="photos/feira-XX-logo.png" alt="Marca">
+    Cards preenchidos (4):
+      - Fasano Angra dos Reis  - @fasanoangra
+      - Nanii Hotel            - @nanii.hotel
+      - Center of Portugal     - @centerofportugal
+      - Palacio Tangara        - @palaciotangara
+    Os demais exibem "Divulgacao em breve" e nao tem botao de zoom.
+    TODAS as fotos e logos das marcas estao hospedadas em photos/
+    (nenhuma imagem e carregada de site de terceiros).
+    Arquivos por marca: photos/feira-0N-<marca>-espaco.jpg (foto)
+    e photos/feira-0N-<marca>-logo.png (logo em branco).
+    Para preencher um novo card, use um card pronto como modelo:
+      - foto:      <div class="feira-card-foto"><img src="photos/..."></div>
+      - logo:      <img class="feira-card-logo" src="photos/...">
       - instagram: <a class="feira-card-instagram" href="https://instagram.com/HANDLE" ...>
     Ao clicar na lupa da foto, abre a imagem ampliada com a
-    logomarca no canto inferior direito.
-    OBS.: a foto do Fasano ainda e carregada por link do site
-    fasano.com.br (nao esta hospedada aqui). O ideal e hospedar
-    o arquivo em photos/ quando disponivel.
+    logomarca da marca no canto inferior direito.
 
 >>> AJUSTES DE LAYOUT
-    - Alternancia de fundos reintercalada apos a nova secao:
-      embaixadores(claro) > feira(escuro) > cronograma(claro) >
-      publico(escuro) > edicao 2025(claro) > aerea(escuro) >
-      hospedagem(claro).
+    - Alternancia de fundos: embaixadores(claro) > feira(escuro) >
+      cronograma(claro) > publico(escuro) > edicao 2025(claro) >
+      aerea(escuro) > hospedagem(claro).
     - Companhia Aerea: logo da Azul em versao BRANCA, textos
       clareados para fundo escuro e remocao do painel claro.
     - Menu: incluida "Feira de Negocios"; removido o ano "2026"
       de Palestrantes e Embaixadores (cabecalho e rodape);
-      menu hamburguer passa a aparecer em telas <= 1240px.
+      menu hamburguer aparece em telas <= 1240px.
+    - Ajustes finos para telas <= 400px nos cards da Feira.
+
+>>> REVISAO DE TEXTOS (editorial)
+    Revisao para reduzir repeticoes e jargao:
+    - Bio do Cesar Serra: "sólida trajetoria" -> "atuacao solida";
+      "Sua trajetoria foi destaque" -> "Seu percurso foi destaque";
+      ultimo paragrafo reescrito (sem "consolidando-se" e sem a
+      segunda "referencia nacional").
+    - Bio da Chris Ayrosa: "experiencia" -> "carreira"; "sempre
+      vista" -> "reconhecida"; "sempre buscando" -> "em favor de";
+      "Sua busca constante" -> "Sua inquietude constante".
+    - Palestrantes: divisor duplicado virou "No palco" e a nota
+      abaixo dele foi encurtada.
+    - Embaixadores, Apresentacao e Edicao 2025: textos reescritos,
+      mais curtos e sem jargao ("divisor de aguas", "plataforma
+      estrategica", "geracao de valor" etc. foram removidos).
+    - Meses padronizados em minuscula nas meta tags.
 
 CONFIRMADOS E NO AR (11):
   - Roberto Cohen       - Cerimonial              - @cohencerimonial
