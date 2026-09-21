@@ -536,6 +536,66 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+  .countdown {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .countdown-label {
+    font-family: var(--sans);
+    font-size: clamp(9px, 0.85vw, 11px);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+    font-weight: 400;
+  }
+  .countdown-units {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(10px, 1.5vw, 22px);
+  }
+  .cd-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: clamp(58px, 7vw, 84px);
+    border: 1px solid var(--nude);
+    padding: 16px 10px 12px;
+  }
+  .cd-num {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.4vw, 44px);
+    color: var(--bg-bege);
+    line-height: 1;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+  .cd-lbl {
+    font-family: var(--sans);
+    font-size: clamp(8px, 0.75vw, 10px);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+    margin-top: 10px;
+    font-weight: 400;
+  }
+  .cd-sep {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.6vw, 34px);
+    color: var(--nude);
+    line-height: 1;
+    align-self: center;
+    padding-bottom: 14px;
+    opacity: 0.6;
+  }
+  @media (max-width: 520px) {
+    .countdown { margin-top: 32px; }
+    .countdown-units { gap: 6px; }
+    .cd-sep { display: none; }
+    .cd-unit { min-width: 66px; }
+  }
   .btn-primary {
     display: inline-block;
     background: var(--nude);
@@ -967,6 +1027,18 @@
     color: var(--bg-bege);
     line-height: 1.4;
   }
+  .cronograma-sub {
+    display: block;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.4px;
+    text-transform: none;
+    color: var(--nude-soft);
+    margin-top: 5px;
+    line-height: 1.45;
+    font-weight: 400;
+  }
+  .cronograma-item.is-pausa .cronograma-titulo { color: var(--nude-soft); opacity: 0.85; }
 
   .cronograma-obs {
     max-width: 720px;
@@ -1016,6 +1088,8 @@
   }
   .pattern-light .cronograma-hora { color: var(--nude-deep); }
   .pattern-light .cronograma-titulo { color: var(--ink); }
+  .pattern-light .cronograma-sub { color: var(--nude-darker); }
+  .pattern-light .cronograma-item.is-pausa .cronograma-titulo { color: var(--nude-darker); opacity: 1; }
   .pattern-light .cronograma-obs {
     border-top-color: rgba(184, 130, 106, 0.22);
   }
@@ -2709,6 +2783,18 @@
     <div class="hero-cta-wrap fade-up delay-4">
       <a href="https://codemy.party/luxodefesta2026" class="btn-primary" target="_blank" rel="noopener">Garanta seu passaporte</a>
     </div>
+    <div class="countdown fade-up delay-4" id="countdown" data-target="2026-11-09T15:00:00-03:00" aria-label="Contagem regressiva para o início do congresso">
+      <div class="countdown-label">O congresso começa em</div>
+      <div class="countdown-units">
+        <div class="cd-unit"><span class="cd-num" data-dias>00</span><span class="cd-lbl">Dias</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" data-horas>00</span><span class="cd-lbl">Horas</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" data-min>00</span><span class="cd-lbl">Min</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" data-seg>00</span><span class="cd-lbl">Seg</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -3789,35 +3875,42 @@
     </div>
 
     <div class="cronograma-painel active" id="cronograma-1" role="tabpanel">
-      <div class="cronograma-item"><div class="cronograma-hora">15:00</div><div class="cronograma-titulo">Credenciamento e Abertura Oficial do Congresso</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">15:00</div><div class="cronograma-titulo">Abertura Oficial do Congresso e Feira de Negócios</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">16:00</div><div class="cronograma-titulo">Apresentação Marcas</div></div>
       <div class="cronograma-item"><div class="cronograma-hora">17:00</div><div class="cronograma-titulo">Desfile</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">18:00</div><div class="cronograma-titulo">Palestra de Abertura</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">18:00</div><div class="cronograma-titulo">Palestra de Abertura — Paulo Borges</div></div>
     </div>
 
     <div class="cronograma-painel" id="cronograma-2" role="tabpanel">
-      <div class="cronograma-item"><div class="cronograma-hora">08:00</div><div class="cronograma-titulo">Abertura</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">09:00</div><div class="cronograma-titulo">Palestra</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">10:00</div><div class="cronograma-titulo">Coffee Break</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">11:00</div><div class="cronograma-titulo">Palestras</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">13:00</div><div class="cronograma-titulo">Feira de Negócios</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">14:00</div><div class="cronograma-titulo">Almoço</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">15:00</div><div class="cronograma-titulo">Palestras</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">17:00</div><div class="cronograma-titulo">Coffee Break</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">18:00</div><div class="cronograma-titulo">Palestras</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">20:00</div><div class="cronograma-titulo">Encerramento</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">08:00</div><div class="cronograma-titulo">Abertura</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">08:30</div><div class="cronograma-titulo">Roberto Cohen</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">09:30</div><div class="cronograma-titulo">Coffee Break</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">10:30</div><div class="cronograma-titulo">Manoela César</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">11:30</div><div class="cronograma-titulo">Painel de Decoração<span class="cronograma-sub">Luiz Pedro · Valéria Leão · Maurício Kurihara · Patrícia Vaks · André Pedrotti</span></div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">12:30</div><div class="cronograma-titulo">Feira de Negócios</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">13:30</div><div class="cronograma-titulo">Almoço</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">14:30</div><div class="cronograma-titulo">Chris Ayrosa</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">15:30</div><div class="cronograma-titulo">Painel de Gastronomia<span class="cronograma-sub">Picuí · Carol Borges · Bia Rocha · Liliane Lobo</span></div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">17:00</div><div class="cronograma-titulo">Coffee Break</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">18:00</div><div class="cronograma-titulo">Suze Lino</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">19:00</div><div class="cronograma-titulo">Andrea Bisker<span class="cronograma-sub">100% Eventos</span></div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">20:00</div><div class="cronograma-titulo">Encerramento do dia</div></div>
     </div>
 
     <div class="cronograma-painel" id="cronograma-3" role="tabpanel">
-      <div class="cronograma-item"><div class="cronograma-hora">08:00</div><div class="cronograma-titulo">Abertura</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">09:00</div><div class="cronograma-titulo">Palestra</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">10:00</div><div class="cronograma-titulo">Coffee Break</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">11:00</div><div class="cronograma-titulo">Palestras</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">13:00</div><div class="cronograma-titulo">Feira de Negócios</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">14:00</div><div class="cronograma-titulo">Almoço</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">15:00</div><div class="cronograma-titulo">Palestras</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">17:00</div><div class="cronograma-titulo">Coffee Break</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">18:00</div><div class="cronograma-titulo">Palestras</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">20:00</div><div class="cronograma-titulo">Encerramento</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">08:00</div><div class="cronograma-titulo">Abertura</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">08:30</div><div class="cronograma-titulo">Vero Festas</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">09:30</div><div class="cronograma-titulo">Coffee Break</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">10:30</div><div class="cronograma-titulo">Milena Salvador</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">11:30</div><div class="cronograma-titulo">Bruna Veronezi</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">12:30</div><div class="cronograma-titulo">Feira de Negócios</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">13:30</div><div class="cronograma-titulo">Almoço</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">14:30</div><div class="cronograma-titulo">Painel de Fotografia<span class="cronograma-sub">Rodolfo Santos · Celso Junior · Plínio Ricardo · Sabrina Vasconcelos</span></div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">16:00</div><div class="cronograma-titulo">Painel Cerimonial<span class="cronograma-sub">César Serra · Roberto Cohen · Izis Dorileo · Babi Leite · Alódia Guimarães</span></div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">17:30</div><div class="cronograma-titulo">Coffee Break</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">18:30</div><div class="cronograma-titulo">Monica Rayol<span class="cronograma-sub">FESTAH</span></div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">19:30</div><div class="cronograma-titulo">César Serra</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">20:00</div><div class="cronograma-titulo">Festa de Encerramento</div></div>
     </div>
 
     <ul class="cronograma-obs">
@@ -4638,6 +4731,36 @@
         );
       });
     });
+  })();
+
+  /* ===== CONTADOR REGRESSIVO ===== */
+  (function(){
+    var el = document.getElementById('countdown');
+    if (!el) return;
+    var target = new Date(el.getAttribute('data-target')).getTime();
+    var elDias = el.querySelector('[data-dias]');
+    var elHoras = el.querySelector('[data-horas]');
+    var elMin = el.querySelector('[data-min]');
+    var elSeg = el.querySelector('[data-seg]');
+    function pad(n){ return (n < 10 ? '0' : '') + n; }
+    function tick(){
+      var diff = target - Date.now();
+      if (diff <= 0){
+        elDias.textContent = '00'; elHoras.textContent = '00';
+        elMin.textContent = '00'; elSeg.textContent = '00';
+        var lbl = el.querySelector('.countdown-label');
+        if (lbl) lbl.textContent = 'O congresso começou';
+        clearInterval(timer);
+        return;
+      }
+      var s = Math.floor(diff / 1000);
+      elDias.textContent = pad(Math.floor(s / 86400));
+      elHoras.textContent = pad(Math.floor((s % 86400) / 3600));
+      elMin.textContent = pad(Math.floor((s % 3600) / 60));
+      elSeg.textContent = pad(s % 60);
+    }
+    tick();
+    var timer = setInterval(tick, 1000);
   })();
 
 </script>
