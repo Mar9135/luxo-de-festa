@@ -1027,6 +1027,18 @@
     color: var(--bg-bege);
     line-height: 1.4;
   }
+  .cronograma-tema {
+    display: block;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    text-transform: none;
+    color: var(--nude);
+    margin-top: 4px;
+    line-height: 1.35;
+  }
+  .pattern-light .cronograma-tema { color: var(--nude-deep); }
   .cronograma-sub {
     display: block;
     font-family: var(--sans);
@@ -1107,6 +1119,7 @@
     .cronograma-item { grid-template-columns: 70px 1fr; gap: 14px; padding: 14px 0; }
     .cronograma-hora { font-size: 20px; }
     .cronograma-titulo { font-size: 12px; letter-spacing: 0.5px; }
+    .cronograma-tema { font-size: 14px; }
   }
 
   @keyframes fadeInUp {
@@ -2693,28 +2706,22 @@
   .feira-card-instagram--ph { opacity: 0.45; }
   .feira-card--vazio { display: flex; flex-direction: column; }
   .feira-card--vazio .feira-card-foto--vazio { aspect-ratio: auto; flex: 1; min-height: 250px; }
-  /* Card de marca (sem foto): logo em destaque sobre fundo claro, Instagram embaixo */
-  .feira-card--marca {
-    display: flex; flex-direction: column;
-    background-color: var(--bg-bege);
-    background-image: url("photos/bg-original-light.png");
-    background-size: 270px auto; background-repeat: repeat;
-    border-color: rgba(184, 130, 106, 0.45);
-  }
+  /* Card de marca (sem foto): mesmo fundo escuro dos demais cards, logo em destaque no lugar da foto, Instagram embaixo */
+  .feira-card--marca { display: flex; flex-direction: column; }
   .feira-card-marca-area {
-    flex: 1; min-height: 0; aspect-ratio: 4 / 3;
+    /* bloco sombreado com a mesma proporção (4:3) da foto dos outros cards */
+    position: relative; aspect-ratio: 4 / 3; overflow: hidden;
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
-    padding: 22px 18px 8px;
+    padding: 18px;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.42) 100%), rgba(0, 0, 0, 0.30);
+    box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.45);
   }
-  .feira-card--marca .feira-card-logo { max-height: 92px; max-width: 82%; }
+  .feira-card--marca .feira-card-logo { max-height: 84px; max-width: 78%; }
   .feira-card-legenda {
     font-family: var(--sans); font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase;
     color: var(--nude-darker);
   }
   .feira-card-info .feira-card-legenda { color: var(--nude); margin-top: -4px; }
-  .feira-card--marca .feira-card-info { padding-top: 10px; }
-  .feira-card--marca .feira-card-instagram { color: var(--ink-soft); }
-  .feira-card--marca .feira-card-instagram:hover { color: var(--nude-deep); }
   @media (max-width: 900px) { .feira-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; } }
   @media (max-width: 520px) { .feira-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } .feira-card-info { padding: 14px 10px 16px; } }
   @media (max-width: 400px) {
@@ -3750,15 +3757,6 @@
         </div>
         <div class="feira-card">
           <div class="feira-card-foto">
-            <img loading="lazy" src="photos/feira-07-maceio-espaco.jpg" alt="Maceió Convention &amp; Visitors Bureau">
-          </div>
-          <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-07-maceio-logo.png" alt="Maceió Convention &amp; Visitors Bureau">
-            <a class="feira-card-instagram" href="https://instagram.com/maceioconvention" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@maceioconvention</a>
-          </div>
-        </div>
-        <div class="feira-card">
-          <div class="feira-card-foto">
             <img loading="lazy" src="photos/feira-08-azul-espaco.jpg" alt="Azul Linhas Aéreas">
           </div>
           <div class="feira-card-info">
@@ -3915,40 +3913,40 @@
     <div class="cronograma-painel active" id="cronograma-1" role="tabpanel">
       <div class="cronograma-item"><div class="cronograma-hora">15:00</div><div class="cronograma-titulo">Abertura Oficial do Congresso e Feira de Negócios</div></div>
       <div class="cronograma-item"><div class="cronograma-hora">16:00</div><div class="cronograma-titulo">Apresentação Marcas</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">17:00</div><div class="cronograma-titulo">Desfile</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">17:00</div><div class="cronograma-titulo">Desfile Camargo Alfaiataria</div></div>
       <div class="cronograma-item"><div class="cronograma-hora">18:00</div><div class="cronograma-titulo">Palestra de Abertura — Paulo Borges</div></div>
     </div>
 
     <div class="cronograma-painel" id="cronograma-2" role="tabpanel">
       <div class="cronograma-item is-pausa"><div class="cronograma-hora">08:00</div><div class="cronograma-titulo">Abertura</div></div>
       <div class="cronograma-item"><div class="cronograma-hora">08:30</div><div class="cronograma-titulo">Roberto Cohen</div></div>
-      <div class="cronograma-item is-pausa"><div class="cronograma-hora">09:30</div><div class="cronograma-titulo">Coffee Break</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">10:30</div><div class="cronograma-titulo">Manoela César</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">11:30</div><div class="cronograma-titulo">Painel de Decoração<span class="cronograma-sub">Luiz Pedro · Valéria Leão · Maurício Kurihara · Patrícia Vaks · André Pedrotti</span></div></div>
-      <div class="cronograma-item is-pausa"><div class="cronograma-hora">12:30</div><div class="cronograma-titulo">Feira de Negócios</div></div>
-      <div class="cronograma-item is-pausa"><div class="cronograma-hora">13:30</div><div class="cronograma-titulo">Almoço</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">14:30</div><div class="cronograma-titulo">Chris Ayrosa</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">15:30</div><div class="cronograma-titulo">Painel de Gastronomia<span class="cronograma-sub">Picuí · Carol Borges · Bia Rocha · Liliane Lobo</span></div></div>
-      <div class="cronograma-item is-pausa"><div class="cronograma-hora">17:00</div><div class="cronograma-titulo">Coffee Break</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">18:00</div><div class="cronograma-titulo">Suze Lino</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">19:00</div><div class="cronograma-titulo">Andrea Bisker<span class="cronograma-sub">100% Eventos</span></div></div>
-      <div class="cronograma-item is-pausa"><div class="cronograma-hora">20:00</div><div class="cronograma-titulo">Encerramento do dia</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">10:00</div><div class="cronograma-titulo">Coffee Break</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">11:00</div><div class="cronograma-titulo">Manoela César</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">12:00</div><div class="cronograma-titulo">Painel de Decoração<span class="cronograma-sub">Luiz Pedro · Valéria Leão · Maurício Kurihara · Patrícia Vaks · André Pedrotti</span></div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">13:00</div><div class="cronograma-titulo">Feira de Negócios</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">14:00</div><div class="cronograma-titulo">Almoço</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">15:00</div><div class="cronograma-titulo">Chris Ayrosa</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">16:00</div><div class="cronograma-titulo">Painel de Gastronomia<span class="cronograma-sub">Picuí · Carol Borges · Bia Rocha · Liliane Lobo</span></div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">17:30</div><div class="cronograma-titulo">Coffee Break</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">18:30</div><div class="cronograma-titulo">Suze Lino</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">19:30</div><div class="cronograma-titulo">Andrea Bisker<span class="cronograma-sub">Apresentado por 100% Eventos</span></div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">20:30</div><div class="cronograma-titulo">Encerramento do dia</div></div>
     </div>
 
     <div class="cronograma-painel" id="cronograma-3" role="tabpanel">
       <div class="cronograma-item is-pausa"><div class="cronograma-hora">08:00</div><div class="cronograma-titulo">Abertura</div></div>
       <div class="cronograma-item"><div class="cronograma-hora">08:30</div><div class="cronograma-titulo">Vero Festas</div></div>
-      <div class="cronograma-item is-pausa"><div class="cronograma-hora">09:30</div><div class="cronograma-titulo">Coffee Break</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">10:30</div><div class="cronograma-titulo">Milena Salvador</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">11:30</div><div class="cronograma-titulo">Bruna Veronezi</div></div>
-      <div class="cronograma-item is-pausa"><div class="cronograma-hora">12:30</div><div class="cronograma-titulo">Feira de Negócios</div></div>
-      <div class="cronograma-item is-pausa"><div class="cronograma-hora">13:30</div><div class="cronograma-titulo">Almoço</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">14:30</div><div class="cronograma-titulo">Painel de Fotografia<span class="cronograma-sub">Rodolfo Santos · Celso Junior · Plínio Ricardo · Sabrina Vasconcelos</span></div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">16:00</div><div class="cronograma-titulo">Painel Cerimonial<span class="cronograma-sub">César Serra · Roberto Cohen · Izis Dorileo · Babi Leite · Alódia Guimarães</span></div></div>
-      <div class="cronograma-item is-pausa"><div class="cronograma-hora">17:30</div><div class="cronograma-titulo">Coffee Break</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">18:30</div><div class="cronograma-titulo">Monica Rayol<span class="cronograma-sub">FESTAH</span></div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">19:30</div><div class="cronograma-titulo">César Serra</div></div>
-      <div class="cronograma-item is-pausa"><div class="cronograma-hora">20:00</div><div class="cronograma-titulo">Festa de Encerramento</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">10:00</div><div class="cronograma-titulo">Coffee Break</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">11:00</div><div class="cronograma-titulo">Milena Salvador</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">12:00</div><div class="cronograma-titulo">Bruna Veronezi</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">13:00</div><div class="cronograma-titulo">Feira de Negócios</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">14:00</div><div class="cronograma-titulo">Almoço</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">15:00</div><div class="cronograma-titulo">Painel de Fotografia<span class="cronograma-sub">Rodolfo Santos · Celso Junior · Plínio Ricardo · Sabrina Vasconcelos</span></div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">16:30</div><div class="cronograma-titulo">Painel Cerimonial<span class="cronograma-sub">César Serra · Roberto Cohen · Izis Dorileo · Babi Leite · Alódia Guimarães</span></div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">18:00</div><div class="cronograma-titulo">Coffee Break</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">19:00</div><div class="cronograma-titulo">Monica Rayol<span class="cronograma-sub">Apresentado por Festah</span></div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">20:00</div><div class="cronograma-titulo">César Serra</div></div>
+      <div class="cronograma-item is-pausa"><div class="cronograma-hora">20:30</div><div class="cronograma-titulo">Festa de Encerramento</div></div>
     </div>
 
     <ul class="cronograma-obs">
