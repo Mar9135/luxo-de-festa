@@ -167,6 +167,34 @@ O carrossel tem 24 vagas (6 paginas de 4 cards).
     - Fotos JPG recomprimidas (largura maxima 1600px, qualidade 82,
       progressivas): 20,0 MB -> 17,9 MB. og-share.jpg intocada.
 
+>>> REVISAO DE DESIGN (17/10/2026)
+    - Perfil do Publico: titulo alinhado a esquerda ao lado da foto;
+      os 6 cards viraram lista numerada (01-06) com linhas finas
+      (classe publico-lista). No celular o texto vem antes da foto.
+    - Sucesso da Edicao 2025: cabecalho dividido (header-split),
+      titulo a esquerda e texto de abertura a direita.
+    - Destaques do evento: as 9 caixas nude viraram grade editorial
+      com numeros grandes (classe destaques-numeros / destaque-num).
+    - Logos da Feira: altura individual via style="--logo-h: Npx"
+      (calculada pela proporcao e densidade da logo) para equilibrar
+      o peso visual. Ao trocar/incluir logo, recalcular ou usar ~50px.
+    - Textos institucionais revisados; menu desktop corrigido
+      (ver AJUSTES DE LAYOUT).
+
+>>> REVISAO GERAL PARA PUBLICACAO (17/10/2026)
+    - Hero: endereco "SCES Trecho 2, Conjunto 42" + botao "Ver no
+      mapa" (Google Maps) dentro do quadro de datas.
+    - Titulos: "Perfil do Publico" em uma linha com a coroa a
+      esquerda (coroa-lateral); "Sucesso da Edicao 2025" com a coroa
+      centralizada sob o titulo (coroa-centro).
+    - Grafia padronizada pelos cards: Manoela Cesar, Mauricio
+      Kurihara, Patricia Vaks, Valeria Leao; Carolina Dieckmann,
+      Fatima Bernardes; "Apresentacao das Marcas".
+    - Funcao dos palestrantes no carrossel em uma linha no desktop;
+      no celular, altura fixa de 2 linhas para alinhar os cards.
+    - Pontos da galeria em uma linha no celular; numeros alinhados
+      (lining) em precos, datas e enderecos.
+
 >>> AJUSTES DE LAYOUT
     - Alternancia de fundos: embaixadores(claro) > feira(escuro) >
       cronograma(claro) > publico(escuro) > edicao 2025(claro) >
@@ -175,7 +203,8 @@ O carrossel tem 24 vagas (6 paginas de 4 cards).
       clareados para fundo escuro e remocao do painel claro.
     - Menu: incluida "Feira de Negocios"; removido o ano "2026"
       de Palestrantes e Embaixadores (cabecalho e rodape);
-      menu hamburguer aparece em telas <= 1240px.
+      menu hamburguer aparece em telas <= 1460px; entre 1461 e
+      1759px o menu fica compacto (10px, espacamento menor).
     - Ajustes finos para telas <= 400px nos cards da Feira.
 
 >>> REVISAO DE TEXTOS (editorial)

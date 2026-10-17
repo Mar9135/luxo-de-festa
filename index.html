@@ -108,10 +108,12 @@
     justify-content: space-between;
     align-items: center;
     transition: padding 0.3s;
+    gap: 24px;
   }
   nav .logo { display: flex; align-items: center; text-decoration: none; }
   nav .logo img { height: 38px; width: auto; display: block; }
   .nav-links { display: flex; gap: 18px; list-style: none; }
+  .nav-links-cta { display: none; }
   .nav-links a {
     color: var(--bg-bege);
     text-decoration: none;
@@ -152,28 +154,35 @@
     background: none; border: none; cursor: pointer;
     color: var(--bg-bege); font-size: 26px;
   }
-  @media (max-width: 1240px) {
+  /* Menu compacto em notebooks: 10 itens + botão cabem a partir de ~1440px */
+  @media (max-width: 1759px) {
+    nav { padding: 14px 3%; }
+    .nav-links { gap: 12px; }
+    .nav-links a { font-size: 10px; letter-spacing: 1px; }
+    .nav-cta { padding: 11px 16px; letter-spacing: 1.5px; }
+  }
+  @media (max-width: 1460px) {
     .nav-links, .nav-cta { display: none; }
     .menu-toggle { display: block; }
     nav .logo img { height: 32px; }
     .nav-links.open {
       display: flex; flex-direction: column;
-      position: absolute; top: 76px; left: 0; right: 0;
+      position: absolute; top: 100%; left: 0; right: 0;
       background: var(--bg-dark);
       padding: 28px 5%;
       gap: 20px;
       border-bottom: 1px solid var(--line-dark);
-      max-height: calc(100vh - 76px);
+      max-height: calc(100vh - 64px);
       overflow-y: auto;
     }
-    .nav-links.open + .nav-cta {
-      display: inline-block;
-      position: absolute;
-      top: auto;
-      left: 5%;
-      right: 5%;
-      margin-top: 8px;
+    .nav-links.open + .nav-cta { display: none; }
+    .nav-links.open .nav-links-cta { display: block; margin-top: 8px; }
+    .nav-links.open .nav-links-cta a {
+      display: block; text-align: center;
+      background: var(--nude); color: var(--ink); opacity: 1;
+      padding: 14px 22px; font-size: 11px; font-weight: 600; letter-spacing: 2px;
     }
+    .nav-links.open .nav-links-cta a::after { display: none; }
     .nav-links a { font-size: 12px; letter-spacing: 2px; padding: 4px 0; }
   }
 
@@ -434,6 +443,7 @@
     .photo-card-label { bottom: 24px; left: 24px; }
     .photo-card-label .name { font-size: 22px; }
     #publico .two-col-with-photo { gap: 36px; }
+    #publico .col-text { order: -1; }
   }
 
   /* ===== HERO ===== */
@@ -529,6 +539,28 @@
     margin-top: 14px;
     font-weight: 400;
   }
+  .hero-date-frame .endereco {
+    font-family: var(--sans);
+    font-size: clamp(10px, 0.85vw, 11.5px);
+    letter-spacing: 1.5px;
+    color: var(--bg-bege);
+    opacity: 0.7;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(212, 168, 150, 0.25);
+  }
+  .hero-date-frame .mapa-link {
+    display: inline-flex; align-items: center; gap: 7px;
+    margin-top: 12px;
+    padding: 7px 16px;
+    border: 1px solid rgba(212, 168, 150, 0.55);
+    font-family: var(--sans); font-size: 10px; font-weight: 500;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--nude); text-decoration: none;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+  }
+  .hero-date-frame .mapa-link svg { width: 13px; height: 13px; }
+  .hero-date-frame .mapa-link:hover { background: var(--nude); color: var(--bg-dark); border-color: var(--nude); }
   .hero-cta-wrap {
     margin-top: 16px;
     display: flex;
@@ -849,6 +881,85 @@
     .destaque-card .big { font-size: 19px; }
   }
   .destaques-hint { display: none; }
+  /* Números alinhados (lining) em preços, datas e endereços para leitura mais clara */
+  .quarto-precos .val, .hospedagem-data .valor, .mapa-endereco, .hero-date-frame .endereco { font-variant-numeric: lining-nums; }
+  /* ===== DESTAQUES 2025: números em layout editorial ===== */
+  .destaques-numeros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+    margin: 0 auto;
+    border-top: 1px solid var(--line-light);
+  }
+  .destaque-num {
+    padding: 34px 32px 36px;
+    border-bottom: 1px solid var(--line-light);
+    border-right: 1px solid var(--line-light);
+    text-align: left;
+  }
+  .destaque-num:nth-child(3n) { border-right: none; }
+  .destaque-num .num {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(44px, 5vw, 64px);
+    line-height: 1;
+    color: var(--nude-deep);
+    letter-spacing: -0.5px;
+    font-variant-numeric: lining-nums;
+  }
+  .destaque-num .suf { font-size: 0.45em; letter-spacing: 0.5px; margin-left: 4px; vertical-align: 0.9em; }
+  .destaque-num .rotulo {
+    font-family: var(--sans); font-size: 14px; line-height: 1.6; color: var(--ink-soft);
+    margin: 14px 0 0; max-width: 280px;
+  }
+  @media (max-width: 900px) {
+    .destaques-numeros { grid-template-columns: 1fr 1fr; }
+    .destaque-num:nth-child(3n) { border-right: 1px solid var(--line-light); }
+    .destaque-num:nth-child(2n) { border-right: none; }
+  }
+  @media (max-width: 560px) {
+    .destaque-num { padding: 24px 14px 26px; }
+    .destaque-num:nth-child(odd) { padding-left: 0; }
+    .destaque-num .num { font-size: 38px; }
+    .destaque-num .rotulo { font-size: 12.5px; margin-top: 10px; }
+  }
+
+  /* ===== Variação de ritmo: cabeçalhos alinhados à esquerda ===== */
+  .chapter-header-inline.left { align-items: flex-start; text-align: left; margin-left: 0; }
+  .chapter-header-inline.left .chapter-title::after { left: 0; transform: none; }
+  /* Título à esquerda com a coroa centralizada sob o bloco de texto */
+  .chapter-header-inline.coroa-centro .chapter-title::after { left: 50%; transform: translateX(-50%); }
+  /* Título em uma linha com a coroa à esquerda, centralizada na altura do texto */
+  .chapter-header-inline.coroa-lateral .chapter-title { padding: 0 0 0 76px; }
+  @media (min-width: 601px) { .chapter-header-inline.coroa-lateral .chapter-title { white-space: nowrap; font-size: clamp(26px, 3.2vw, 52px); } }
+  .chapter-header-inline.coroa-lateral .chapter-title::after { top: 50%; bottom: auto; transform: translateY(-58%); }
+  @media (max-width: 600px) {
+    .chapter-header-inline.coroa-lateral, .chapter-header-inline.left { padding: 0; }
+    .chapter-header-inline.coroa-lateral .chapter-title { padding: 0 0 0 56px; }
+  }
+  .header-split {
+    display: grid; grid-template-columns: 1fr 1.15fr; gap: 64px; align-items: end;
+    max-width: 1100px; margin: 0 auto 72px;
+  }
+  .header-split .chapter-header-inline { margin-bottom: 0; }
+  .header-split p { font-size: 16px; line-height: 1.85; color: var(--ink-soft); margin: 0; }
+  @media (max-width: 900px) { .header-split { grid-template-columns: 1fr; gap: 28px; margin-bottom: 48px; } }
+  .publico-lista { list-style: none; margin: 0; padding: 0; counter-reset: pub; border-top: 1px solid var(--line-dark); }
+  .publico-lista li {
+    counter-increment: pub;
+    display: grid; grid-template-columns: 52px 1fr; gap: 12px; align-items: baseline;
+    padding: 16px 0; border-bottom: 1px solid var(--line-dark);
+    font-family: var(--sans); font-size: 15px; line-height: 1.55; color: var(--bg-bege);
+  }
+  .publico-lista li::before {
+    content: counter(pub, decimal-leading-zero);
+    font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--nude);
+  }
+  @media (max-width: 560px) {
+    .publico-lista li { grid-template-columns: 40px 1fr; font-size: 14px; padding: 14px 0; }
+    .publico-lista li::before { font-size: 19px; }
+  }
+
 
   /* ===== INLINE LINK (texto que vira link sem quebrar o fluxo visual) ===== */
   /* Herda cor/estilo do texto ao redor, ganha underline sutil + hover destaca */
@@ -1226,6 +1337,7 @@
     transition: background 0.3s, transform 0.3s;
   }
   .galeria-dot.active { background: var(--nude); transform: scale(1.15); }
+  @media (max-width: 600px) { .galeria-dots { gap: 5px; flex-wrap: nowrap; } .galeria-dot { width: 7px; height: 7px; flex: none; } }
   @media (max-width: 600px) {
     .galeria-viewport { aspect-ratio: 4/3; }
     .galeria-nav { gap: 14px; margin-top: 22px; }
@@ -1286,6 +1398,11 @@
     color: var(--nude);
     opacity: 0.95;
     margin-bottom: 14px;
+  }
+  /* Cards do carrossel: função em uma linha no desktop */
+  .palestrante-card .palestrante-funcao { font-size: 11px; letter-spacing: 1.5px; }
+  @media (max-width: 600px) {
+    .palestrante-card .palestrante-funcao { font-size: 10px; letter-spacing: 1px; line-height: 1.45; min-height: 2.9em; }
   }
   .palestrantes-divisor {
     display: flex;
@@ -2692,6 +2809,8 @@
   }
   .feira-card-info { padding: 18px 14px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
   .feira-card-logo { max-height: 64px; max-width: 85%; object-fit: contain; }
+  /* Logos da Feira: altura calculada por logo (proporção e densidade) para equilibrar o peso visual */
+  .feira-card-info .feira-card-logo { height: var(--logo-h, 56px); width: auto; max-height: none; max-width: 85%; object-fit: contain; }
   .feira-card-logo-ph {
     font-family: var(--serif); font-size: 15px; letter-spacing: 1px; color: var(--nude); opacity: 0.85;
     border: 1px dashed rgba(212,168,150,0.4); padding: 8px 16px;
@@ -2724,12 +2843,14 @@
   .feira-card-info .feira-card-legenda { color: var(--nude); margin-top: -4px; }
   @media (max-width: 900px) { .feira-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; } }
   @media (max-width: 520px) { .feira-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } .feira-card-info { padding: 14px 10px 16px; } }
+  @media (max-width: 520px) { .feira-card-info .feira-card-logo { height: calc(var(--logo-h, 56px) * 0.72); max-width: 90%; } }
   @media (max-width: 400px) {
     .feira-card-logo { max-height: 48px; max-width: 90%; }
     .feira-card-ph-text { font-size: 9px; letter-spacing: 1px; }
     .feira-card-instagram { font-size: 11px; }
     .feira-card--vazio .feira-card-foto--vazio { min-height: 180px; }
     .feira-card--marca .feira-card-logo { max-height: 60px; max-width: 88%; }
+    .feira-card-info .feira-card-logo { height: calc(var(--logo-h, 56px) * 0.66); max-width: 90%; }
     .feira-card-legenda { font-size: 8px; letter-spacing: 1.2px; text-align: center; }
   }
 
@@ -2782,6 +2903,7 @@
     <li><a href="#case">Edição 2025</a></li>
     <li><a href="#patrocinadores">Companhia Aérea</a></li>
     <li><a href="#hospedagem">Hospedagem</a></li>
+    <li class="nav-links-cta"><a href="https://codemy.party/luxodefesta2026" target="_blank" rel="noopener">Garantir meu Passaporte</a></li>
   </ul>
   <a href="https://codemy.party/luxodefesta2026" class="nav-cta" target="_blank" rel="noopener">Garantir meu Passaporte</a>
   <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
@@ -2810,6 +2932,8 @@
     <div class="hero-date-frame fade-up delay-3">
       <div class="dates">9 · 10 · 11<br>NOVEMBRO 2026</div>
       <div class="location">Unique Palace · Brasília — DF</div>
+      <div class="endereco">SCES Trecho 2, Conjunto 42</div>
+      <a class="mapa-link" href="https://www.google.com/maps/search/?api=1&amp;query=Unique%20Palace%2C%20SCES%20Trecho%202%20Conjunto%2042%2C%20Bras%C3%ADlia%20DF" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Ver no mapa</a>
     </div>
     <div class="hero-cta-wrap fade-up delay-4">
       <a href="https://codemy.party/luxodefesta2026" class="btn-primary" target="_blank" rel="noopener">Garanta seu passaporte</a>
@@ -2837,9 +2961,9 @@
     </div>
     <div class="two-col-with-photo">
       <div class="col-text">
-        <p>O <strong>Luxo de Festa — Congresso Nacional de Festas &amp; Eventos, por César Serra</strong>, consolidou-se como o congresso mais relevante do mercado de festas, eventos sociais, corporativos e experiências de luxo no Brasil. Após o <strong>sucesso da segunda edição, em 2025</strong>, que reuniu profissionais de todo o país, marcas parceiras e formadores de opinião do setor, o projeto retorna em 2026 ainda mais maduro, ambicioso e conectado ao mercado.</p>
-        <p>A edição 2026 acontecerá nos dias <strong>9, 10 e 11 de novembro, no Unique Palace – Brasília/DF</strong>, no mesmo espaço que consagrou a edição anterior.</p>
-        <p>Mais do que um congresso, o Luxo de Festa é uma <strong>plataforma de negócios, posicionamento de marca e relacionamento de alto nível</strong>, conectando fornecedores, patrocinadores, criadores, empresários e decisores do mercado de festas e eventos.</p>
+        <p>Criado por César Serra, o <strong>Luxo de Festa — Congresso Nacional de Festas &amp; Eventos</strong> é hoje o congresso de referência do mercado de festas, eventos sociais, corporativos e de luxo no Brasil. A segunda edição, em 2025, levou a Brasília profissionais de todo o país, marcas parceiras e nomes que formam opinião no setor.</p>
+        <p>Em 2026, o congresso volta ao Unique Palace, em Brasília, nos dias <strong>9, 10 e 11 de novembro</strong>.</p>
+        <p>São três dias de palestras, painéis e uma Feira de Negócios com destinos e fornecedores de alto padrão. Um encontro para aprender com quem é referência, ampliar contatos e fazer negócios com quem decide no mercado de festas e eventos.</p>
       </div>
       <div class="col-photo">
         <div class="photo-card landscape carousel single-frame" data-nome="Edição 2025" style="box-shadow: 0 24px 56px rgba(168, 130, 100, 0.22);">
@@ -2923,7 +3047,7 @@
       <h2 class="chapter-title">PALESTRANTES<br class="mobile-break"> CONFIRMADOS</h2>
     </div>
     <p class="palestrantes-intro">
-      Conheça os profissionais e referências do mercado que compõem a curadoria de palestras da <strong style="color: var(--nude);">3ª Edição do Luxo de Festa</strong>. Nomes que vão compartilhar visão, repertório e cases ao longo dos três dias de imersão em Brasília.
+      Quem sobe ao palco na <strong style="color: var(--nude);">3ª edição do Luxo de Festa</strong>: profissionais de referência que vão dividir experiência e cases reais ao longo dos três dias em Brasília.
     </p>
 
     <!-- Destaque: Palestra de Abertura -->
@@ -2946,7 +3070,7 @@
             Paulo Borges
           </h3>
           <p>Com 43 anos dedicados à moda, <strong>Paulo Borges</strong> é o nome que liderou a organização da Moda no país como setor criativo, econômico e cultural.</p>
-          <p>Criador e fundador do <strong>SPFW</strong> — Calendário Oficial da Moda Brasileira — e do <strong>IN-MODE</strong>, Instituto Nacional de Moda, Design e Economia Criativa.</p>
+          <p>Criador e fundador do <strong>SPFW</strong> — Calendário Oficial da Moda Brasileira — e do <strong>IN&#8209;MODE</strong>, Instituto Nacional de Moda, Design e Economia Criativa.</p>
           <p>Sua visão única, inovadora e transversal sobre Moda revolucionou seu desenvolvimento, projetando o mercado brasileiro ao reconhecimento mundial.</p>
           <a href="https://instagram.com/pborgesj" target="_blank" rel="noopener" class="palestrante-instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -3232,7 +3356,7 @@
             </a>
           </div>
         </div>
-        <div class="palestrante-card" data-bio="Uma das decoradoras mais reconhecidas do Brasil, Patricia Vaks acumula mais de 18 anos de carreira, marcada por sua criatividade, sofisticação e exclusividade, seu trabalho é uma verdadeira obra de arte. Com atenção meticulosa aos detalhes e uma habilidade única de transformar eventos em experiências inesquecíveis e personalizadas, Patricia já realizou mais de 750 decorações no Brasil e no exterior.">
+        <div class="palestrante-card" data-bio="Uma das decoradoras mais reconhecidas do Brasil, Patricia Vaks acumula mais de 18 anos de carreira, marcada por sua criatividade, sofisticação e exclusividade. Seu trabalho é uma verdadeira obra de arte. Com atenção meticulosa aos detalhes e uma habilidade única de transformar eventos em experiências inesquecíveis e personalizadas, Patricia já realizou mais de 750 decorações no Brasil e no exterior.">
           <div class="photo-card portrait">
             <div class="photo-card-inner">
               <img decoding="async" loading="lazy" src="photos/18-patricia-vaks.jpg" alt="Patricia Vaks">
@@ -3277,7 +3401,7 @@
             </a>
           </div>
         </div>
-        <div class="palestrante-card" data-bio="Dentista por profissão e cerimonialista por paixão, Roberto Cohen transformou um simples pedido de ajuda de uma amiga em 1985 em uma carreira de sucesso que hoje ultrapassa a marca de quatro mil festas realizadas. Reconhecido por sua habilidade e dedicação, Roberto tem no seu portfólio clientes como Juliana Paes, Carolina Dieckmmann, Marcelo Serrado, Paulo Gustavo, Fatima Bernardes, William Bonner, entre muitos outros nomes de destaque no Brasil. Sua trajetória é marcada pela excelência na criação de eventos únicos e personalizados, atendendo a clientes de alto padrão e celebridades.">
+        <div class="palestrante-card" data-bio="Dentista por profissão e cerimonialista por paixão, Roberto Cohen transformou um simples pedido de ajuda de uma amiga em 1985 em uma carreira de sucesso que hoje ultrapassa a marca de quatro mil festas realizadas. Reconhecido por sua habilidade e dedicação, Roberto tem no seu portfólio clientes como Juliana Paes, Carolina Dieckmann, Marcelo Serrado, Paulo Gustavo, Fátima Bernardes, William Bonner, entre muitos outros nomes de destaque no Brasil. Sua trajetória é marcada pela excelência na criação de eventos únicos e personalizados, atendendo a clientes de alto padrão e celebridades.">
           <div class="photo-card portrait">
             <div class="photo-card-inner">
               <img decoding="async" loading="lazy" src="photos/17-roberto-cohen.jpg" alt="Roberto Cohen">
@@ -3337,7 +3461,7 @@
             </a>
           </div>
         </div>
-        <div class="palestrante-card" data-bio="Valeria Leão Bittar é uma das profissionais mais prestigiadas e requisitadas do mercado de decoração de casamentos e grandes eventos de luxo no Brasil. Seu trabalho é reconhecido pelo olhar sofisticado, suntuosidade e pela capacidade de transformar cenários de festas em verdadeiras obras de arte.">
+        <div class="palestrante-card" data-bio="Valéria Leão Bittar é uma das profissionais mais prestigiadas e requisitadas do mercado de decoração de casamentos e grandes eventos de luxo no Brasil. Seu trabalho é reconhecido pelo olhar sofisticado, suntuosidade e pela capacidade de transformar cenários de festas em verdadeiras obras de arte.">
           <div class="photo-card portrait">
             <div class="photo-card-inner">
               <img decoding="async" loading="lazy" src="photos/36-valeria-leao.jpg" alt="Valéria Leão">
@@ -3375,10 +3499,10 @@
 <section class="chapter pattern-light" id="embaixadores">
   <div class="container">
     <div class="chapter-header-inline centered">
-      <h2 class="chapter-title">EMBAIXADORES 2026</h2>
+      <h2 class="chapter-title">EMBAIXADORES</h2>
     </div>
     <p class="embaixadores-intro">
-      Conheça quem representa o <strong>Luxo de Festa</strong> em cada estado, levando a excelência do congresso a todo o país.
+      Em cada estado, um profissional de referência representa o <strong>Luxo de Festa</strong> e leva o congresso até o seu mercado.
     </p>
 
     <div class="embaixadores-carousel" id="embaixadoresCarousel">
@@ -3687,13 +3811,13 @@
       <h2 class="chapter-title">FEIRA DE NEGÓCIOS</h2>
     </div>
     <p class="palestrantes-intro" style="max-width: 880px; margin: 0 auto;">
-      A Feira de Negócios reúne, em lounges exclusivos, os nomes mais desejados do <strong style="color: var(--nude-deep);">destination wedding</strong> brasileiro. Em cada espaço, o congressista conhece de perto estruturas, serviços e condições para a realização de eventos &mdash; do primeiro contato ao fechamento.
+      Em lounges montados dentro do congresso, hotéis, destinos e fornecedores de alto padrão, com foco em <strong style="color: var(--nude-deep);">destination wedding</strong>, apresentam seus espaços, serviços e condições para eventos.
     </p>
     <p class="palestrantes-intro" style="max-width: 880px; margin: 24px auto 0;">
-      Mais do que uma exposição, a Feira é um ambiente de <strong style="color: var(--nude-deep);">networking qualificado</strong>: destinos e fornecedores de alto padrão em contato direto com profissionais de todo o país. É desse encontro que nascem parcerias duradouras e negócios concretos.
+      É a chance de conversar diretamente com quem decide, comparar opções e começar parcerias ali mesmo, com profissionais vindos de todo o país.
     </p>
     <p class="palestrantes-intro" style="max-width: 880px; margin: 24px auto 0;">
-      Tudo acontece em paralelo à programação, seguindo o mesmo cronograma do congresso &mdash;<br><strong style="color: var(--nude-deep);">9, 10 e 11 de novembro de 2026</strong>, no Unique Palace, em Brasília/DF.
+      A Feira funciona durante todo o congresso, de <strong style="color: var(--nude-deep);">9 a 11 de novembro de 2026</strong>, no Unique Palace, em Brasília/DF.
     </p>
     <p class="palestrantes-intro" style="max-width: 880px; margin: 24px auto 0;">
       Acompanhe a divulgação completa no nosso <a href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener" class="inline-link">instagram oficial</a>.
@@ -3706,7 +3830,7 @@
             <img loading="lazy" src="photos/feira-01-fasano-espaco.jpg" alt="Fasano Angra dos Reis">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-01-fasano-logo.png" alt="Fasano Angra dos Reis">
+            <img class="feira-card-logo" style="--logo-h: 54px;" src="photos/feira-01-fasano-logo.png" alt="Fasano Angra dos Reis">
             <a class="feira-card-instagram" href="https://instagram.com/fasanoangra" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@fasanoangra</a>
           </div>
         </div>
@@ -3715,7 +3839,7 @@
             <img loading="lazy" src="photos/feira-02-nanii-espaco.jpg" alt="Nanii Hotel">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-02-nanii-logo.png" alt="Nanii Hotel">
+            <img class="feira-card-logo" style="--logo-h: 65px;" src="photos/feira-02-nanii-logo.png" alt="Nanii Hotel">
             <a class="feira-card-instagram" href="https://instagram.com/nanii.hotel" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@nanii.hotel</a>
           </div>
         </div>
@@ -3724,7 +3848,7 @@
             <img loading="lazy" src="photos/feira-03-centerofportugal-espaco.jpg" alt="Center of Portugal">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-03-centerofportugal-logo.png" alt="Center of Portugal">
+            <img class="feira-card-logo" style="--logo-h: 51px;" src="photos/feira-03-centerofportugal-logo.png" alt="Center of Portugal">
             <a class="feira-card-instagram" href="https://instagram.com/centerofportugal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@centerofportugal</a>
           </div>
         </div>
@@ -3733,7 +3857,7 @@
             <img loading="lazy" src="photos/feira-04-tangara-espaco.jpg" alt="Palácio Tangará — São Paulo">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-04-tangara-logo.png" alt="Palácio Tangará — São Paulo">
+            <img class="feira-card-logo" style="--logo-h: 68px;" src="photos/feira-04-tangara-logo.png" alt="Palácio Tangará — São Paulo">
             <a class="feira-card-instagram" href="https://instagram.com/palaciotangara" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@palaciotangara</a>
           </div>
         </div>
@@ -3742,7 +3866,7 @@
             <img loading="lazy" src="photos/feira-06-nannai-espaco.jpg" alt="Nannai Milagres — Alagoas">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-06-nannai-logo.png" alt="Nannai Milagres">
+            <img class="feira-card-logo" style="--logo-h: 43px;" src="photos/feira-06-nannai-logo.png" alt="Nannai Milagres">
             <a class="feira-card-instagram" href="https://instagram.com/nannaimilagres" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@nannaimilagres</a>
           </div>
         </div>
@@ -3751,7 +3875,7 @@
             <img loading="lazy" src="photos/feira-05-jade-espaco.jpg" alt="Jade Hotel — Brasília">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-05-jade-logo.png" alt="Jade Hotel">
+            <img class="feira-card-logo" style="--logo-h: 74px;" src="photos/feira-05-jade-logo.png" alt="Jade Hotel">
             <a class="feira-card-instagram" href="https://instagram.com/jadehotelbrasilia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@jadehotelbrasilia</a>
           </div>
         </div>
@@ -3760,7 +3884,7 @@
             <img loading="lazy" src="photos/feira-08-azul-espaco.jpg" alt="Azul Linhas Aéreas">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/aerea-oficial-azul-branca.png" alt="Azul Linhas Aéreas">
+            <img class="feira-card-logo" style="--logo-h: 40px;" src="photos/aerea-oficial-azul-branca.png" alt="Azul Linhas Aéreas">
             <a class="feira-card-instagram" href="https://instagram.com/azulinhasaereas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@azulinhasaereas</a>
           </div>
         </div>
@@ -3769,7 +3893,7 @@
             <img loading="lazy" src="photos/feira-09-bento-espaco.jpg" alt="Bento e Região Convention &amp; Visitors Bureau">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-09-bento-logo.png" alt="Bento e Região Convention &amp; Visitors Bureau">
+            <img class="feira-card-logo" style="--logo-h: 42px;" src="photos/feira-09-bento-logo.png" alt="Bento e Região Convention &amp; Visitors Bureau">
             <a class="feira-card-instagram" href="https://instagram.com/bentoeregiaoconvention" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@bentoeregiaoconvention</a>
           </div>
         </div>
@@ -3778,7 +3902,7 @@
             <img loading="lazy" src="photos/feira-10-colosso-espaco.jpg" alt="Colosso Fortaleza">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-10-colosso-logo.png" alt="Colosso Fortaleza">
+            <img class="feira-card-logo" style="--logo-h: 60px;" src="photos/feira-10-colosso-logo.png" alt="Colosso Fortaleza">
             <a class="feira-card-instagram" href="https://instagram.com/colosso.fortaleza" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@colosso.fortaleza</a>
           </div>
         </div>
@@ -3787,7 +3911,7 @@
             <img loading="lazy" src="photos/feira-11-borges-espaco.jpg" alt="Borges Hotel Fazenda">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-11-borges-logo.png" alt="Borges Hotel Fazenda">
+            <img class="feira-card-logo" style="--logo-h: 66px;" src="photos/feira-11-borges-logo.png" alt="Borges Hotel Fazenda">
             <a class="feira-card-instagram" href="https://instagram.com/borgeshotelfazenda" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@borgeshotelfazenda</a>
           </div>
         </div>
@@ -3796,7 +3920,7 @@
             <img loading="lazy" src="photos/feira-12-almaserra-espaco.jpg" alt="Alma Serra">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-12-almaserra-logo.png" alt="Alma Serra">
+            <img class="feira-card-logo" style="--logo-h: 73px;" src="photos/feira-12-almaserra-logo.png" alt="Alma Serra">
             <a class="feira-card-instagram" href="https://instagram.com/almaserravila" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@almaserravila</a>
           </div>
         </div>
@@ -3805,7 +3929,7 @@
             <img loading="lazy" src="photos/feira-13-vinicolatrindade-espaco.jpg" alt="Vinícola Trindade">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-13-vinicolatrindade-logo.png" alt="Vinícola Trindade">
+            <img class="feira-card-logo" style="--logo-h: 74px;" src="photos/feira-13-vinicolatrindade-logo.png" alt="Vinícola Trindade">
             <a class="feira-card-instagram" href="https://instagram.com/vinicolatrindade" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@vinicolatrindade</a>
           </div>
         </div>
@@ -3814,7 +3938,7 @@
             <img loading="lazy" src="photos/feira-14-novotel-espaco.jpg" alt="Novotel Recife Marina">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-14-novotel-logo.png" alt="Novotel Recife Marina">
+            <img class="feira-card-logo" style="--logo-h: 39px;" src="photos/feira-14-novotel-logo.png" alt="Novotel Recife Marina">
             <a class="feira-card-instagram" href="https://instagram.com/novotelrecifemarina" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@novotelrecifemarina</a>
           </div>
         </div>
@@ -3823,7 +3947,7 @@
             <img loading="lazy" src="photos/feira-16-bisutti-espaco.jpg" alt="Bisutti">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-16-bisutti-logo.png" alt="Bisutti" style="max-height: 84px;">
+            <img class="feira-card-logo" style="--logo-h: 74px;" src="photos/feira-16-bisutti-logo.png" alt="Bisutti">
             <a class="feira-card-instagram" href="https://instagram.com/bisuttioficial" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@bisuttioficial</a>
           </div>
         </div>
@@ -3832,7 +3956,7 @@
             <img loading="lazy" src="photos/feira-17-casaperini-espaco.jpg" alt="Casa Perini">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-17-casaperini-logo.png" alt="Casa Perini">
+            <img class="feira-card-logo" style="--logo-h: 39px;" src="photos/feira-17-casaperini-logo.png" alt="Casa Perini">
             <a class="feira-card-instagram" href="https://instagram.com/casaperini" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@casaperini</a>
           </div>
         </div>
@@ -3841,7 +3965,7 @@
             <img loading="lazy" src="photos/feira-18-pernambuco-espaco.jpg" alt="Visit Pernambuco">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-18-pernambuco-logo.png" alt="Visit Pernambuco">
+            <img class="feira-card-logo" style="--logo-h: 32px;" src="photos/feira-18-pernambuco-logo.png" alt="Visit Pernambuco">
           </div>
         </div>
         <div class="feira-card">
@@ -3849,7 +3973,7 @@
             <img loading="lazy" src="photos/feira-19-jomalone-espaco.jpg" alt="Jo Malone London">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-19-jomalone-logo.png" alt="Jo Malone London">
+            <img class="feira-card-logo" style="--logo-h: 45px;" src="photos/feira-19-jomalone-logo.png" alt="Jo Malone London">
             <a class="feira-card-instagram" href="https://instagram.com/jomalonelondon" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@jomalonelondon</a>
           </div>
         </div>
@@ -3874,7 +3998,7 @@
             <img loading="lazy" src="photos/feira-22-grupolobato-espaco.jpg" alt="Grupo Lobato">
           </div>
           <div class="feira-card-info">
-            <img class="feira-card-logo" src="photos/feira-22-grupolobato-logo.png" alt="Grupo Lobato">
+            <img class="feira-card-logo" style="--logo-h: 39px;" src="photos/feira-22-grupolobato-logo.png" alt="Grupo Lobato">
             <span class="feira-card-legenda">5 espaços para celebrações</span>
             <a class="feira-card-instagram" href="https://instagram.com/grupolobato" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@grupolobato</a>
           </div>
@@ -3912,7 +4036,7 @@
 
     <div class="cronograma-painel active" id="cronograma-1" role="tabpanel">
       <div class="cronograma-item"><div class="cronograma-hora">15:00</div><div class="cronograma-titulo">Abertura Oficial do Congresso e Feira de Negócios</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">16:00</div><div class="cronograma-titulo">Apresentação Marcas</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">16:00</div><div class="cronograma-titulo">Apresentação das Marcas</div></div>
       <div class="cronograma-item"><div class="cronograma-hora">17:00</div><div class="cronograma-titulo">Desfile Camargo Alfaiataria</div></div>
       <div class="cronograma-item"><div class="cronograma-hora">18:00</div><div class="cronograma-titulo">Palestra de Abertura — Paulo Borges</div></div>
     </div>
@@ -3921,8 +4045,8 @@
       <div class="cronograma-item is-pausa"><div class="cronograma-hora">08:00</div><div class="cronograma-titulo">Abertura</div></div>
       <div class="cronograma-item"><div class="cronograma-hora">08:30</div><div class="cronograma-titulo">Roberto Cohen</div></div>
       <div class="cronograma-item is-pausa"><div class="cronograma-hora">10:00</div><div class="cronograma-titulo">Coffee Break</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">11:00</div><div class="cronograma-titulo">Manoela César</div></div>
-      <div class="cronograma-item"><div class="cronograma-hora">12:00</div><div class="cronograma-titulo">Painel de Decoração<span class="cronograma-sub">Luiz Pedro · Valéria Leão · Maurício Kurihara · Patrícia Vaks · André Pedrotti</span></div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">11:00</div><div class="cronograma-titulo">Manoela Cesar</div></div>
+      <div class="cronograma-item"><div class="cronograma-hora">12:00</div><div class="cronograma-titulo">Painel de Decoração<span class="cronograma-sub">Luiz Pedro · Valéria Leão · Mauricio Kurihara · Patricia Vaks · André Pedrotti</span></div></div>
       <div class="cronograma-item is-pausa"><div class="cronograma-hora">13:00</div><div class="cronograma-titulo">Feira de Negócios</div></div>
       <div class="cronograma-item is-pausa"><div class="cronograma-hora">14:00</div><div class="cronograma-titulo">Almoço</div></div>
       <div class="cronograma-item"><div class="cronograma-hora">15:00</div><div class="cronograma-titulo">Chris Ayrosa</div></div>
@@ -3962,9 +4086,6 @@
 <!-- PERFIL DO PÚBLICO -->
 <section class="chapter pattern-dark" id="publico">
   <div class="container">
-    <div class="chapter-header-inline centered">
-      <h2 class="chapter-title">PERFIL DO PÚBLICO</h2>
-    </div>
     <div class="two-col-with-photo">
       <div class="col-photo">
         <div class="photo-card landscape single-frame" style="box-shadow: 0 24px 56px rgba(168, 130, 100, 0.22);">
@@ -3977,17 +4098,20 @@
         </div>
       </div>
       <div class="col-text">
-        <p class="palestrantes-intro" style="text-align: left; margin: 0 0 28px;">
-          O congresso é direcionado a um <strong style="color: var(--nude-deep);">público altamente qualificado</strong>, formado por profissionais e decisores do mercado de festas e eventos:
-        </p>
-        <div class="publico-grid" style="max-width: 100%;">
-          <div class="publico-card">Empresários e gestores do mercado de festas e eventos</div>
-          <div class="publico-card">Decoradores, cerimonialistas e produtores de eventos</div>
-          <div class="publico-card">Fornecedores premium (buffets, locações, cenografia, iluminação e audiovisual)</div>
-          <div class="publico-card">Profissionais de hotelaria, espaços de eventos e especialistas em gestão de serviços para destination wedding</div>
-          <div class="publico-card">Profissionais de branding, marketing e posicionamento no mercado de luxo</div>
-          <div class="publico-card">Influenciadores e formadores de opinião do setor</div>
+        <div class="chapter-header-inline left coroa-lateral">
+          <h2 class="chapter-title">PERFIL DO PÚBLICO</h2>
         </div>
+        <p class="palestrantes-intro" style="text-align: left; margin: 0 0 24px;">
+          O Luxo de Festa é feito para profissionais e decisores do mercado de festas e eventos:
+        </p>
+        <ul class="publico-lista">
+          <li>Empresários e gestores do mercado de festas e eventos</li>
+          <li>Decoradores, cerimonialistas e produtores de eventos</li>
+          <li>Fornecedores premium (buffets, locações, cenografia, iluminação e audiovisual)</li>
+          <li>Profissionais de hotelaria, espaços de eventos e especialistas em gestão de serviços para destination wedding</li>
+          <li>Profissionais de branding, marketing e posicionamento no mercado de luxo</li>
+          <li>Influenciadores e formadores de opinião do setor</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -3996,27 +4120,26 @@
 <!-- SUCESSO DA EDIÇÃO 2025 -->
 <section class="chapter pattern-light" id="case">
   <div class="container">
-    <div class="chapter-header-inline centered">
-      <h2 class="chapter-title">SUCESSO DA EDIÇÃO 2025</h2>
-    </div>
-
-    <div style="max-width: 820px; margin: 0 auto 72px; text-align: left;">
-      <p style="font-size: 16px; line-height: 1.85; color: var(--ink-soft);">A edição de <strong style="color: var(--nude-deep);">2025</strong> marcou uma virada para o mercado de eventos no Brasil e firmou o <strong style="color: var(--nude-deep);">Luxo de Festa</strong> como um congresso de grande alcance, no presencial e no digital. Os resultados comprovam a força do evento como <strong style="color: var(--nude-deep);">plataforma de conteúdo, relacionamento e negócios</strong> &mdash; com público qualificado, marcas parceiras e ampla cobertura de mídia. Mais do que dimensão, os números a seguir revelam engajamento real e o valor entregue a parceiros e patrocinadores, tornando 2026 uma oportunidade ainda maior de visibilidade e negócios.</p>
+    <div class="header-split">
+      <div class="chapter-header-inline left coroa-centro">
+        <h2 class="chapter-title">SUCESSO DA<br>EDIÇÃO 2025</h2>
+      </div>
+      <p>Em 2025, o <strong style="color: var(--nude-deep);">Luxo de Festa</strong> voltou em novo formato e reuniu em Brasília participantes de várias regiões do país, marcas parceiras e ampla cobertura de mídia, no presencial e no digital. Os números abaixo mostram o resultado para quem participou, expôs e patrocinou.</p>
     </div>
 
     <div style="text-align: center;">
       <div class="destaques-title">DESTAQUES DO EVENTO</div>
     </div>
-    <div class="destaques-grid">
-      <div class="destaque-card"><div><span class="big">Mais de 300 participantes</span><span class="txt">, vindos de diversas regiões do Brasil, ao longo de três dias de imersão presencial em Brasília – DF</span></div></div>
-      <div class="destaque-card"><div><span class="big">100% de intenção de retorno</span><span class="txt"> ao evento e recomendação para novos participantes</span></div></div>
-      <div class="destaque-card"><div><span class="big">97% de aprovação</span><span class="txt"> do congresso</span></div></div>
-      <div class="destaque-card"><div><span class="big">Mais de 25 horas de palestras</span><span class="txt"> com profissionais e referências do mercado</span></div></div>
-      <div class="destaque-card"><div><span class="big">20 expositores</span><span class="txt"> focados em destinos de casamentos e experiências premium do Brasil</span></div></div>
-      <div class="destaque-card"><div><span class="big">Mais de 700 mil visualizações</span><span class="txt"> no perfil oficial do Instagram </span><a href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener" class="inline-link">@luxodefestaoficial</a></div></div>
-      <div class="destaque-card"><div><span class="big">Mais de 15 podcasts gravados</span><span class="txt"> para ativações pós-congresso</span></div></div>
-      <div class="destaque-card"><div><span class="big">120 metros de painel</span><span class="txt"> de LED, compondo um palco de alto impacto visual</span></div></div>
-      <div class="destaque-card"><div><span class="big">Mais de 1.000 flores cenográficas</span><span class="txt">, criando uma ambientação sofisticada e imersiva</span></div></div>
+    <div class="destaques-numeros">
+      <div class="destaque-num"><div class="num">300<span class="suf">+</span></div><p class="rotulo">participantes de diversas regiões do Brasil, em três dias de imersão em Brasília</p></div>
+      <div class="destaque-num"><div class="num">100<span class="suf">%</span></div><p class="rotulo">de intenção de retorno e de recomendação para novos participantes</p></div>
+      <div class="destaque-num"><div class="num">97<span class="suf">%</span></div><p class="rotulo">de aprovação do congresso</p></div>
+      <div class="destaque-num"><div class="num">25<span class="suf">h+</span></div><p class="rotulo">de palestras com profissionais e referências do mercado</p></div>
+      <div class="destaque-num"><div class="num">20<span class="suf"></span></div><p class="rotulo">expositores de destinos de casamento e experiências premium</p></div>
+      <div class="destaque-num"><div class="num">700<span class="suf">mil+</span></div><p class="rotulo">visualizações no Instagram <a href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener" class="inline-link">@luxodefestaoficial</a></p></div>
+      <div class="destaque-num"><div class="num">15<span class="suf">+</span></div><p class="rotulo">podcasts gravados para ativações pós-congresso</p></div>
+      <div class="destaque-num"><div class="num">120<span class="suf">m</span></div><p class="rotulo">de painel de LED compondo o palco</p></div>
+      <div class="destaque-num"><div class="num">1.000<span class="suf">+</span></div><p class="rotulo">flores cenográficas na ambientação</p></div>
     </div>
 
     <!-- Galeria de fotos da edição 2025 -->
@@ -4093,7 +4216,7 @@
     <div class="aerea-oficial-bloco">
       <img class="azul-logo" src="photos/aerea-oficial-azul-branca.png" alt="Azul Linhas Aéreas — Companhia Aérea Oficial">
       <p class="azul-texto">
-        <strong>Azul Linhas Aéreas</strong> é a Companhia Aérea Oficial do <strong>Luxo de Festa 2026</strong>. Uma parceria que reflete os mesmos valores de excelência, hospitalidade brasileira e cuidado com cada detalhe da experiência — desde o voo até o congresso.
+        A <strong>Azul Linhas Aéreas</strong> é a Companhia Aérea Oficial do <strong>Luxo de Festa 2026</strong>, com desconto exclusivo para quem vai ao congresso.
       </p>
       <div class="azul-promocode">
         <div class="azul-promocode-label">Promocode exclusivo para o congresso</div>
@@ -4196,7 +4319,7 @@
     </div>
 
     <ul class="hospedagem-observacoes">
-      <li>Café da manhã, estacionamento, wi-fi e área de lazer inclusos.</li>
+      <li>Café da manhã, estacionamento com serviço de manobrista, wi-fi e acesso à área de lazer inclusos.</li>
       <li>Check-in às 15h e check-out até às 12h.</li>
       <li>Tarifa não reembolsável e irrevogável.</li>
       <li>Pagamento de 50% no ato da reserva, como garantia.</li>
@@ -4210,6 +4333,8 @@
       </div>
       <div class="hospedagem-conheca">
         Conheça o hotel: <a href="https://www.jadehotel.com.br" target="_blank" rel="noopener">jadehotel.com.br</a>
+        &nbsp;·&nbsp;
+        <a href="https://jadehotelbrasilia.com.br/catalogo" target="_blank" rel="noopener">fotos das categorias</a>
         &nbsp;·&nbsp;
         <a href="https://www.instagram.com/jadehotelbrasilia" target="_blank" rel="noopener">@jadehotelbrasilia</a>
       </div>
