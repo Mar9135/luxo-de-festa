@@ -141,6 +141,11 @@ O carrossel tem 24 vagas (6 paginas de 4 cards).
       - Sebrae DF      (feira-20) - @sebraenodf   - sem foto (definitivo)
       - Code My Party  (feira-21) - @codemyparty  - sem foto (definitivo)
     Nenhum card "Divulgacao em breve" restante.
+    ORDEM: desde 21/10/2026 os cards ficam em ordem alfabetica pelo
+    nome da logo (9 1/2 Brasserie primeiro; Pernambuco pelo "P";
+    Fazenda Borges pelo "F"). Card novo entra na posicao alfabetica.
+    9 1/2 Brasserie (feira-23) INCLUIDO em 20/10/2026: foto da
+    fachada + logo do vetor oficial (branca). @noveemeiobrasserie.
     Casa do Valle Hotel Boutique (feira-15) REMOVIDA em 01/10/2026
     (lounge nao pago; distrato enviado). Arquivos excluidos de photos/.
     Maceio Convention & Visitors Bureau (feira-07) REMOVIDO em
