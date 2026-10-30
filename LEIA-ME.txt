@@ -144,6 +144,9 @@ O carrossel tem 24 vagas (6 paginas de 4 cards).
     ORDEM: desde 21/10/2026 os cards ficam em ordem alfabetica pelo
     nome da logo (9 1/2 Brasserie primeiro; Pernambuco pelo "P";
     Fazenda Borges pelo "F"). Card novo entra na posicao alfabetica.
+    Casa Foca (feira-24, @casafocabuzios, com foto) e Diamond
+    (feira-25, @barcodiamond, com foto) INCLUIDOS em
+    30/10/2026.
     9 1/2 Brasserie (feira-23) INCLUIDO em 20/10/2026: foto da
     fachada + logo do vetor oficial (branca). @noveemeiobrasserie.
     Casa do Valle Hotel Boutique (feira-15) REMOVIDA em 01/10/2026
