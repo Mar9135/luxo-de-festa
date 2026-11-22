@@ -1,4 +1,31 @@
 ==========================================================
+  ATUALIZACAO 22/11/2026 - VIRADA PARA A EDICAO 2027
+==========================================================
+- Evento: 8, 9 e 10 de novembro de 2027 (seg/ter/qua), 4a Edicao.
+- Link de pre-venda (todos os botoes):
+    https://codemy.party/l/start.luxodefesta2027
+- Logo (logos/logo_branca.png) e imagem de compartilhamento
+  (photos/og-share.jpg) sem o ano "2026".
+- Contagem regressiva mostra somente os dias faltantes
+  (alvo: 08/11/2027).
+- Palestrantes e Embaixadores: cards removidos; secoes exibem
+  "Em breve novidades". Titulo agora "PALESTRANTES".
+- Secao "Curadoria Criativa" (Chris Ayrosa) removida.
+- Fotos de palestrantes/embaixadores/curadoria que ficaram sem
+  uso foram retiradas de photos/ (originais no pacote 2026).
+- Feira de Negocios: frase "Veja quem passou pela Feira de
+  Negocios em 2026:" antes da grade de marcas (marcas de 2026).
+- Azul: promocode EVLUXO26 e instrucao OCULTOS (comentados no
+  HTML, marcados "OCULTO 2027"). Texto: "foi a Companhia Aerea
+  Oficial do Luxo de Festa 2026. Em breve, novidades..."
+- Jade Hotel: datas de check-in/out, tarifas (quartos-grid) e
+  condicoes de pagamento OCULTAS (comentadas, "OCULTO 2027").
+  Exibe "Condicoes especiais para congressistas em breve".
+  Contatos, foto, mapa e servicos inclusos mantidos.
+  Para reativar: atualizar valores e remover os comentarios.
+- PENDENTE: programacao do Cronograma ainda e a de 2026.
+
+==========================================================
   SITE - LUXO DE FESTA 2026  [VERSAO OFICIAL / COMPLETA]
   Congresso Nacional de Festas & Eventos
   Estado consolidado do projeto
@@ -312,8 +339,8 @@ og-share.jpg               imagem de preview ao compartilhar
 --------------------------------------------------
 8. CONSTANTES DO PROJETO
 --------------------------------------------------
-Inscricao no congresso:
-  https://app.codemyparty.com.br/evento/8ee5dab1-1384-46f0-add7-59749b10e5af
+Inscricao no congresso (pre-venda 2027):
+  https://codemy.party/l/start.luxodefesta2027
 
 Contatos no site:
   Instagram: @luxodefestaoficial e @cesarserra
