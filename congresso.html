@@ -1,0 +1,4350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1d1815">
+<link rel="icon" type="image/png" href="logos/coroa_branca.png">
+<link rel="apple-touch-icon" href="logos/coroa_branca.png">
+<title>Luxo de Festa 2027 — Congresso Nacional de Festas & Eventos · 4ª edição</title>
+<meta name="description" content="Luxo de Festa, por César Serra: 4ª edição do Congresso Nacional de Festas & Eventos. 8, 9 e 10 de novembro de 2027, no Unique Palace, em Brasília/DF.">
+<link rel="canonical" href="https://www.luxodefestabrasil.com/congresso">
+
+<!-- Open Graph (WhatsApp / Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Luxo de Festa Brasil">
+<meta property="og:url" content="https://www.luxodefestabrasil.com/congresso">
+<meta property="og:title" content="Luxo de Festa 2027 — Congresso Nacional de Festas & Eventos">
+<meta property="og:description" content="4ª edição, por César Serra. 8, 9 e 10 de novembro de 2027, no Unique Palace, em Brasília/DF.">
+<meta property="og:image" content="https://www.luxodefestabrasil.com/photos/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Luxo de Festa — Congresso Nacional de Festas & Eventos 2027">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Luxo de Festa 2027 — Congresso Nacional de Festas & Eventos">
+<meta name="twitter:description" content="4ª edição, por César Serra. 8, 9 e 10 de novembro de 2027, no Unique Palace, em Brasília/DF.">
+<meta name="twitter:image" content="https://www.luxodefestabrasil.com/photos/og-share.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    /* Paleta extraída da apresentação oficial 2026 */
+    --bg-dark: #1d1815;          /* fundo preto-quente das peças escuras */
+    --bg-dark-soft: #2a221d;     /* variação um pouco mais clara */
+    --bg-bege: #e8e0d0;          /* fundo bege champagne (claro) */
+    --bg-bege-soft: #f0e9d9;     /* variação clara do bege */
+    --nude: #d4a896;             /* rosa nude principal (lettering, molduras) */
+    --nude-soft: #e5c5b3;        /* rosa nude pálido (blocos, cards) */
+    --nude-deep: #b8826a;        /* nude profundo (acentos, hover) */
+    --nude-darker: #8a5a40;      /* nude bem escuro (textos pequenos em fundo claro) */
+    --nude-pale: #c9a888;        /* nude pálido (linhas do padrão) */
+    --ink: #1a1a1a;
+    --ink-soft: #3d3530;
+    --ink-mute: #6b5f54;
+    --paper: #ffffff;
+    --line-dark: rgba(212, 168, 150, 0.25);
+    --line-light: rgba(184, 130, 106, 0.35);
+    /* Tipografia (mesma das peças oficiais) */
+    --serif: 'Playfair Display', 'Vogue', Georgia, serif;
+    --sans: 'Montserrat', -apple-system, sans-serif;
+    --brand: 'Cinzel', 'Playfair Display', Georgia, serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  section[id] { scroll-margin-top: 72px; }
+  @media (max-width: 600px) { .btn-primary { padding-left: 20px; padding-right: 20px; letter-spacing: 2px; white-space: nowrap; } }
+  .hero-h1 { margin: 0; font: inherit; }
+  h3.destaques-title { font-weight: 400; }
+  .visualmente-oculto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  body {
+    background-color: var(--bg-dark);
+    background-image: url("photos/bg-original-dark.png");
+    background-size: 270px auto;
+    background-repeat: repeat;
+    color: var(--bg-bege);
+    font-family: var(--sans);
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+  html {
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+  /* Defensive: media elements never break the layout */
+  img, iframe, video, embed, object, svg {
+    max-width: 100%;
+  }
+
+  /* ===== PADRÃO OFICIAL ===== */
+  /* Aplicado no body — seções pattern-dark são transparentes para herdar */
+  .pattern-dark {
+    background-color: transparent;
+  }
+  .pattern-light {
+    background-color: var(--bg-bege);
+    background-image: url("photos/bg-original-light.png");
+    background-size: 270px auto;
+    background-repeat: repeat;
+  }
+
+  @media (max-width: 768px) {
+    body { background-size: 190px auto; }
+    .pattern-light { background-size: 190px auto; }
+  }
+
+  /* ===== Foto do palco como fundo fixo de todas as seções =====
+     Para desfazer, basta tirar a classe "fundo-foto" do <body>. */
+  body.fundo-foto::before {
+    content: "";
+    position: fixed;
+    inset: -40px;
+    z-index: -1;
+    background: url("photos/congresso-palco.jpg") center 60%/cover no-repeat;
+    filter: blur(10px) saturate(1.1);
+  }
+  /* A capa usa a mesma foto fixa: some a imagem própria dela (que rolava junto) */
+  body.fundo-foto .hero { background-color: transparent; }
+  body.fundo-foto .hero-bg { display: none; }
+  /* véu da capa termina no mesmo tom das seções escuras, para não marcar a divisa */
+  body.fundo-foto .hero-overlay {
+    background:
+      radial-gradient(ellipse 60% 55% at 50% 45%, rgba(29, 24, 21, 0.5) 0%, rgba(29, 24, 21, 0) 70%),
+      linear-gradient(180deg, rgba(29, 24, 21, 0.6) 0%, rgba(29, 24, 21, 0.68) 55%, rgba(29, 24, 21, 0.78) 100%);
+  }
+  body.fundo-foto .pattern-dark {
+    background: rgba(29, 24, 21, 0.78);   /* véu uniforme: sem faixa escura entre seções */
+  }
+  body.fundo-foto .pattern-light {
+    background:
+      linear-gradient(rgba(232, 224, 208, 0.86), rgba(232, 224, 208, 0.86));
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(29, 24, 21, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line-dark);
+    padding: 14px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: padding 0.3s;
+    gap: 24px;
+  }
+  nav .logo { display: flex; align-items: center; text-decoration: none; }
+  nav .logo img { height: 38px; width: auto; display: block; }
+  .nav-links { display: flex; gap: 18px; list-style: none; }
+  .nav-links-cta { display: none; }
+  .nav-links a {
+    color: var(--bg-bege);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: all 0.3s;
+    position: relative;
+    white-space: nowrap;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px; left: 0;
+    width: 0; height: 1px;
+    background: var(--nude);
+    transition: width 0.3s;
+  }
+  .nav-links a:hover { opacity: 1; color: var(--nude); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    background: var(--nude);
+    color: var(--ink);
+    padding: 11px 22px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--nude-soft); transform: translateY(-1px); }
+  .menu-toggle {
+    display: none;
+    background: none; border: none; cursor: pointer;
+    color: var(--bg-bege); font-size: 26px;
+  }
+  /* Menu compacto em notebooks: 10 itens + botão cabem a partir de ~1440px */
+  @media (max-width: 2199px) {
+    nav { padding: 14px 3%; }
+    .nav-links { gap: 12px; }
+    .nav-links a { font-size: 10px; letter-spacing: 1px; }
+    .nav-cta { padding: 11px 16px; letter-spacing: 1.5px; }
+  }
+  @media (max-width: 1999px) {
+    .nav-links { display: none; }
+    .nav-cta { margin-left: auto; }
+    .menu-toggle { display: block; }
+    nav .logo img { height: 32px; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--bg-dark);
+      padding: 28px 5%;
+      gap: 20px;
+      border-bottom: 1px solid var(--line-dark);
+      max-height: calc(100vh - 64px);
+      overflow-y: auto;
+    }
+    .nav-links.open .nav-links-cta { display: block; margin-top: 8px; }
+    .nav-links.open .nav-links-cta a {
+      display: block; text-align: center;
+      background: var(--nude); color: var(--ink); opacity: 1;
+      padding: 14px 22px; font-size: 11px; font-weight: 600; letter-spacing: 2px;
+    }
+    .nav-links.open .nav-links-cta a::after { display: none; }
+    .nav-links a { font-size: 12px; letter-spacing: 2px; padding: 4px 0; }
+  }
+  @media (max-width: 600px) { .nav-cta { display: none; } }
+  .menu-toggle { line-height: 1; width: 32px; text-align: center; }
+
+  /* ===== UTILITÁRIOS ===== */
+  .frame {
+    border: 1px solid var(--nude);
+    padding: 16px 32px;
+    display: inline-block;
+  }
+  .chapter-num {
+    /* Mantido por compatibilidade — número agora oculto em todas as seções */
+    display: none;
+  }
+  .chapter-title {
+    display: inline-block;
+    font-family: var(--serif);
+    font-size: clamp(28px, 4.5vw, 52px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--bg-bege);
+    padding: 0 0 44px;
+    margin-bottom: 0;
+    line-height: 1.15;
+    position: relative;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  }
+  /* Quebra de linha apenas no mobile, para títulos longos */
+  .chapter-title .mobile-break { display: none; }
+  /* Coroa ornamental abaixo do título */
+  .chapter-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 52px;
+    height: 31px;
+    background-image: url("logos/coroa_nude.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .pattern-light .chapter-title { color: var(--ink); }
+  .pattern-light .chapter-title::after {
+    background-image: url("logos/coroa_nude_deep.png");
+  }
+
+  /* Header de seção: sempre centralizado, título sozinho */
+  .chapter-header-inline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto 56px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .chapter-header-inline.centered {
+    justify-content: center;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    .chapter-header-inline { margin-bottom: 36px; padding: 0 12px; }
+    .chapter-title { font-size: 26px; letter-spacing: 1.5px; padding-bottom: 38px; }
+    .chapter-title::after { width: 44px; height: 26px; }
+    /* Ativa quebra de linha em títulos marcados para mobile */
+    .chapter-title .mobile-break { display: inline; }
+  }
+  @media (max-width: 400px) {
+    .chapter-title { font-size: 22px; letter-spacing: 1px; }
+  }
+  @media (max-width: 360px) {
+    .chapter-title { font-size: 20px; letter-spacing: 0.8px; }
+  }
+
+  /* ===== PHOTO CARD (estilo editorial com moldura interna) ===== */
+  .photo-card {
+    position: relative;
+    background: linear-gradient(135deg, #2a221d 0%, #1d1815 70%, #15110e 100%);
+    padding: 18px;
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(212, 168, 150, 0.08);
+  }
+  .photo-card-inner {
+    position: relative;
+    border: 1px solid var(--nude);
+    padding: 14px;
+    overflow: hidden;
+  }
+  .photo-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .photo-card.portrait .photo-card-inner {
+    aspect-ratio: 3/4;
+  }
+  .photo-card.portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .photo-card.landscape .photo-card-inner {
+    aspect-ratio: 4/3;
+  }
+  .photo-card.landscape img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Variante: moldura simples (sem o gradient externo + sem padding externo) */
+  .photo-card.single-frame {
+    background: transparent;
+    padding: 0;
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.4);
+  }
+  .photo-card.single-frame .photo-card-inner {
+    padding: 0;
+  }
+  /* Quando single-frame, o label fica sobre a imagem (com text-shadow) */
+  .photo-card.single-frame .photo-card-label {
+    bottom: 24px;
+    left: 24px;
+  }
+  /* Scrim para garantir legibilidade do label sobre fotos de fundo claro */
+  .photo-card.single-frame.label-scrim .photo-card-inner::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 42%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0));
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* ===== CAROUSEL (Apresentação) ===== */
+  .photo-card.carousel {
+    margin-bottom: 40px;
+  }
+  .photo-card.carousel .photo-card-inner {
+    position: relative;
+  }
+  .photo-card.carousel .carousel-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+  }
+  .photo-card.carousel .carousel-img.active {
+    opacity: 1;
+  }
+  .carousel-dots {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 4;
+  }
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--nude);
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  .carousel-dot:hover {
+    background: rgba(212, 168, 150, 0.5);
+  }
+  .carousel-dot.active {
+    background: var(--nude);
+    transform: scale(1.15);
+  }
+  .photo-card-label {
+    position: absolute;
+    bottom: 36px;
+    left: 36px;
+    z-index: 3;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+  }
+  .photo-card-label .eyebrow {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .photo-card-label .name {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 28px;
+    color: var(--bg-bege);
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  /* ===== TWO COL WITH PHOTO ===== */
+  /* Texto à esquerda, photo-card à direita (default) — ou invertido com .reversed */
+  .two-col-with-photo {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 72px;
+    align-items: center;
+  }
+  /* Variante "reversed": foto à direita. O texto vem antes no HTML;
+     a foto ocupa a coluna estreita (mesmo tamanho do card do César). */
+  .two-col-with-photo.reversed { grid-template-columns: 1.25fr 1fr; }
+  .two-col-with-photo .col-text > .chapter-header-inline { margin-bottom: 32px; }
+  .two-col-with-photo .col-text p {
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--bg-bege);
+    opacity: 0.92;
+    margin-bottom: 22px;
+    text-align: left;
+  }
+  .two-col-with-photo .col-text p:last-child { margin-bottom: 0; }
+  .two-col-with-photo .col-text strong { color: var(--nude); font-weight: 600; }
+  .two-col-with-photo .col-text em { font-style: italic; color: var(--nude); }
+  
+  /* Quando within light background */
+  .pattern-light .two-col-with-photo .col-text p,
+  .publico-section .two-col-with-photo .col-text p {
+    color: var(--ink-soft);
+  }
+  .pattern-light .two-col-with-photo .col-text strong,
+  .publico-section .two-col-with-photo .col-text strong {
+    color: var(--nude-deep);
+  }
+  .pattern-light .two-col-with-photo .col-text em,
+  .publico-section .two-col-with-photo .col-text em {
+    color: var(--nude-deep);
+  }
+  @media (max-width: 900px) {
+    .two-col-with-photo,
+    .two-col-with-photo.reversed { grid-template-columns: 1fr; gap: 48px; }
+    /* Na variante reversed (foto após o texto no HTML), no mobile a
+       foto sobe para antes do texto descritivo. */
+    .two-col-with-photo.reversed .col-photo { order: 1; }
+    .two-col-with-photo.reversed .col-text { order: 2; }
+    .two-col-with-photo .col-text p { text-align: left; }
+    .photo-card-label { bottom: 24px; left: 24px; }
+    .photo-card-label .name { font-size: 22px; }
+    #publico .two-col-with-photo { gap: 36px; }
+    #publico .col-text { order: -1; }
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 5% 80px;
+    overflow: hidden;
+    background-color: var(--bg-dark);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url("photos/congresso-palco.jpg") center 60%/cover no-repeat;
+    opacity: 1;
+    /* desfoque leve: mantém as luzes e apaga a logo do telão, que competiria com a do site */
+    filter: blur(3px) saturate(1.1);
+    transform: scale(1.04);
+    z-index: 0;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 55% at 50% 45%, rgba(29, 24, 21, 0.78) 0%, rgba(29, 24, 21, 0.55) 60%, rgba(29, 24, 21, 0.8) 100%),
+      linear-gradient(180deg, rgba(29, 24, 21, 0.55) 0%, rgba(29, 24, 21, 0) 30%, rgba(29, 24, 21, 0) 70%, rgba(29, 24, 21, 0.9) 100%);
+    z-index: 1;
+  }
+  .hero-pattern-overlay {
+    position: absolute; inset: 0; z-index: 1;
+    background-image: url("photos/bg-original-dark.png");
+    background-size: 270px auto;
+    background-repeat: repeat;
+  }
+  @media (max-width: 768px) {
+    .hero-pattern-overlay { background-size: 190px auto; }
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+  }
+  .hero-edition {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(16px, 1.5vw, 22px);
+    color: var(--nude-soft);
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+  }
+  .hero-logo {
+    display: block;
+    height: clamp(360px, 45vw, 580px);
+    width: auto;
+    margin: 0 auto 48px;
+    filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.4));
+  }
+  .hero-subtitle {
+    font-size: clamp(11px, 1.2vw, 14px);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--bg-bege);
+    margin-bottom: 40px;
+    font-weight: 500;
+    line-height: 1.8;
+  }
+  .hero-date-frame {
+    display: inline-block;
+    border: 1px solid var(--nude);
+    padding: 26px 52px;
+    margin-bottom: 36px;
+  }
+  .hero-date-frame .dates {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.1vw, 26px);
+    color: var(--bg-bege);
+    letter-spacing: 4px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .hero-date-frame .location {
+    font-family: var(--sans);
+    font-size: clamp(10px, 0.9vw, 12px);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+    margin-top: 14px;
+    font-weight: 400;
+  }
+  .hero-date-frame .endereco {
+    font-family: var(--sans);
+    font-size: clamp(10px, 0.85vw, 11.5px);
+    letter-spacing: 1.5px;
+    color: var(--bg-bege);
+    opacity: 0.7;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(212, 168, 150, 0.25);
+  }
+  .hero-date-frame .mapa-link {
+    display: inline-flex; align-items: center; gap: 7px;
+    margin-top: 12px;
+    padding: 7px 16px;
+    border: 1px solid rgba(212, 168, 150, 0.55);
+    font-family: var(--sans); font-size: 10px; font-weight: 500;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--nude); text-decoration: none;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+  }
+  .hero-date-frame .mapa-link svg { width: 13px; height: 13px; }
+  .hero-date-frame .mapa-link:hover { background: var(--nude); color: var(--bg-dark); border-color: var(--nude); }
+  .hero-cta-wrap {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .countdown {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .countdown-label {
+    font-family: var(--sans);
+    font-size: clamp(9px, 0.85vw, 11px);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+    font-weight: 400;
+  }
+  .countdown-units {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(10px, 1.5vw, 22px);
+  }
+  .cd-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: clamp(58px, 7vw, 84px);
+    border: 1px solid var(--nude);
+    padding: 16px 10px 12px;
+  }
+  .cd-num {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.4vw, 44px);
+    color: var(--bg-bege);
+    line-height: 1;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+  .cd-lbl {
+    font-family: var(--sans);
+    font-size: clamp(8px, 0.75vw, 10px);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+    margin-top: 10px;
+    font-weight: 400;
+  }
+  .cd-sep {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.6vw, 34px);
+    color: var(--nude);
+    line-height: 1;
+    align-self: center;
+    padding-bottom: 14px;
+    opacity: 0.6;
+  }
+  @media (max-width: 520px) {
+    .countdown { margin-top: 32px; }
+    .countdown-units { gap: 6px; }
+    .cd-sep { display: none; }
+    .cd-unit { min-width: 66px; }
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--nude);
+    color: var(--ink);
+    padding: 20px 44px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  /* ===== FAIXA DE FECHAMENTO (chamada de inscrição) ===== */
+  .fechamento-cta {
+    text-align: center;
+    padding: 88px 6%;
+    position: relative;
+  }
+  .fechamento-cta .fechamento-titulo {
+    font-family: var(--serif);
+    font-size: clamp(26px, 3.4vw, 40px);
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--bg-bege);
+    margin-bottom: 14px;
+  }
+  .fechamento-cta .fechamento-titulo em {
+    font-style: italic;
+    color: var(--nude);
+  }
+  /* Lettering da marca — aproxima da logo oficial (Cinzel, caixa alta) */
+  .marca-luxo {
+    font-family: var(--brand);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--nude);
+    font-size: 0.92em;
+  }
+  .fechamento-cta .fechamento-sub {
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+    margin-bottom: 36px;
+  }
+  .btn-primary:hover {
+    background: var(--bg-bege);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.3);
+  }
+  .btn-ghost {
+    display: inline-block;
+    border: 1px solid var(--nude);
+    color: var(--bg-bege);
+    padding: 20px 36px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  .btn-ghost:hover { background: var(--nude); color: var(--ink); }
+  @media (max-width: 700px) {
+    .hero { padding: 100px 5% 60px; }
+    .hero-logo { height: 280px; margin-bottom: 32px; }
+    .hero-date-frame { padding: 16px 24px; }
+    .hero-date-frame .dates { letter-spacing: 3px; }
+    .hero-subtitle { letter-spacing: 3px; font-size: 11px; }
+  }
+
+  /* ===== SCROLL INDICATOR ===== */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 32px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: var(--nude-soft);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0.7;
+    animation: bounce 2.4s ease-in-out infinite;
+  }
+  .scroll-indicator .arrow {
+    display: block;
+    margin: 8px auto 0;
+    width: 1px; height: 30px;
+    background: var(--nude);
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.7; }
+    50% { transform: translateX(-50%) translateY(6px); opacity: 1; }
+  }
+
+  /* ===== SECTIONS ===== */
+  section.chapter {
+    padding: 120px 6%;
+    position: relative;
+  }
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .two-col p {
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--bg-bege);
+    margin-bottom: 20px;
+    opacity: 0.92;
+    text-align: left;
+  }
+  .pattern-light .two-col p { color: var(--ink-soft); }
+  .two-col strong { color: var(--nude); font-weight: 600; }
+  .pattern-light .two-col strong { color: var(--nude-deep); }
+  
+  /* Variante de texto em coluna única */
+  .single-col-center {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .single-col-center p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: var(--bg-bege);
+    margin-bottom: 26px;
+    opacity: 0.92;
+  }
+  .single-col-center p:last-child { margin-bottom: 0; }
+  .single-col-center strong { color: var(--nude); font-weight: 600; }
+  .pattern-light .single-col-center p { color: var(--ink-soft); }
+  .pattern-light .single-col-center strong { color: var(--nude-deep); }
+  
+  @media (max-width: 900px) {
+    .two-col { grid-template-columns: 1fr; gap: 32px; }
+    section.chapter { padding: 64px 6%; }
+  }
+  @media (max-width: 600px) {
+    section.chapter { padding: 44px 6%; }
+  }
+
+  /* ===== APRESENTAÇÃO COM FOTO ===== */
+  .with-photo {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 0;
+    align-items: stretch;
+    min-height: 600px;
+  }
+  .with-photo .photo {
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+  }
+  .with-photo .content {
+    padding: 80px 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media (max-width: 900px) {
+    .with-photo { grid-template-columns: 1fr; }
+    .with-photo .photo { min-height: 320px; }
+    .with-photo .content { padding: 60px 6%; }
+  }
+
+  /* ===== DESTAQUES (cards rosa nude) ===== */
+  .destaques-title {
+    display: inline-block;
+    font-family: var(--serif);
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0 0 18px;
+    color: var(--bg-bege);
+    margin-bottom: 48px;
+    line-height: 1.1;
+    position: relative;
+  }
+  .destaques-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 52px;
+    height: 2px;
+    background: var(--nude);
+  }
+  .pattern-light .destaques-title { color: var(--ink); }
+  .pattern-light .destaques-title::after { background: var(--nude-deep); }
+  /* Grid estático de destaques — 3x3, cards de altura uniforme */
+  .destaques-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .destaque-card {
+    background: var(--nude-soft);
+    color: var(--ink);
+    padding: 40px 32px;
+    text-align: center;
+    line-height: 1.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  .destaque-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+  }
+  .destaque-card > div { width: 100%; }
+  /* Número/dado em destaque: serif, maior, cor de marca */
+  .destaque-card .big {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--nude-deep);
+    display: inline;
+  }
+  /* Texto de apoio: sans, leve */
+  .destaque-card .txt {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--ink-soft);
+    display: inline;
+  }
+  @media (max-width: 900px) {
+    .destaques-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px) {
+    .destaques-grid { grid-template-columns: 1fr; gap: 12px; }
+    .destaque-card { padding: 32px 28px; }
+    .destaque-card .big { font-size: 19px; }
+  }
+  .destaques-hint { display: none; }
+  /* Números alinhados (lining) em preços, datas e endereços para leitura mais clara */
+  .quarto-precos .val, .hospedagem-data .valor, .mapa-endereco, .hero-date-frame .endereco { font-variant-numeric: lining-nums; }
+  /* ===== DESTAQUES 2025: números em layout editorial ===== */
+  .destaques-numeros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   /* 8 números: 2 linhas de 4 */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid var(--line-light);
+  }
+  .destaque-num {
+    padding: 34px 26px 36px;
+    border-bottom: 1px solid var(--line-light);
+    border-right: 1px solid var(--line-light);
+    text-align: left;
+  }
+  .destaque-num:nth-child(4n) { border-right: none; }
+  .destaque-num .num {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(44px, 5vw, 64px);
+    line-height: 1;
+    color: var(--nude-deep);
+    letter-spacing: -0.5px;
+    font-variant-numeric: lining-nums;
+  }
+  .destaque-num .suf { font-size: 0.45em; letter-spacing: 0.5px; margin-left: 4px; vertical-align: 0.9em; }
+  .destaque-num .rotulo {
+    font-family: var(--sans); font-size: 14px; line-height: 1.6; color: var(--ink-soft);
+    margin: 14px 0 0; max-width: 280px;
+  }
+  @media (max-width: 900px) {
+    .destaques-numeros { grid-template-columns: 1fr 1fr; }
+    .destaque-num:nth-child(4n) { border-right: 1px solid var(--line-light); }
+    .destaque-num:nth-child(2n) { border-right: none; }
+  }
+  @media (max-width: 560px) {
+    .destaque-num { padding: 24px 14px 26px; }
+    .destaque-num:nth-child(odd) { padding-left: 0; }
+    .destaque-num .num { font-size: 38px; }
+    .destaque-num .rotulo { font-size: 12.5px; margin-top: 10px; }
+  }
+
+  /* ===== Variação de ritmo: cabeçalhos alinhados à esquerda ===== */
+  .chapter-header-inline.left { align-items: flex-start; text-align: left; margin-left: 0; }
+  .chapter-header-inline.left .chapter-title::after { left: 0; transform: none; }
+  /* Título à esquerda com a coroa centralizada sob o bloco de texto */
+  .chapter-header-inline.coroa-centro .chapter-title::after { left: 50%; transform: translateX(-50%); }
+  /* Título em uma linha com a coroa à esquerda, centralizada na altura do texto */
+  .chapter-header-inline.coroa-lateral .chapter-title { padding: 0 0 0 76px; }
+  @media (min-width: 601px) { .chapter-header-inline.coroa-lateral .chapter-title { white-space: nowrap; font-size: clamp(26px, 3.2vw, 52px); } }
+  .chapter-header-inline.coroa-lateral .chapter-title::after { top: 50%; bottom: auto; transform: translateY(-58%); }
+  @media (max-width: 600px) {
+    .chapter-header-inline.coroa-lateral, .chapter-header-inline.left { padding: 0; }
+    .chapter-header-inline.coroa-lateral .chapter-title { padding: 0 0 0 56px; }
+  }
+  .header-split {
+    display: grid; grid-template-columns: 1fr 1.15fr; gap: 64px; align-items: end;
+    max-width: 1100px; margin: 0 auto 72px;
+  }
+  .header-split .chapter-header-inline { margin-bottom: 0; }
+  .header-split p { font-size: 16px; line-height: 1.85; color: var(--ink-soft); margin: 0; }
+  @media (max-width: 900px) { .header-split { grid-template-columns: 1fr; gap: 28px; margin-bottom: 48px; } }
+  .publico-lista { list-style: none; margin: 0; padding: 0; counter-reset: pub; border-top: 1px solid var(--line-dark); }
+  .publico-lista li {
+    counter-increment: pub;
+    display: grid; grid-template-columns: 52px 1fr; gap: 12px; align-items: baseline;
+    padding: 16px 0; border-bottom: 1px solid var(--line-dark);
+    font-family: var(--sans); font-size: 15px; line-height: 1.55; color: var(--bg-bege);
+  }
+  .publico-lista li::before {
+    content: counter(pub, decimal-leading-zero);
+    font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--nude);
+  }
+  @media (max-width: 560px) {
+    .publico-lista li { grid-template-columns: 40px 1fr; font-size: 14px; padding: 14px 0; }
+    .publico-lista li::before { font-size: 19px; }
+  }
+
+
+  /* ===== INLINE LINK (texto que vira link sem quebrar o fluxo visual) ===== */
+  /* Herda cor/estilo do texto ao redor, ganha underline sutil + hover destaca */
+  .inline-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(184, 130, 106, 0.4);
+    transition: border-color 0.3s, color 0.3s;
+  }
+  .inline-link:hover {
+    color: var(--nude);
+    border-bottom-color: var(--nude);
+  }
+  /* No destaque-card (rosa nude com texto escuro), o hover usa cor mais escura */
+  .destaque-card .inline-link:hover {
+    color: var(--nude-deep);
+    border-bottom-color: var(--nude-deep);
+  }
+
+  .destaques-footer {
+    max-width: 760px;
+    margin: 56px auto 0;
+    text-align: center;
+    color: var(--bg-bege);
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: 0.95;
+  }
+
+  /* ===== PERFIL DO PÚBLICO (cards transparentes com moldura) ===== */
+  .publico-section { background: var(--bg-bege); }
+  .publico-section .chapter-num { color: var(--nude-deep); opacity: 0.45; }
+  .publico-section .chapter-title { color: var(--ink); border-color: var(--nude-deep); }
+  .publico-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .publico-card {
+    border: 1px solid var(--nude);
+    padding: 22px 24px;
+    text-align: center;
+    color: var(--bg-bege);
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.04);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .publico-card:hover {
+    background: rgba(212, 168, 150, 0.14);
+    transform: translateY(-3px);
+  }
+  /* Seção Público em fundo claro: ajusta a cor do texto dos quadros,
+     que por padrão é bege (pensado para fundo escuro). */
+  .pattern-light .publico-card {
+    color: var(--ink);
+    background: rgba(255, 255, 255, 0.45);
+    border-color: var(--nude-deep);
+  }
+  .pattern-light .publico-card:hover {
+    background: rgba(212, 168, 150, 0.22);
+  }
+  .publico-stats {
+    margin-top: 32px;
+    padding: 28px 28px;
+    background: rgba(212, 168, 150, 0.18);
+    border-left: 3px solid var(--nude-deep);
+  }
+  .two-col-with-photo .col-text .publico-stats p,
+  .publico-stats p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: var(--ink-soft);
+    opacity: 1;
+    text-align: left;
+  }
+  .publico-stats p:last-child { margin-bottom: 0; }
+  .publico-stats strong { color: var(--nude-deep); font-weight: 700; }
+  @media (max-width: 600px) {
+    .publico-grid { grid-template-columns: 1fr; gap: 12px; margin-bottom: 0; }
+    .publico-card { padding: 18px 20px; font-size: 13px; line-height: 1.55; }
+    .two-col-with-photo .col-text .palestrantes-intro { font-size: 15px; margin-bottom: 22px; }
+  }
+
+  /* ===== CRONOGRAMA INTERATIVO ===== */
+  .dias-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 720px;
+    margin: 0 auto 48px;
+  }
+  .dia-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--nude);
+    color: var(--bg-bege);
+    padding: 26px 16px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-align: center;
+    font-family: var(--sans);
+  }
+  .dia-btn:hover { background: rgba(212, 168, 150, 0.14); }
+  .dia-btn .dia-label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  .dia-btn .dia-numero {
+    display: block;
+    font-family: var(--serif);
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 8px;
+    color: var(--nude);
+  }
+  .dia-btn .dia-mes {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    font-weight: 500;
+  }
+  .dia-btn.active {
+    background: var(--nude);
+    color: var(--ink);
+    border-color: var(--nude);
+  }
+  .dia-btn.active .dia-numero { color: var(--ink); }
+  .dia-btn.active .dia-label,
+  .dia-btn.active .dia-mes { opacity: 1; }
+
+  .cronograma-painel {
+    max-width: 720px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--nude);
+    padding: 36px 44px;
+    display: none;
+    animation: fadeInUp 0.5s ease;
+  }
+  .cronograma-painel.active { display: block; }
+  .cronograma-item {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 28px;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(212, 168, 150, 0.18);
+  }
+  .cronograma-item:last-child { border-bottom: none; }
+  .cronograma-hora {
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--nude);
+    line-height: 1;
+  }
+  .cronograma-titulo {
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--bg-bege);
+    line-height: 1.4;
+  }
+  .cronograma-tema {
+    display: block;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    text-transform: none;
+    color: var(--nude);
+    margin-top: 4px;
+    line-height: 1.35;
+  }
+  .pattern-light .cronograma-tema { color: var(--nude-deep); }
+  .cronograma-sub {
+    display: block;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.4px;
+    text-transform: none;
+    color: var(--nude-soft);
+    margin-top: 5px;
+    line-height: 1.45;
+    font-weight: 400;
+  }
+  .cronograma-item.is-pausa .cronograma-titulo { color: var(--nude-soft); opacity: 0.85; }
+
+  .cronograma-obs {
+    max-width: 720px;
+    margin: 48px auto 0;
+    padding-top: 32px;
+    border-top: 1px solid rgba(212, 168, 150, 0.15);
+    list-style: none;
+  }
+  .cronograma-obs li {
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--bg-bege);
+    opacity: 0.95;
+  }
+  .cronograma-obs li::before {
+    content: "*";
+    position: absolute;
+    left: 0;
+    color: var(--nude);
+    font-weight: 700;
+  }
+  .cronograma-obs li em { font-style: italic; color: var(--nude-soft); }
+
+  /* Cronograma em fundo claro: cores de texto escuras (mesma lógica da Curadoria) */
+  .pattern-light .dia-btn {
+    background: rgba(168, 130, 100, 0.06);
+    border-color: var(--nude-deep);
+    color: var(--ink);
+  }
+  .pattern-light .dia-btn:hover { background: rgba(184, 130, 106, 0.12); }
+  .pattern-light .dia-btn .dia-numero { color: var(--nude-deep); }
+  .pattern-light .dia-btn.active {
+    background: var(--nude-deep);
+    border-color: var(--nude-deep);
+    color: #fff;
+  }
+  .pattern-light .dia-btn.active .dia-numero { color: #fff; }
+  .pattern-light .cronograma-painel {
+    background: rgba(168, 130, 100, 0.05);
+    border-color: var(--nude-deep);
+  }
+  .pattern-light .cronograma-item {
+    border-bottom-color: rgba(184, 130, 106, 0.22);
+  }
+  .pattern-light .cronograma-hora { color: var(--nude-deep); }
+  .pattern-light .cronograma-titulo { color: var(--ink); }
+  .pattern-light .cronograma-sub { color: var(--nude-darker); }
+  .pattern-light .cronograma-item.is-pausa .cronograma-titulo { color: var(--nude-darker); opacity: 1; }
+  .pattern-light .cronograma-obs {
+    border-top-color: rgba(184, 130, 106, 0.22);
+  }
+  .pattern-light .cronograma-obs li { color: var(--ink); opacity: 1; }
+  .pattern-light .cronograma-obs li::before { color: var(--nude-deep); }
+  .pattern-light .cronograma-obs li em { color: var(--nude-deep); }
+
+  @media (max-width: 600px) {
+    .dias-tabs { grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 100%; }
+    .dia-btn { padding: 16px 6px; }
+    .dia-btn .dia-numero { font-size: 32px; margin-bottom: 6px; }
+    .dia-btn .dia-label { font-size: 8px; letter-spacing: 1.5px; margin-bottom: 8px; }
+    .dia-btn .dia-mes { font-size: 8px; letter-spacing: 1px; }
+    .cronograma-painel { padding: 28px 20px; }
+    .cronograma-item { grid-template-columns: 70px 1fr; gap: 14px; padding: 14px 0; }
+    .cronograma-hora { font-size: 20px; }
+    .cronograma-titulo { font-size: 12px; letter-spacing: 0.5px; }
+    .cronograma-tema { font-size: 14px; }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== GALERIA DE FOTOS ===== */
+  /* Galeria como carrossel grande (dentro da seção Edição 2025) */
+  .galeria-carousel {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .galeria-viewport {
+    position: relative;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    border: 1px solid var(--nude);
+    box-shadow: 0 28px 64px rgba(0, 0, 0, 0.45);
+  }
+  .galeria-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  .galeria-slide.active { opacity: 1; }
+  /* Etiqueta "Edição 2025" sobreposta no canto inferior esquerdo da galeria */
+  .galeria-legenda {
+    position: absolute;
+    bottom: 28px;
+    left: 32px;
+    z-index: 4;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 26px;
+    color: var(--bg-bege);
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9);
+    pointer-events: none;
+  }
+  @media (max-width: 720px) {
+    .galeria-legenda { bottom: 18px; left: 20px; font-size: 20px; }
+  }
+  /* Barra de navegação: seta ‹ — dots — seta › , abaixo da imagem (igual a Palestrantes) */
+  .galeria-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 28px;
+  }
+  .galeria-arrow {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: var(--nude);
+    color: var(--ink);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(168, 130, 100, 0.3);
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    flex-shrink: 0;
+  }
+  .galeria-arrow:hover {
+    background: var(--nude-deep);
+    color: #fff;
+    transform: scale(1.08);
+  }
+  /* Contador */
+  .galeria-contador {
+    position: absolute;
+    bottom: 18px;
+    right: 22px;
+    z-index: 3;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--bg-bege);
+    background: rgba(20, 16, 14, 0.6);
+    padding: 6px 14px;
+  }
+  /* Dots */
+  .galeria-dots {
+    display: flex;
+    justify-content: center;
+    gap: 11px;
+    flex-wrap: wrap;
+  }
+  .galeria-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--nude);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .galeria-dot.active { background: var(--nude); transform: scale(1.15); }
+  .galeria-dots { flex-wrap: wrap; justify-content: center; }
+  @media (max-width: 900px) { .galeria-dots { display: none; } }
+  @media (max-width: 600px) {
+    .galeria-viewport { aspect-ratio: 4/3; }
+    .galeria-nav { gap: 14px; margin-top: 22px; }
+    .galeria-arrow { width: 40px; height: 40px; font-size: 16px; }
+  }
+
+  /* ===== PALESTRANTES CONFIRMADOS ===== */
+  .palestrantes-intro {
+    max-width: 900px;
+    margin: 0 auto 56px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--bg-bege);
+    opacity: 0.9;
+    text-align: center;
+  }
+  /* Destaque: palestra de abertura (mesma estrutura do tópico 02) */
+  .palestrante-destaque {
+    margin-bottom: 88px;
+  }
+  /* Nome do palestrante como título inline, acima do texto */
+  .palestrante-titulo-inline {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    color: var(--bg-bege);
+    line-height: 1.05;
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+  }
+  .palestrante-titulo-inline .palestrante-eyebrow {
+    display: block;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-style: normal;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--nude);
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+  /* Link Instagram dentro do destaque (após o último parágrafo) */
+  .palestrante-destaque .palestrante-instagram {
+    margin-top: 28px;
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  .palestrante-destaque .palestrante-instagram svg {
+    width: 18px;
+    height: 18px;
+  }
+  /* Função/cargo do palestrante (cards do grid) */
+  .palestrante-funcao {
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--nude);
+    opacity: 0.95;
+    margin-bottom: 14px;
+  }
+  /* Cards do carrossel: função em uma linha no desktop */
+  .palestrante-card .palestrante-funcao { font-size: 11px; letter-spacing: 1.5px; }
+  @media (max-width: 600px) {
+    .palestrante-card .palestrante-funcao { font-size: 10px; letter-spacing: 1px; line-height: 1.45; min-height: 2.9em; }
+  }
+  .palestrantes-divisor {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    margin: 0 auto 18px;
+    max-width: 780px;
+  }
+  .palestrantes-divisor::before,
+  .palestrantes-divisor::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(184, 130, 106, 0.45);
+  }
+  .palestrantes-divisor span {
+    font-family: var(--serif);
+    font-size: clamp(24px, 3.4vw, 38px);
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--nude);
+    white-space: nowrap;
+  }
+  .pattern-light .palestrantes-divisor span { color: var(--ink); }
+  .pattern-light .palestrantes-divisor::before,
+  .pattern-light .palestrantes-divisor::after {
+    background: rgba(184, 130, 106, 0.5);
+  }
+  /* Responsivo: impede que o texto do divisor (nowrap) estoure a largura no mobile */
+  @media (max-width: 600px) {
+    .palestrantes-divisor { gap: 16px; max-width: 100%; }
+    .palestrantes-divisor span {
+      font-size: clamp(15px, 4.4vw, 22px);
+      letter-spacing: 1.5px;
+      white-space: normal;
+      text-align: center;
+    }
+  }
+  @media (max-width: 400px) {
+    .palestrantes-divisor { gap: 12px; }
+    .palestrantes-divisor span { font-size: 14px; letter-spacing: 1px; }
+  }
+  .palestrantes-divisor.em-breve { margin: 48px auto 8px; }
+  .palestrantes-nota {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 0.3px;
+    color: var(--bg-bege);
+    opacity: 0.7;
+    margin: 0 auto 56px;
+    max-width: 620px;
+  }
+  .pattern-light .palestrantes-nota { color: var(--ink-soft); opacity: 0.85; }
+  /* Carrossel paginado de palestrantes — 4 por página */
+  .palestrantes-carousel {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .palestrantes-viewport {
+    display: grid;
+  }
+  /* Todas as páginas ocupam a mesma célula: o carrossel reserva sempre a
+     altura da página mais alta, mantendo a barra de navegação fixa. */
+  .palestrantes-pagina {
+    grid-area: 1 / 1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .palestrantes-pagina.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .palestrante-card {
+    display: flex;
+    flex-direction: column;
+  }
+  /* O photo-card aqui usa o mesmo estilo do tópico 01, em formato retrato */
+  .palestrante-card .photo-card {
+    background: transparent;
+    padding: 0;
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.4);
+    margin-bottom: 18px;
+  }
+  .palestrante-card .photo-card-inner {
+    padding: 0;
+    aspect-ratio: 3/4;
+  }
+  .palestrante-card .photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+  /* Placeholder para foto ainda não carregada */
+  .palestrante-card .photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2a221d 0%, #1d1815 100%);
+    color: var(--nude-soft);
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+  .palestrante-info {
+    text-align: center;
+    padding: 4px 8px;
+  }
+  .palestrante-nome {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--bg-bege);
+    line-height: 1.25;
+    margin-bottom: 6px;
+  }
+  .palestrante-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--sans);
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: var(--nude);
+    text-decoration: none;
+    opacity: 0.95;
+    transition: opacity 0.3s, color 0.3s;
+  }
+  .palestrante-instagram:hover { opacity: 1; color: var(--nude-soft); }
+  .palestrante-instagram svg { width: 16px; height: 16px; }
+  /* Nos cards do carrossel, o link ocupa a largura do card; @ longos cabem em 1 linha */
+  .palestrante-card .palestrante-instagram {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    overflow-wrap: anywhere;
+  }
+  .palestrante-card .palestrante-instagram svg { flex-shrink: 0; }
+  /* Barra de navegação: seta ‹ — dots — seta › , toda abaixo dos cards */
+  .palestrantes-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 44px;
+  }
+  .palestrantes-arrow {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: var(--nude);
+    color: var(--ink);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(168, 130, 100, 0.3);
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    flex-shrink: 0;
+  }
+  .palestrantes-arrow:hover {
+    background: var(--nude-deep);
+    color: #fff;
+    transform: scale(1.08);
+  }
+  /* Dots de página */
+  .palestrantes-dots {
+    display: flex;
+    justify-content: center;
+    gap: 11px;
+  }
+  .palestrantes-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--nude);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .palestrantes-dot.active { background: var(--nude); transform: scale(1.15); }
+  @media (max-width: 1100px) {
+    .palestrantes-pagina { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+  }
+  @media (max-width: 560px) {
+    .palestrantes-pagina { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+    .palestrante-card .photo-card { margin-bottom: 12px; }
+    .palestrante-nome { font-size: 15px; }
+    .palestrante-instagram { font-size: 11px; letter-spacing: 1px; gap: 5px; }
+    .palestrante-instagram svg { width: 13px; height: 13px; }
+    .palestrante-funcao { font-size: 11px; }
+    .palestrante-info { padding: 4px 2px; }
+    .palestrantes-nav { gap: 14px; margin-top: 32px; }
+    .palestrantes-arrow { width: 40px; height: 40px; font-size: 16px; }
+  }
+
+  /* Tópico 06 em fundo claro: ajustes de cor */
+  .pattern-light .palestrantes-intro { color: var(--ink-soft); opacity: 1; }
+  .pattern-light .palestrante-titulo-inline { color: var(--ink); }
+  .pattern-light .palestrante-nome { color: var(--ink); }
+
+  .pattern-light .palestrante-card .photo-card {
+    box-shadow: 0 20px 44px rgba(168, 130, 100, 0.22);
+  }
+  .pattern-light .palestrante-funcao { color: var(--nude-deep); opacity: 1; }
+  .pattern-light .palestrante-instagram { color: var(--nude-deep); }
+  .pattern-light .palestrante-instagram:hover { color: var(--ink); }
+  .pattern-light .palestrante-titulo-inline .palestrante-eyebrow { color: var(--nude-deep); }
+  /* O destaque (Paulo Borges) usa col-text — texto já vira escuro via regra geral */
+
+  /* ===== SEÇÃO EMBAIXADORES =====
+     Mesma base visual do carrossel de palestrantes, porém os cards
+     trazem só nome, estado representado e Instagram (sem biografia). */
+  .embaixadores-intro {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--bg-bege);
+    opacity: 0.92;
+    max-width: 760px;
+    margin: 0 auto 56px;
+  }
+  .pattern-light .embaixadores-intro { color: var(--ink-soft); opacity: 1; }
+  .embaixadores-carousel {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .embaixadores-viewport { display: grid; }
+  .embaixadores-pagina {
+    grid-area: 1 / 1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .embaixadores-pagina.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .embaixador-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .embaixador-card .photo-card {
+    background: transparent;
+    padding: 0;
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.4);
+    margin-bottom: 18px;
+  }
+  .embaixador-card .photo-card-inner {
+    padding: 0;
+    aspect-ratio: 3/4;
+  }
+  .embaixador-card .photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+  .embaixador-card .photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2a221d 0%, #1d1815 100%);
+    color: var(--nude-soft);
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+  .embaixador-info {
+    text-align: center;
+    padding: 4px 8px;
+  }
+  .embaixador-nome {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--bg-bege);
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+  .embaixador-estado {
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+    margin-bottom: 8px;
+  }
+  .embaixador-instagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    max-width: 100%;
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    color: var(--nude);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: opacity 0.3s, color 0.3s;
+  }
+  .embaixador-instagram:hover { color: var(--nude-soft); }
+  .embaixador-instagram svg { width: 16px; height: 16px; flex-shrink: 0; }
+  /* card com dois perfis (ex.: Pernambuco): empilha os dois links */
+  .embaixador-instagram.duplo {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .embaixador-instagram.duplo .ig-linha {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .embaixadores-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 44px;
+  }
+  .embaixadores-arrow {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: var(--nude);
+    color: var(--ink);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(168, 130, 100, 0.3);
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    flex-shrink: 0;
+  }
+  .embaixadores-arrow:hover {
+    background: var(--nude-deep);
+    color: #fff;
+    transform: scale(1.08);
+  }
+  .embaixadores-dots {
+    display: flex;
+    justify-content: center;
+    gap: 11px;
+  }
+  .embaixadores-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--nude);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .embaixadores-dot.active { background: var(--nude); transform: scale(1.15); }
+  .pattern-light .embaixador-nome { color: var(--ink); }
+  .pattern-light .embaixador-card .photo-card {
+    box-shadow: 0 20px 44px rgba(168, 130, 100, 0.22);
+  }
+  .pattern-light .embaixador-estado { color: var(--nude-deep); }
+  .pattern-light .embaixador-instagram { color: var(--nude-deep); }
+  .pattern-light .embaixador-instagram:hover { color: var(--ink); }
+  @media (max-width: 1100px) {
+    .embaixadores-pagina { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+  }
+  @media (max-width: 560px) {
+    .embaixadores-pagina { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+    .embaixador-card .photo-card { margin-bottom: 12px; }
+    .embaixador-nome { font-size: 15px; }
+    .embaixador-estado { font-size: 10px; letter-spacing: 1.5px; }
+    .embaixador-instagram { font-size: 11px; letter-spacing: 0.3px; gap: 5px; }
+    .embaixador-instagram svg { width: 13px; height: 13px; }
+    .embaixador-info { padding: 4px 2px; }
+    .embaixadores-nav { gap: 14px; margin-top: 32px; }
+    .embaixadores-arrow { width: 40px; height: 40px; font-size: 16px; }
+  }
+
+  /* ===== CTA FINAL com foto ===== */
+  /* ===== HOSPEDAGEM (Hotel parceiro) ===== */
+  .hospedagem-hotel-nome {
+    text-transform: uppercase;
+    max-width: 760px;
+    margin: 0 auto 8px;
+    text-align: center;
+    font-family: var(--serif);
+    font-size: clamp(26px, 4vw, 46px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--bg-bege);
+  }
+  .hospedagem-eyebrow {
+    max-width: 760px;
+    margin: 0 auto 26px;
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+  }
+  .hospedagem-intro {
+    max-width: 760px;
+    margin: 0 auto 18px;
+    text-align: center;
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.4vw, 30px);
+    color: var(--bg-bege);
+    line-height: 1.3;
+  }
+  .hospedagem-intro strong { color: var(--nude); font-weight: 400; }
+  .hospedagem-sub {
+    max-width: 680px;
+    margin: 0 auto 14px;
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+  }
+  /* Datas check-in / check-out */
+  .hospedagem-datas {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 32px auto 16px;
+    max-width: 440px;
+    border: 1px solid var(--nude);
+    position: relative;
+    z-index: 1;
+    background: var(--bg-bege);
+  }
+  .pattern-dark .hospedagem-datas { background: var(--bg-dark); }
+  .hospedagem-data {
+    flex: 1;
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .hospedagem-data + .hospedagem-data { border-left: 1px solid var(--nude); }
+  .hospedagem-data .rotulo {
+    display: block;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+    margin-bottom: 8px;
+  }
+  .hospedagem-data .valor {
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--nude);
+  }
+  /* Aviso de validade dos pacotes */
+  .hospedagem-validade {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--nude-soft);
+    margin-bottom: 48px;
+  }
+  /* Seletor de lotes de tarifa */
+  .lotes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 8px auto 28px;
+  }
+  .lote-btn {
+    font-family: var(--sans);
+    background: transparent;
+    border: 1px solid var(--nude-darker);
+    color: var(--ink);
+    padding: 12px 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 150px;
+    transition: background .25s, color .25s;
+  }
+  .lote-btn .lote-nome { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; }
+  .lote-btn .lote-periodo { font-size: 12px; color: var(--ink-soft); font-variant-numeric: lining-nums; }
+  .lote-btn:hover { background: rgba(168, 130, 100, 0.12); }
+  .lote-btn.ativo { background: var(--nude-deep); border-color: var(--nude-deep); color: #fff; }
+  .lote-btn.ativo .lote-periodo { color: rgba(255, 255, 255, 0.85); }
+  .quarto-precos .val.a-definir { font-family: var(--sans); font-size: 13px; font-style: italic; letter-spacing: .5px; }
+  .lote-aviso, .hospedagem-diaria {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 18px auto 0;
+  }
+  .lote-aviso { font-style: italic; }
+  @media (max-width: 600px) {
+    .lote-btn { min-width: 0; flex: 1 1 30%; padding: 10px 6px; }
+    .lote-btn .lote-nome { letter-spacing: 1.5px; font-size: 11px; }
+    .lote-btn .lote-periodo { font-size: 10.5px; }
+  }
+  /* Grade de categorias de quarto */
+  .quartos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .quarto-card {
+    border: 1px solid var(--nude);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 28px 26px;
+    display: flex;
+    flex-direction: column;
+  }
+  .quarto-nome {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--bg-bege);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .quarto-tipo {
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--nude);
+    margin-bottom: 18px;
+  }
+  .quarto-precos {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+    flex: 1;
+  }
+  .quarto-precos li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(212, 168, 150, 0.16);
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--bg-bege);
+  }
+  .quarto-precos li:last-child { border-bottom: none; }
+  .quarto-precos .reg { color: var(--nude-soft); letter-spacing: 1px; text-transform: uppercase; font-size: 12px; }
+  .quarto-precos .val { color: var(--nude); font-family: var(--serif); font-size: 18px; white-space: nowrap; }
+  .quarto-obs {
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--nude-soft);
+    font-style: italic;
+  }
+  /* Observações gerais */
+  .hospedagem-observacoes {
+    max-width: 760px;
+    margin: 56px auto 0;
+    padding-top: 32px;
+    border-top: 1px solid rgba(212, 168, 150, 0.15);
+    list-style: none;
+  }
+  .hospedagem-observacoes li {
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 10px;
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--bg-bege);
+    opacity: 0.95;
+  }
+  .hospedagem-observacoes li::before {
+    content: "*";
+    position: absolute;
+    left: 0;
+    color: var(--nude);
+    font-weight: 700;
+  }
+  /* Bloco de reserva (links/contato) */
+  .hospedagem-reserva {
+    max-width: 760px;
+    margin: 40px auto 0;
+    text-align: center;
+  }
+  .hospedagem-reserva .reserva-titulo {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--bg-bege);
+    margin-bottom: 20px;
+  }
+  .hospedagem-reserva .reserva-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .reserva-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border: 1px solid var(--nude);
+    color: var(--nude);
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+  .reserva-btn:hover { background: var(--nude); color: var(--ink); }
+  .reserva-btn.primario { background: var(--nude); color: var(--ink); }
+  .reserva-btn.primario:hover { background: var(--nude-soft); }
+  .hospedagem-conheca {
+    text-align: center;
+    margin-top: 28px;
+    font-family: var(--sans);
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--nude-soft);
+  }
+  .hospedagem-conheca a {
+    color: var(--nude);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(212, 168, 150, 0.4);
+    transition: color 0.3s;
+  }
+  .hospedagem-conheca a:hover { color: var(--nude-soft); }
+  /* Localização — mapa do hotel */
+  .hospedagem-mapa {
+    margin-top: 44px;
+    padding-top: 36px;
+    border-top: 1px solid var(--line-dark);
+    text-align: center;
+  }
+  .hospedagem-mapa .mapa-rotulo {
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+    margin-bottom: 10px;
+  }
+  .hospedagem-mapa .mapa-endereco {
+    font-family: var(--serif);
+    font-size: 16px;
+    color: var(--bg-bege);
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+  .hospedagem-mapa .mapa-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--nude);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+  .hospedagem-mapa .mapa-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  .hospedagem-mapa .mapa-btn-wrap {
+    margin-top: 38px;
+    position: relative;
+    z-index: 1;
+  }
+  /* Seção Hospedagem em fundo claro: ajusta os textos que por
+     padrão são claros (pensados para o fundo escuro original). */
+  .pattern-light .hospedagem-intro { color: var(--ink); }
+  .pattern-light .hospedagem-intro strong { color: var(--nude-darker); }
+  .pattern-light .hospedagem-hotel-nome { color: var(--ink); }
+  .pattern-light .hospedagem-eyebrow,
+  .pattern-light .hospedagem-sub,
+  .pattern-light .hospedagem-validade,
+  .pattern-light .quarto-obs,
+  .pattern-light .quarto-precos .reg,
+  .pattern-light .hospedagem-data .rotulo,
+  .pattern-light .hospedagem-mapa .mapa-rotulo { color: var(--nude-darker); }
+  .pattern-light .hospedagem-conheca { color: var(--ink-soft); }
+  .pattern-light .hospedagem-data .valor,
+  .pattern-light .quarto-tipo,
+  .pattern-light .quarto-precos .val,
+  .pattern-light .reserva-btn,
+  .pattern-light .hospedagem-conheca a { color: var(--nude-darker); }
+  .pattern-light .quarto-nome,
+  .pattern-light .quarto-precos li,
+  .pattern-light .hospedagem-observacoes li,
+  .pattern-light .hospedagem-reserva .reserva-titulo,
+  .pattern-light .hospedagem-mapa .mapa-endereco { color: var(--ink); }
+  .pattern-light .quarto-card { background: rgba(255, 255, 255, 0.45); border-color: var(--nude-darker); }
+  .pattern-light .hospedagem-datas { border-color: var(--nude-darker); }
+  .pattern-light .hospedagem-data + .hospedagem-data { border-left-color: var(--nude-darker); }
+  .pattern-light .reserva-btn { border-color: var(--nude-darker); }
+  .pattern-light .reserva-btn:hover { background: var(--nude-darker); color: #fff; }
+  .pattern-light .reserva-btn.primario { background: var(--nude-darker); color: #fff; }
+  .pattern-light .reserva-btn.primario:hover { background: var(--ink); }
+  .pattern-light .hospedagem-observacoes li::before { color: var(--nude-darker); }
+  .pattern-light .hospedagem-mapa { border-top-color: rgba(58, 42, 32, 0.18); }
+  @media (max-width: 900px) {
+    .quartos-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .quartos-grid { grid-template-columns: 1fr; }
+    .reserva-btn { width: 100%; justify-content: center; }
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: transparent;
+    padding: 80px 6% 32px;
+    text-align: center;
+    border-top: 1px solid var(--line-dark);
+  }
+  footer .footer-logo {
+    height: 190px;
+    width: auto;
+    margin-bottom: 44px;
+  }
+  .footer-contact {
+    color: var(--bg-bege);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 32px;
+  }
+  .footer-contact a { color: var(--nude); text-decoration: none; }
+  .footer-contact a:hover { color: var(--nude-soft); }
+  .footer-contact strong { color: var(--nude); font-weight: 600; }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 28px 0;
+    flex-wrap: wrap;
+    padding: 0 4%;
+  }
+  .footer-links a {
+    color: var(--bg-bege);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 11px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    /* margin fallback for browsers that ignore gap */
+    margin: 4px 0;
+  }
+  .footer-links a:hover { opacity: 1; color: var(--nude); }
+  @media (max-width: 720px) {
+    .footer-links {
+      gap: 18px 22px;
+      margin: 24px 0;
+    }
+    .footer-links a {
+      font-size: 10px;
+      letter-spacing: 2px;
+      /* explicit horizontal margin for legacy mobile browsers */
+      margin: 4px 11px;
+    }
+    footer { padding: 60px 5% 28px; }
+    footer .footer-logo { height: 140px; margin-bottom: 32px; }
+    .footer-contact { font-size: 13px; line-height: 1.9; padding: 0 4%; }
+  }
+  @media (max-width: 480px) {
+    .footer-links { gap: 14px 18px; }
+    .footer-links a { font-size: 9.5px; letter-spacing: 1.8px; margin: 4px 9px; }
+    footer .footer-logo { height: 110px; }
+  }
+
+  /* ===== COMPARTILHAR — barra fixa + rodapé ===== */
+  .share-fixed {
+    position: fixed;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .share-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--nude);
+    background: rgba(20, 16, 14, 0.78);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--nude);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  .share-btn svg { width: 19px; height: 19px; display: block; }
+  .share-btn:hover {
+    background: var(--nude);
+    color: var(--bg-dark);
+    transform: translateY(-2px);
+  }
+  /* bloco de compartilhar no rodapé */
+  .footer-share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 30px 0 4px;
+  }
+  .footer-share .share-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--bg-bege);
+    opacity: 0.65;
+  }
+  .footer-share .share-btn {
+    background: transparent;
+  }
+  @media (max-width: 920px) {
+    .share-fixed {
+      right: 50%;
+      top: auto;
+      bottom: 0;
+      transform: translateX(50%);
+      flex-direction: row;
+      gap: 14px;
+      padding: 9px 16px;
+      background: rgba(20, 16, 14, 0.92);
+      backdrop-filter: blur(6px);
+      border-top: 1px solid var(--line-dark);
+      width: 100%;
+      justify-content: center;
+    }
+    .share-btn { background: transparent; }
+  }
+  .copyright {
+    padding-top: 28px;
+    border-top: 1px solid var(--line-dark);
+    margin-top: 24px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--bg-bege);
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+
+  /* ===== ANIMAÇÕES ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards;
+  }
+  .delay-1 { animation-delay: 0.15s; }
+  .delay-2 { animation-delay: 0.3s; }
+  .delay-3 { animation-delay: 0.45s; }
+  .delay-4 { animation-delay: 0.6s; }
+
+  /* ===== Botão de expandir foto ===== */
+  .zoom-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(29, 24, 21, 0.62);
+    color: var(--bg-bege);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity 0.25s ease, transform 0.25s ease, background 0.25s ease;
+    z-index: 6;
+    backdrop-filter: blur(2px);
+  }
+  .zoom-btn svg { width: 18px; height: 18px; }
+  .zoom-btn:hover { background: var(--nude-deep); color: #fff; }
+  /* O wrapper que contém imagem + botão.
+     Só vira relative se ainda não tiver posicionamento próprio. */
+  .has-zoom:not(.galeria-slide):not(.carousel-img) { position: relative; }
+  .has-zoom:hover .zoom-btn,
+  .has-zoom:focus-within .zoom-btn { opacity: 1; transform: scale(1); }
+  /* Quando a visibilidade é controlada por JS (ex.: galeria), o :hover do CSS
+     não dispara — usa-se a classe .zoom-visivel. */
+  .has-zoom.zoom-js-hover .zoom-btn { opacity: 0; transform: scale(0.85); }
+  .has-zoom.zoom-js-hover.zoom-visivel .zoom-btn { opacity: 1; transform: scale(1); }
+  /* Em telas sem hover (touch), o botão fica sempre visível */
+  @media (hover: none) {
+    .zoom-btn { opacity: 1; transform: scale(1); }
+  }
+
+  /* ===== Overlay (lightbox + popup) ===== */
+  .lf-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 12, 10, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .lf-overlay.open { opacity: 1; pointer-events: auto; }
+  .lf-close {
+    position: fixed;
+    top: 22px;
+    right: 26px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--line-dark);
+    background: rgba(29, 24, 21, 0.7);
+    color: var(--bg-bege);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+    z-index: 1002;
+  }
+  .lf-close:hover { background: var(--nude-deep); color: #fff; transform: rotate(90deg); }
+
+  /* Lightbox simples — só a imagem */
+  .lf-image {
+    max-width: 92vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    transform: scale(0.96);
+    transition: transform 0.3s ease;
+  }
+  .lf-overlay.open .lf-image { transform: scale(1); }
+
+  /* Lightbox da Feira: foto grande + logo da marca no canto inferior direito */
+  .lf-feira { position: relative; display: inline-block; line-height: 0; }
+  .lf-feira-logo {
+    position: absolute; right: 20px; bottom: 20px;
+    max-width: 34%; max-height: 78px; width: auto; height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));
+    pointer-events: none;
+  }
+  @media (max-width: 600px) {
+    .lf-feira-logo { right: 12px; bottom: 12px; max-height: 54px; max-width: 42%; }
+  }
+
+  /* Pop-up de palestrante — foto à esquerda, descrição à direita */
+  .lf-palestrante {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+    max-width: 940px;
+    width: 100%;
+    max-height: 86vh;
+    background: var(--bg-dark-soft);
+    border: 1px solid var(--line-dark);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    transform: scale(0.96);
+    transition: transform 0.3s ease;
+  }
+  .lf-overlay.open .lf-palestrante { transform: scale(1); }
+  .lf-palestrante-foto {
+    position: relative;
+    background: var(--bg-dark);
+    min-height: 100%;
+  }
+  .lf-palestrante-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .lf-palestrante-texto {
+    padding: 48px 44px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .lf-palestrante-funcao {
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+    margin-bottom: 12px;
+  }
+  .lf-palestrante-nome {
+    font-family: var(--serif);
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 400;
+    color: var(--bg-bege);
+    line-height: 1.15;
+    margin-bottom: 22px;
+  }
+  .lf-palestrante-bio {
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--bg-bege);
+    opacity: 0.9;
+    margin-bottom: 26px;
+  }
+  .lf-palestrante-bio p { margin-bottom: 14px; }
+  .lf-palestrante-bio p:last-child { margin-bottom: 0; }
+  .lf-palestrante-insta {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--nude);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .lf-palestrante-insta:hover { color: var(--nude-soft); }
+  .lf-palestrante-insta svg { width: 16px; height: 16px; }
+
+  /* Zoom de retrato: foto ampliada com etiqueta + nome no canto inferior esquerdo */
+  .lf-retrato-fig {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    line-height: 0;
+    transform: scale(0.96);
+    transition: transform 0.3s ease;
+  }
+  .lf-overlay.open .lf-retrato-fig { transform: scale(1); }
+  /* scrim: degradê escuro atrás da legenda, garante leitura
+     mesmo quando o canto inferior da foto é claro */
+  .lf-retrato-fig::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 45%;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.45) 38%,
+      rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .lf-retrato-img {
+    max-width: 92vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    display: block;
+  }
+  .lf-retrato-cap {
+    position: absolute;
+    bottom: 36px;
+    left: 36px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
+  }
+  .lf-retrato-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--nude-soft);
+    margin-bottom: 8px;
+  }
+  .lf-retrato-nome {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 30px;
+    color: var(--bg-bege);
+    font-weight: 400;
+    line-height: 1;
+  }
+  @media (max-width: 720px) {
+    .lf-retrato-cap { bottom: 22px; left: 22px; }
+    .lf-retrato-nome { font-size: 24px; }
+    .lf-retrato-eyebrow { font-size: 10px; letter-spacing: 3px; }
+  }
+
+  @media (max-width: 720px) {
+    .lf-overlay { padding: 0; }
+    /* o conteúdo ocupa a tela inteira; filhos centralizados
+       (lightbox e retrato continuam centralizados normalmente) */
+    .lf-content {
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Pop-up de palestrante no mobile: foto em tela cheia e
+       descrição sobreposta sobre um véu de transparência. */
+    .lf-palestrante {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      max-height: none;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      background: var(--bg-dark);
+    }
+    .lf-palestrante-foto {
+      position: absolute;
+      inset: 0;
+      min-height: 0;
+    }
+    .lf-palestrante-texto {
+      position: absolute;
+      inset: 0;
+      justify-content: flex-end;
+      padding: 30vh 26px 42px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      background: linear-gradient(to bottom,
+        rgba(20, 16, 14, 0) 0%,
+        rgba(20, 16, 14, 0) 14%,
+        rgba(20, 16, 14, 0.72) 30%,
+        rgba(20, 16, 14, 0.90) 46%,
+        rgba(20, 16, 14, 0.94) 100%);
+    }
+    .lf-palestrante-funcao { text-shadow: 0 1px 10px rgba(0, 0, 0, 0.85); }
+    .lf-palestrante-nome { text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9); }
+    .lf-palestrante-bio {
+      opacity: 1;
+      text-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
+    }
+    .lf-palestrante-insta {
+      margin-top: 6px;
+      text-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
+    }
+    .lf-close { top: 14px; right: 16px; width: 42px; height: 42px; }
+  }
+
+  /* ============================================================
+     SEÇÃO: PATROCINADORES E APOIADORES
+     ============================================================ */
+  .patrocinadores-intro {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 1.7;
+    max-width: 780px;
+    margin: 0 auto 56px;
+    color: var(--ink-soft);
+  }
+  .pattern-dark .patrocinadores-intro { color: var(--bg-bege); opacity: 0.85; }
+
+  .patrocinadores-divisor {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    margin: 0 auto 36px;
+    max-width: 780px;
+  }
+  .patrocinadores-divisor::before,
+  .patrocinadores-divisor::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(184, 130, 106, 0.5);
+  }
+  .patrocinadores-divisor span {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.6vw, 28px);
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .pattern-dark .patrocinadores-divisor span { color: var(--nude); }
+  .pattern-dark .patrocinadores-divisor::before,
+  .pattern-dark .patrocinadores-divisor::after { background: rgba(212, 168, 150, 0.4); }
+
+  /* Grids de logos */
+  .logos-grid {
+    display: grid;
+    gap: 24px;
+    margin: 0 auto 72px;
+    max-width: 1100px;
+  }
+  .logos-grid.patrocinadores { grid-template-columns: repeat(3, 1fr); }
+  .logos-grid.apoiadores     { grid-template-columns: repeat(5, 1fr); }
+
+  .logo-card {
+    aspect-ratio: 4 / 3;
+    background: #ffffff;
+    border: 1px solid rgba(184, 130, 106, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 28px;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  .logo-card:hover {
+    border-color: rgba(184, 130, 106, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+  }
+  .logo-card img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  .logo-card.empty {
+    background: transparent;
+    border-style: dashed;
+    border-color: rgba(184, 130, 106, 0.4);
+    color: var(--nude-deep);
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0.7;
+  }
+  .pattern-dark .logo-card.empty {
+    color: var(--nude);
+    border-color: rgba(212, 168, 150, 0.35);
+  }
+
+  /* Bloco destaque para Companhia Aérea Oficial
+     (mesmo tratamento visual dos quarto-card da seção Hospedagem) */
+  .aerea-oficial-bloco {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 56px 48px;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid var(--nude-darker);
+    text-align: center;
+  }
+  .aerea-oficial-bloco .azul-logo {
+    max-width: 240px;
+    max-height: 96px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 32px;
+    display: block;
+  }
+  .azul-texto {
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin: 0 auto 36px;
+  }
+  .azul-texto strong {
+    color: var(--nude-deep);
+    font-weight: 600;
+  }
+  .azul-promocode {
+    border: 1px solid rgba(184, 130, 106, 0.55);
+    padding: 24px 32px;
+    max-width: 520px;
+    margin: 0 auto;
+    background: rgba(184, 130, 106, 0.06);
+  }
+  .azul-promocode-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--nude-deep);
+    margin-bottom: 12px;
+  }
+  .azul-promocode-codigo {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--nude-deep);
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+  .azul-promocode-desconto {
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+  .azul-promocode-validade {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: var(--ink-soft);
+    opacity: 0.65;
+    font-style: italic;
+  }
+  .azul-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 28px auto 16px;
+    padding: 14px 28px;
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--nude-darker);
+    border: 1px solid var(--nude-darker);
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+  }
+  .azul-cta:hover {
+    background: transparent;
+    color: var(--nude-darker);
+    transform: translateY(-1px);
+  }
+  .azul-cta svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+  }
+  .azul-cta:hover svg { transform: translateX(3px); }
+  .azul-instrucao {
+    font-family: var(--sans);
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    opacity: 0.78;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .azul-instrucao strong {
+    color: var(--nude-darker);
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  /* Companhia Aérea (Azul) sobre fundo ESCURO — clareia o lettering */
+  .pattern-dark .azul-texto { color: var(--bg-bege); }
+  .pattern-dark .azul-texto strong { color: var(--nude); }
+  .pattern-dark .azul-promocode { border-color: rgba(212, 168, 150, 0.5); background: rgba(212, 168, 150, 0.08); }
+  .pattern-dark .azul-promocode-label { color: var(--nude); }
+  .pattern-dark .azul-promocode-codigo { color: var(--nude); }
+  .pattern-dark .azul-promocode-desconto { color: var(--bg-bege); }
+  .pattern-dark .azul-promocode-validade { color: var(--bg-bege); }
+  .pattern-dark .azul-cta { color: var(--bg-dark); background: var(--nude); border-color: var(--nude); }
+  .pattern-dark .azul-cta:hover { background: transparent; color: var(--nude); }
+  .pattern-dark .azul-instrucao { color: var(--bg-bege); }
+  .pattern-dark .azul-instrucao strong { color: var(--nude); }
+  .pattern-dark .aerea-oficial-bloco { background: transparent; border-color: rgba(212, 168, 150, 0.3); }
+
+  /* ===== FEIRA DE NEGÓCIOS — cards de lounges (layout próprio) ===== */
+  .feira-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 22px;
+    max-width: 1140px;
+    margin: 4px auto 0;
+  }
+  .feira-card {
+    background: rgba(212, 168, 150, 0.05);
+    border: 1px solid rgba(212, 168, 150, 0.28);
+    overflow: hidden;
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  }
+  .feira-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--nude);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  }
+  .feira-card-foto { position: relative; aspect-ratio: 4 / 3; overflow: hidden; }
+  .feira-card-foto img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+  .feira-card:hover .feira-card-foto img { transform: scale(1.05); }
+  .feira-card-foto--vazio {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+    background: repeating-linear-gradient(45deg, rgba(212,168,150,0.06) 0 10px, rgba(212,168,150,0.02) 10px 20px), var(--bg-dark-soft);
+    color: var(--nude);
+  }
+  .feira-card-foto--vazio svg { width: 30px; height: 30px; opacity: 0.55; }
+  .feira-card-ph-text { font-family: var(--sans); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.7; }
+  .feira-card-num {
+    position: absolute; top: 10px; left: 10px; z-index: 2;
+    font-family: var(--sans); font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--bg-dark); background: var(--nude); padding: 4px 9px;
+  }
+  .feira-card-info { padding: 18px 14px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .feira-card-logo { max-height: 64px; max-width: 85%; object-fit: contain; }
+  /* Logos da Feira: altura calculada por logo (proporção e densidade) para equilibrar o peso visual */
+  .feira-card-info .feira-card-logo { height: var(--logo-h, 56px); width: auto; max-height: none; max-width: 85%; object-fit: contain; }
+  .feira-card-logo-ph {
+    font-family: var(--serif); font-size: 15px; letter-spacing: 1px; color: var(--nude); opacity: 0.85;
+    border: 1px dashed rgba(212,168,150,0.4); padding: 8px 16px;
+  }
+  .feira-card-instagram {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--sans); font-size: 12px; letter-spacing: 0.5px; color: var(--bg-bege);
+    text-decoration: none; opacity: 0.9; transition: color 0.3s;
+  }
+  .feira-card-instagram:hover { color: var(--nude); }
+  .feira-card-instagram svg { width: 14px; height: 14px; }
+  .feira-card-instagram--ph { opacity: 0.45; }
+  .feira-card--vazio { display: flex; flex-direction: column; }
+  .feira-card--vazio .feira-card-foto--vazio { aspect-ratio: auto; flex: 1; min-height: 250px; }
+  /* Card de marca (sem foto): mesmo fundo escuro dos demais cards, logo em destaque no lugar da foto, Instagram embaixo */
+  .feira-card--marca { display: flex; flex-direction: column; }
+  .feira-card-marca-area {
+    /* bloco sombreado com a mesma proporção (4:3) da foto dos outros cards */
+    position: relative; aspect-ratio: 4 / 3; overflow: hidden;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+    padding: 18px;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.42) 100%), rgba(0, 0, 0, 0.30);
+    box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.45);
+  }
+  .feira-card--marca .feira-card-logo { max-height: 84px; max-width: 78%; }
+  .feira-card-legenda {
+    font-family: var(--sans); font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase;
+    color: var(--nude-darker);
+  }
+  .feira-card-info .feira-card-legenda { color: var(--nude); margin-top: -4px; }
+  @media (max-width: 900px) { .feira-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; } }
+  @media (max-width: 520px) { .feira-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } .feira-card-info { padding: 14px 10px 16px; } }
+  @media (max-width: 520px) { .feira-card-info .feira-card-logo { height: calc(var(--logo-h, 56px) * 0.72); max-width: 90%; } }
+  @media (max-width: 400px) {
+    .feira-card-logo { max-height: 48px; max-width: 90%; }
+    .feira-card-ph-text { font-size: 9px; letter-spacing: 1px; }
+    .feira-card-instagram { font-size: 11px; }
+    .feira-card--vazio .feira-card-foto--vazio { min-height: 180px; }
+    .feira-card--marca .feira-card-logo { max-height: 60px; max-width: 88%; }
+    .feira-card-info .feira-card-logo { height: calc(var(--logo-h, 56px) * 0.66); max-width: 90%; }
+    .feira-card-legenda { font-size: 8px; letter-spacing: 1.2px; text-align: center; }
+  }
+
+  @media (max-width: 900px) {
+    .logos-grid.patrocinadores { grid-template-columns: repeat(2, 1fr); }
+    .logos-grid.apoiadores     { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .logos-grid.patrocinadores,
+    .logos-grid.apoiadores     { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .aerea-oficial-bloco { padding: 36px 20px; }
+    .aerea-oficial-bloco .azul-logo { max-width: 170px; max-height: 80px; margin-bottom: 22px; }
+    .azul-texto { font-size: 13.5px; line-height: 1.65; margin-bottom: 26px; }
+    .azul-promocode { padding: 20px 18px; }
+    .azul-promocode-label { font-size: 9px; letter-spacing: 2px; }
+    .azul-promocode-codigo { font-size: 26px; letter-spacing: 3px; }
+    .azul-promocode-desconto { font-size: 12px; }
+    .azul-promocode-validade { font-size: 10px; }
+    .azul-cta {
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      padding: 13px 18px;
+      margin-top: 22px;
+      /* let the button respect the container width to avoid overflow on very narrow screens */
+      width: 100%;
+      justify-content: center;
+    }
+    .azul-cta svg { width: 13px; height: 13px; }
+    .azul-instrucao { font-size: 11px; line-height: 1.55; }
+    .patrocinadores-divisor { gap: 18px; margin-bottom: 28px; }
+  }
+
+  /* ===== PERGUNTAS FREQUENTES ===== */
+  .faq-lista { max-width: 860px; margin: 0 auto; border-top: 1px solid var(--line-dark); }
+  .faq-item { border-bottom: 1px solid var(--line-dark); }
+  .faq-item summary {
+    list-style: none; cursor: pointer; position: relative;
+    padding: 22px 48px 22px 0;
+    font-family: var(--serif); font-size: 20px; line-height: 1.35; color: var(--bg-bege);
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+    font-family: var(--sans); font-size: 24px; font-weight: 300; color: var(--nude); transition: transform 0.3s;
+  }
+  .faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  .faq-item summary:hover { color: var(--nude); }
+  .faq-item p { padding: 0 48px 24px 0; font-size: 16px; line-height: 1.8; color: var(--bg-bege); opacity: 0.9; }
+  .faq-item p a { color: var(--nude); }
+  @media (max-width: 600px) {
+    .faq-item summary { font-size: 17px; padding: 18px 40px 18px 0; }
+    .faq-item p { padding-right: 0; font-size: 15px; }
+  }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Quando e onde acontece o congresso?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nos dias 8, 9 e 10 de novembro de 2027, no Unique Palace, em Brasília/DF (SCES Trecho 2, Conjunto 42)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Como garanto minha participação?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Pelo passaporte, à venda na página oficial de inscrição: garantir meu passaporte."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Para quem é o congresso?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Para quem atua no mercado de festas e eventos: empresários e gestores, cerimonialistas, decoradores, produtores, fornecedores, profissionais de hotelaria e de destination wedding, de marketing e formadores de opinião do setor."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "O que está incluído no passaporte?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Os três dias de palestras e painéis, a Feira de Negócios, o almoço e o coffee break. Bar e café ficam disponíveis durante todo o congresso."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quando sai a programação?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Em breve, aqui no site e no Instagram @luxodefestaoficial. A programação pode sofrer alterações."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "O que é a Feira de Negócios?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "São lounges montados dentro do congresso, em que hotéis, destinos e fornecedores apresentam seus espaços, serviços e condições para eventos. Ela funciona durante os três dias."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Existe hotel com tarifa especial?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sim. O Jade Hotel é o hotel oficial, com tarifas especiais de 8 a 12 de novembro de 2027 pelo código LUXO2027. Os valores, lotes e condições estão na seção Hospedagem."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Há condições especiais de passagem aérea?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A Azul foi a Companhia Aérea Oficial do Luxo de Festa 2026. As novidades sobre condições especiais para 2027 serão divulgadas em breve."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Como falo com a organização?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Pelo WhatsApp +55 11 5283-4125, pelo e-mail contato@luxodefestabrasil.com ou pelo Instagram @luxodefestaoficial."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body class="fundo-foto">
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo" aria-label="Voltar ao início">
+    <img decoding="async" loading="eager" fetchpriority="high" src="logos/coroa_branca.png" alt="Luxo de Festa">
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#apresentacao">Apresentação</a></li>
+    <li><a href="#curadoria">Curadoria</a></li>
+    <li><a href="#palestrantes">Palestrantes</a></li>
+    <li><a href="#embaixadores">Embaixadores</a></li>
+    <li><a href="#feira-negocios">Feira de Negócios</a></li>
+    <li><a href="#formato">Cronograma</a></li>
+    <li><a href="#publico">Público</a></li>
+    <li><a href="#case">Edição 2026</a></li>
+    <li><a href="#patrocinadores">Companhia Aérea</a></li>
+    <li><a href="#hospedagem">Hospedagem</a></li>
+    <li><a href="#faq">Dúvidas</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li class="nav-links-cta"><a href="https://codemy.party/l/start.luxodefesta2027" target="_blank" rel="noopener">Garantir meu passaporte</a></li>
+  </ul>
+  <a href="https://codemy.party/l/start.luxodefesta2027" class="nav-cta" target="_blank" rel="noopener">Garantir meu passaporte</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+</nav>
+
+<!-- BARRA FIXA DE COMPARTILHAMENTO -->
+<div class="share-fixed" id="shareFixed">
+  <a class="share-btn" id="shareWhats" target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp" title="Compartilhar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+  <a class="share-btn" id="shareFb" target="_blank" rel="noopener" aria-label="Compartilhar no Facebook" title="Compartilhar no Facebook">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="share-btn" id="shareInsta" href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener" aria-label="Seguir no Instagram" title="Seguir no Instagram">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+  </a>
+  <a class="share-btn" href="mailto:contato@luxodefestabrasil.com" aria-label="Enviar e-mail para contato@luxodefestabrasil.com" title="Enviar e-mail">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"></rect><path d="M3 6.5l9 6.5 9-6.5"></path></svg>
+  </a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-h1"><img decoding="async" loading="eager" fetchpriority="high" src="logos/logo_branca.png" alt="Luxo de Festa — Congresso Nacional de Festas &amp; Eventos, 4ª edição" class="hero-logo fade-up delay-1"></h1>
+    <div class="hero-date-frame fade-up delay-3">
+      <div class="dates">8 · 9 · 10<br>NOVEMBRO 2027</div>
+      <div class="location">Unique Palace · Brasília/DF</div>
+      <div class="endereco">SCES Trecho 2, Conjunto 42</div>
+      <a class="mapa-link" href="https://www.google.com/maps/search/?api=1&amp;query=Unique%20Palace%2C%20SCES%20Trecho%202%20Conjunto%2042%2C%20Bras%C3%ADlia%20DF" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Ver no mapa</a>
+    </div>
+    <div class="hero-cta-wrap fade-up delay-4">
+      <a href="https://codemy.party/l/start.luxodefesta2027" class="btn-primary" target="_blank" rel="noopener">Garantir meu passaporte</a>
+    </div>
+    <div class="countdown fade-up delay-4" id="countdown" data-target="2027-11-08T00:00:00-03:00" aria-label="Contagem regressiva para o início do congresso">
+      <div class="countdown-label">Faltam</div>
+      <div class="countdown-units">
+        <div class="cd-unit"><span class="cd-num" data-dias>000</span><span class="cd-lbl">Dias</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APRESENTAÇÃO -->
+<section class="chapter pattern-dark" id="apresentacao">
+  <div class="container">
+    <div class="chapter-header-inline centered">
+      <h2 class="chapter-title">APRESENTAÇÃO</h2>
+    </div>
+    <div class="two-col-with-photo">
+      <div class="col-text">
+        <p>Criado por César Serra, o <strong>Luxo de Festa — Congresso Nacional de Festas &amp; Eventos</strong> é hoje o congresso de referência do mercado de festas, eventos sociais, corporativos e de luxo no Brasil. A terceira edição, em 2026, reuniu em Brasília mais de 350 participantes de várias regiões do país, além de marcas parceiras e nomes que formam opinião no setor.</p>
+        <p>Em 2027, o congresso volta ao Unique Palace, em Brasília, nos dias <strong>8, 9 e 10 de novembro</strong>.</p>
+        <p>São três dias de palestras, painéis e uma Feira de Negócios com destinos e fornecedores de alto padrão. Um encontro para aprender com quem é referência, ampliar contatos e fazer negócios com quem decide no mercado de festas e eventos.</p>
+      </div>
+      <div class="col-photo">
+        <div class="photo-card landscape carousel single-frame" data-nome="Edição 2026" style="box-shadow: 0 24px 56px rgba(168, 130, 100, 0.22);">
+          <div class="photo-card-inner" style="border-color: var(--nude-deep);">
+            <img decoding="async" loading="eager" fetchpriority="high" src="photos/2026-ap-01.jpg" alt="Luxo de Festa 2026 — César Serra no palco" class="carousel-img active">
+            <img decoding="async" loading="lazy" src="photos/2026-ap-02.jpg" alt="Luxo de Festa 2026 — Salão do congresso" class="carousel-img">
+            <img decoding="async" loading="lazy" src="photos/2026-ap-03.jpg" alt="Luxo de Festa 2026 — Desfile Camargo Alfaiataria" class="carousel-img">
+            <img decoding="async" loading="lazy" src="photos/2026-ap-04.jpg" alt="Luxo de Festa 2026 — Ambientação do bar" class="carousel-img">
+            <img decoding="async" loading="lazy" src="photos/2026-ap-05.jpg" alt="Luxo de Festa 2026 — Show no palco" class="carousel-img">
+            <img decoding="async" loading="lazy" src="photos/2026-ap-06.jpg" alt="Luxo de Festa 2026 — Palco iluminado" class="carousel-img">
+            <img decoding="async" loading="lazy" src="photos/2026-ap-07.jpg" alt="Luxo de Festa 2026 — Desfile na escadaria" class="carousel-img">
+            <img decoding="async" loading="lazy" src="photos/2026-ap-08.jpg" alt="Luxo de Festa 2026 — Modelos do desfile Camargo" class="carousel-img">
+            <img decoding="async" loading="lazy" src="photos/2026-ap-09.jpg" alt="Luxo de Festa 2026 — Exposição de veículo" class="carousel-img">
+            <img decoding="async" loading="lazy" src="photos/2026-ap-10.jpg" alt="Luxo de Festa 2026 — Encerramento do desfile Camargo" class="carousel-img">
+          </div>
+          <div class="photo-card-label">
+            <div class="name">Edição 2026</div>
+          </div>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" data-idx="0" aria-label="Foto 1"></button>
+            <button class="carousel-dot" data-idx="1" aria-label="Foto 2"></button>
+            <button class="carousel-dot" data-idx="2" aria-label="Foto 3"></button>
+            <button class="carousel-dot" data-idx="3" aria-label="Foto 4"></button>
+            <button class="carousel-dot" data-idx="4" aria-label="Foto 5"></button>
+            <button class="carousel-dot" data-idx="5" aria-label="Foto 6"></button>
+            <button class="carousel-dot" data-idx="6" aria-label="Foto 7"></button>
+            <button class="carousel-dot" data-idx="7" aria-label="Foto 8"></button>
+            <button class="carousel-dot" data-idx="8" aria-label="Foto 9"></button>
+            <button class="carousel-dot" data-idx="9" aria-label="Foto 10"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURADORIA E REALIZAÇÃO -->
+<section class="chapter pattern-light" id="curadoria">
+  <div class="container">
+    <div class="chapter-header-inline centered">
+      <h2 class="chapter-title">CURADORIA E REALIZAÇÃO</h2>
+    </div>
+    <div class="two-col-with-photo">
+      <div class="col-photo">
+        <div class="photo-card portrait single-frame">
+          <div class="photo-card-inner">
+            <img decoding="async" loading="lazy" src="photos/2026-cesar-serra.jpg" alt="César Serra no palco do Luxo de Festa 2026">
+          </div>
+          <div class="photo-card-label">
+            <div class="eyebrow">Idealizador &amp; Curador</div>
+            <div class="name">César Serra</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-text">
+        <p><strong>César Serra</strong> é um dos cerimonialistas mais reconhecidos do Brasil, com mais de 40 anos de atuação nos segmentos de eventos sociais, corporativos e diplomáticos. Natural de Fortaleza, iniciou sua trajetória profissional em Brasília, integrando o cerimonial do Palácio do Itamaraty, onde participou de recepções oficiais de grande relevância, como a visita da princesa Diana e do então príncipe Charles ao Brasil, na década de 1990.</p>
+        <p>Sua carreira consolidou-se na capital federal, tornando seu nome uma referência nacional em elegância, protocolo e produção de eventos de alto padrão. É o idealizador do <strong>Luxo de Festa</strong>, uma das maiores e mais tradicionais exposições do setor de casamentos e festas do país, realizada ao longo de 26 anos em cidades como Brasília e Fortaleza.</p>
+        <p>César também construiu atuação sólida no segmento de <em>destination wedding</em>, assinando cerimônias personalizadas em diversos destinos no Brasil e no exterior. Seu percurso foi destaque em programas nacionais, como o <strong>Programa do Jô</strong>, no qual foi entrevistado por Jô Soares.</p>
+        <p>Em 2019, o Luxo de Festa foi lançado no formato de congresso. Depois da pausa imposta pela pandemia, voltou em 2025 e 2026 com <strong>grande sucesso de público, conteúdo e marcas parceiras</strong>, reafirmando o protagonismo de César Serra na curadoria e na produção de experiências memoráveis. Em 2027, chega à sua 4ª edição.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PALESTRANTES -->
+<section class="chapter pattern-dark" id="palestrantes">
+  <div class="container">
+    <div class="chapter-header-inline centered">
+      <h2 class="chapter-title">PALESTRANTES</h2>
+    </div>
+    <p class="palestrantes-intro">
+      Quem sobe ao palco na <strong style="color: var(--nude);">4ª edição do Luxo de Festa</strong>: profissionais de referência que vão compartilhar experiências e <em>cases</em> reais ao longo dos três dias em Brasília.
+    </p>
+    <div class="palestrantes-divisor em-breve"><span>Novidades em breve</span></div>
+  </div>
+</section>
+
+<!-- EMBAIXADORES -->
+<section class="chapter pattern-light" id="embaixadores">
+  <div class="container">
+    <div class="chapter-header-inline centered">
+      <h2 class="chapter-title">EMBAIXADORES</h2>
+    </div>
+    <p class="embaixadores-intro">
+      Em cada estado, um profissional de referência representa o <strong>Luxo de Festa</strong> e aproxima o congresso dos profissionais da sua região.
+    </p>
+    <div class="palestrantes-divisor em-breve"><span>Novidades em breve</span></div>
+  </div>
+</section>
+
+<!-- FEIRA DE NEGÓCIOS -->
+<section class="chapter pattern-dark" id="feira-negocios">
+  <div class="container">
+    <div class="chapter-header-inline centered">
+      <h2 class="chapter-title">FEIRA DE NEGÓCIOS</h2>
+    </div>
+    <p class="palestrantes-intro" style="max-width: 880px; margin: 0 auto;">
+      Hotéis, destinos e fornecedores de alto padrão, com foco em <strong style="color: var(--nude-deep);"><em>destination wedding</em></strong>, apresentam seus espaços, serviços e condições para eventos em lounges montados dentro do congresso.
+    </p>
+    <p class="palestrantes-intro" style="max-width: 880px; margin: 24px auto 0;">
+      É a chance de conversar diretamente com quem decide, comparar opções e começar parcerias ali mesmo, com profissionais vindos de todo o país.
+    </p>
+    <p class="palestrantes-intro" style="max-width: 880px; margin: 24px auto 0;">
+      A Feira funciona durante todo o congresso, de <strong style="color: var(--nude-deep);">8 a 10 de novembro de 2027</strong>, no Unique Palace, em Brasília/DF.
+    </p>
+    <p class="palestrantes-intro" style="max-width: 880px; margin: 24px auto 0;">
+      Acompanhe a divulgação completa no nosso <a href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener" class="inline-link">Instagram oficial</a>.
+    </p>
+    <p class="palestrantes-intro" style="max-width: 880px; margin: 24px auto 0;">
+      Veja quem passou pela <strong style="color: var(--nude-deep);">Feira de Negócios em 2026</strong>:
+    </p>
+
+    <div class="palestrantes-divisor" style="margin-top:44px;"><span>Feira de Negócios 2026</span></div>
+    <div class="feira-grid">
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-23-9meio-espaco.jpg" alt="Lounge 9 ½ Brasserie na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 74px;" src="photos/feira-23-9meio-logo.png" alt="Logo 9 ½ Brasserie">
+            <a class="feira-card-instagram" href="https://instagram.com/noveemeiobrasserie" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@noveemeiobrasserie</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-12-almaserra-espaco.jpg" alt="Lounge Alma Serra na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 73px;" src="photos/feira-12-almaserra-logo.png" alt="Logo Alma Serra">
+            <a class="feira-card-instagram" href="https://instagram.com/almaserravila" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@almaserravila</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-08-azul-espaco.jpg" alt="Lounge Azul Linhas Aéreas na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 40px;" src="photos/aerea-oficial-azul-branca.png" alt="Logo Azul Linhas Aéreas">
+            <a class="feira-card-instagram" href="https://instagram.com/azulinhasaereas" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@azulinhasaereas</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-09-bento-espaco.jpg" alt="Lounge Bento e Região Convention &amp; Visitors Bureau na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 42px;" src="photos/feira-09-bento-logo.png" alt="Logo Bento e Região Convention &amp; Visitors Bureau">
+            <a class="feira-card-instagram" href="https://instagram.com/bentoeregiaoconvention" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@bentoeregiaoconvention</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-16-bisutti-espaco.jpg" alt="Lounge Bisutti na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 74px;" src="photos/feira-16-bisutti-logo.png" alt="Logo Bisutti">
+            <a class="feira-card-instagram" href="https://instagram.com/bisuttioficial" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@bisuttioficial</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-24-casafoca-espaco.jpg" alt="Lounge Casa Foca na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 59px;" src="photos/feira-24-casafoca-logo.png" alt="Logo Casa Foca">
+            <a class="feira-card-instagram" href="https://instagram.com/casafocabuzios" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@casafocabuzios</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-17-casaperini-espaco.jpg" alt="Lounge Casa Perini na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 39px;" src="photos/feira-17-casaperini-logo.png" alt="Logo Casa Perini">
+            <a class="feira-card-instagram" href="https://instagram.com/casaperini" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@casaperini</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-03-centerofportugal-espaco.jpg" alt="Lounge Center of Portugal na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 51px;" src="photos/feira-03-centerofportugal-logo.png" alt="Logo Center of Portugal">
+            <a class="feira-card-instagram" href="https://instagram.com/centerofportugal" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@centerofportugal</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-10-colosso-espaco.jpg" alt="Lounge Colosso Fortaleza na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 60px;" src="photos/feira-10-colosso-logo.png" alt="Logo Colosso Fortaleza">
+            <a class="feira-card-instagram" href="https://instagram.com/colosso.fortaleza" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@colosso.fortaleza</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-25-diamond-espaco.jpg" alt="Lounge Diamond na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 63px;" src="photos/feira-25-diamond-logo.png" alt="Logo Diamond">
+            <a class="feira-card-instagram" href="https://instagram.com/barcodiamond" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@barcodiamond</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-01-fasano-espaco.jpg" alt="Lounge Fasano Angra dos Reis na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 54px;" src="photos/feira-01-fasano-logo.png" alt="Logo Fasano Angra dos Reis">
+            <a class="feira-card-instagram" href="https://instagram.com/fasanoangra" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@fasanoangra</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-11-borges-espaco.jpg" alt="Lounge Borges Hotel Fazenda na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 66px;" src="photos/feira-11-borges-logo.png" alt="Logo Borges Hotel Fazenda">
+            <a class="feira-card-instagram" href="https://instagram.com/borgeshotelfazenda" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@borgeshotelfazenda</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-22-grupolobato-espaco.jpg" alt="Lounge Grupo Lobato na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 39px;" src="photos/feira-22-grupolobato-logo.png" alt="Logo Grupo Lobato">
+            <span class="feira-card-legenda">5 espaços para celebrações</span>
+            <a class="feira-card-instagram" href="https://instagram.com/grupolobato" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@grupolobato</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-05-jade-espaco.jpg" alt="Lounge Jade Hotel na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 74px;" src="photos/feira-05-jade-logo.png" alt="Logo Jade Hotel">
+            <a class="feira-card-instagram" href="https://instagram.com/jadehotelbrasilia" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@jadehotelbrasilia</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-19-jomalone-espaco.jpg" alt="Lounge Jo Malone London na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 45px;" src="photos/feira-19-jomalone-logo.png" alt="Logo Jo Malone London">
+            <a class="feira-card-instagram" href="https://instagram.com/jomalonelondon" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@jomalonelondon</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-02-nanii-espaco.jpg" alt="Lounge Nanii Hotel na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 65px;" src="photos/feira-02-nanii-logo.png" alt="Logo Nanii Hotel">
+            <a class="feira-card-instagram" href="https://instagram.com/nanii.hotel" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@nanii.hotel</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-06-nannai-espaco.jpg" alt="Lounge Nannai Milagres na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 43px;" src="photos/feira-06-nannai-logo.png" alt="Logo Nannai Milagres">
+            <a class="feira-card-instagram" href="https://instagram.com/nannaimilagres" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@nannaimilagres</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-14-novotel-espaco.jpg" alt="Lounge Novotel Recife Marina na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 39px;" src="photos/feira-14-novotel-logo.png" alt="Logo Novotel Recife Marina">
+            <a class="feira-card-instagram" href="https://instagram.com/novotelrecifemarina" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@novotelrecifemarina</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-04-tangara-espaco.jpg" alt="Lounge Palácio Tangará — São Paulo na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 68px;" src="photos/feira-04-tangara-logo.png" alt="Logo Palácio Tangará — São Paulo">
+            <a class="feira-card-instagram" href="https://instagram.com/palaciotangara" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@palaciotangara</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-18-pernambuco-espaco.jpg" alt="Lounge Visit Pernambuco na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 32px;" src="photos/feira-18-pernambuco-logo.png" alt="Logo Visit Pernambuco">
+          </div>
+        </div>
+        <div class="feira-card feira-card--marca">
+          <div class="feira-card-marca-area">
+            <img class="feira-card-logo" src="photos/feira-20-sebrae-logo.png" alt="Logo Visit Pernambuco">
+          </div>
+          <div class="feira-card-info">
+            <a class="feira-card-instagram" href="https://instagram.com/sebraenodf" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@sebraenodf</a>
+          </div>
+        </div>
+        <div class="feira-card">
+          <div class="feira-card-foto">
+            <img loading="lazy" src="photos/feira-13-vinicolatrindade-espaco.jpg" alt="Lounge Vinícola Trindade na Feira de Negócios 2026">
+          </div>
+          <div class="feira-card-info">
+            <img class="feira-card-logo" style="--logo-h: 74px;" src="photos/feira-13-vinicolatrindade-logo.png" alt="Logo Vinícola Trindade">
+            <a class="feira-card-instagram" href="https://instagram.com/vinicolatrindade" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@vinicolatrindade</a>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRONOGRAMA -->
+<section class="chapter pattern-light" id="formato">
+  <div class="container">
+    <div class="chapter-header-inline centered">
+      <h2 class="chapter-title">CRONOGRAMA</h2>
+    </div>
+
+    <p class="palestrantes-intro">
+      A programação da <strong>4ª edição do Luxo de Festa</strong> será divulgada em breve: três dias de palestras, painéis e Feira de Negócios, de 8 a 10 de novembro de 2027, em Brasília.
+    </p>
+    <div class="palestrantes-divisor em-breve"><span>Novidades em breve</span></div>
+
+    <ul class="cronograma-obs">
+      <li>Acompanhe a divulgação dos palestrantes no Instagram oficial <a href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener" class="inline-link"><em>@luxodefestaoficial</em></a>.</li>
+      <li>Almoço e coffee break incluídos no valor do passaporte.</li>
+      <li>Bar e café disponíveis durante todo o congresso.</li>
+      <li>Feira de Negócios com os principais destinos e fornecedores do país.</li>
+      <li>Cronograma sujeito a alteração sem aviso prévio.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PERFIL DO PÚBLICO -->
+<section class="chapter pattern-dark" id="publico">
+  <div class="container">
+    <div class="chapter-header-inline centered">
+      <h2 class="chapter-title">PERFIL DO PÚBLICO</h2>
+    </div>
+    <div class="two-col-with-photo">
+      <div class="col-photo">
+        <div class="photo-card landscape single-frame" style="box-shadow: 0 24px 56px rgba(168, 130, 100, 0.22);">
+          <div class="photo-card-inner" style="border-color: var(--nude-deep);">
+            <img decoding="async" loading="lazy" src="photos/2026-publico.jpg" alt="Público do Luxo de Festa — Edição 2026">
+          </div>
+          <div class="photo-card-label">
+            <div class="name">Edição 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-text">
+        <p class="palestrantes-intro" style="text-align: left; margin: 0 0 24px;">
+          O Luxo de Festa é para quem atua no mercado de festas e eventos, como:
+        </p>
+        <ul class="publico-lista">
+          <li>Empresários e gestores do mercado de festas e eventos</li>
+          <li>Decoradores, cerimonialistas e produtores de eventos</li>
+          <li>Fornecedores (buffets, locações, cenografia, iluminação e audiovisual)</li>
+          <li><span>Profissionais de hotelaria, espaços de eventos e especialistas em gestão de serviços para <em>destination wedding</em></span></li>
+          <li>Profissionais de branding, marketing e posicionamento no mercado de luxo</li>
+          <li>Influenciadores e formadores de opinião do setor</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCESSO DA EDIÇÃO 2026 -->
+<section class="chapter pattern-light" id="case">
+  <div class="container">
+    <div class="chapter-header-inline centered">
+      <h2 class="chapter-title">SUCESSO DA EDIÇÃO 2026</h2>
+    </div>
+    <p class="palestrantes-intro">Em 2026, o <strong style="color: var(--nude-deep);">Luxo de Festa</strong> reuniu em Brasília mais de 350 participantes de várias regiões do país, marcas parceiras e ampla cobertura de mídia, no presencial e no digital. Os números abaixo mostram o resultado para quem participou, expôs e patrocinou.</p>
+
+    <div style="text-align: center;">
+      <h3 class="destaques-title">DESTAQUES DO EVENTO</h3>
+    </div>
+    <div class="destaques-numeros">
+      <div class="destaque-num"><div class="num">350<span class="suf">+</span></div><p class="rotulo">participantes de diversas regiões do Brasil, em três dias de imersão em Brasília <em>(eram mais de 300 em 2025)</em></p></div>
+      <div class="destaque-num"><div class="num">100<span class="suf">%</span></div><p class="rotulo">de intenção de retorno e de recomendação para novos participantes</p></div>
+      <div class="destaque-num"><div class="num">98<span class="suf">%</span></div><p class="rotulo">de aprovação do congresso</p></div>
+      <div class="destaque-num"><div class="num">30<span class="suf">h+</span></div><p class="rotulo">de conteúdo com profissionais e referências do mercado</p></div>
+      <div class="destaque-num"><div class="num">22<span class="suf"></span></div><p class="rotulo">expositores de destinos de casamento e experiências de alto padrão</p></div>
+      <div class="destaque-num"><div class="num">700<span class="suf">mil+</span></div><p class="rotulo">visualizações no Instagram <a href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener" class="inline-link">@luxodefestaoficial</a></p></div>
+      <div class="destaque-num"><div class="num">15<span class="suf">+</span></div><p class="rotulo">podcasts gravados para ativações pós-congresso</p></div>
+      <div class="destaque-num"><div class="num">120<span class="suf">m²</span></div><p class="rotulo">de painel de LED compondo o palco</p></div>    </div>
+
+    <!-- Galeria de fotos da edição 2026 -->
+    <div style="text-align: center; margin-top: 80px;">
+      <h3 class="destaques-title">GALERIA</h3>
+    </div>
+    <div class="galeria-carousel" id="galeriaCarousel">
+    <div class="galeria-viewport">
+      <div class="galeria-slide active loaded" role="img" aria-label="Luxo de Festa 2026 — foto 1 de 32" data-bg="photos/g26-01.jpg" style="background-image: url('photos/g26-01.jpg');"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 2 de 32" data-bg="photos/g26-02.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 3 de 32" data-bg="photos/g26-03.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 4 de 32" data-bg="photos/g26-04.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 5 de 32" data-bg="photos/g26-05.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 6 de 32" data-bg="photos/g26-06.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 7 de 32" data-bg="photos/g26-07.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 8 de 32" data-bg="photos/g26-08.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 9 de 32" data-bg="photos/g26-09.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 10 de 32" data-bg="photos/g26-10.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 11 de 32" data-bg="photos/g26-11.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 12 de 32" data-bg="photos/g26-12.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 13 de 32" data-bg="photos/g26-13.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 14 de 32" data-bg="photos/g26-14.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 15 de 32" data-bg="photos/g26-15.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 16 de 32" data-bg="photos/g26-16.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 17 de 32" data-bg="photos/g26-17.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 18 de 32" data-bg="photos/g26-18.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 19 de 32" data-bg="photos/g26-19.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 20 de 32" data-bg="photos/g26-20.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 21 de 32" data-bg="photos/g26-21.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 22 de 32" data-bg="photos/g26-22.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 23 de 32" data-bg="photos/g26-23.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 24 de 32" data-bg="photos/g26-24.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 25 de 32" data-bg="photos/g26-25.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 26 de 32" data-bg="photos/g26-26.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 27 de 32" data-bg="photos/g26-27.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 28 de 32" data-bg="photos/g26-28.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 29 de 32" data-bg="photos/g26-29.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 30 de 32" data-bg="photos/g26-30.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 31 de 32" data-bg="photos/g26-31.jpg"></div>
+      <div class="galeria-slide" role="img" aria-label="Luxo de Festa 2026 — foto 32 de 32" data-bg="photos/g26-32.jpg"></div>
+      <div class="galeria-contador"><span class="galeria-atual">1</span> / 32</div>
+      <div class="galeria-legenda">Edição 2026</div>
+    </div>
+    <div class="galeria-nav">
+      <button class="galeria-arrow prev" aria-label="Foto anterior">&#10094;</button>
+      <div class="galeria-dots">
+        <button class="galeria-dot active" data-idx="0" aria-label="Foto 1"></button>
+        <button class="galeria-dot" data-idx="1" aria-label="Foto 2"></button>
+        <button class="galeria-dot" data-idx="2" aria-label="Foto 3"></button>
+        <button class="galeria-dot" data-idx="3" aria-label="Foto 4"></button>
+        <button class="galeria-dot" data-idx="4" aria-label="Foto 5"></button>
+        <button class="galeria-dot" data-idx="5" aria-label="Foto 6"></button>
+        <button class="galeria-dot" data-idx="6" aria-label="Foto 7"></button>
+        <button class="galeria-dot" data-idx="7" aria-label="Foto 8"></button>
+        <button class="galeria-dot" data-idx="8" aria-label="Foto 9"></button>
+        <button class="galeria-dot" data-idx="9" aria-label="Foto 10"></button>
+        <button class="galeria-dot" data-idx="10" aria-label="Foto 11"></button>
+        <button class="galeria-dot" data-idx="11" aria-label="Foto 12"></button>
+        <button class="galeria-dot" data-idx="12" aria-label="Foto 13"></button>
+        <button class="galeria-dot" data-idx="13" aria-label="Foto 14"></button>
+        <button class="galeria-dot" data-idx="14" aria-label="Foto 15"></button>
+        <button class="galeria-dot" data-idx="15" aria-label="Foto 16"></button>
+        <button class="galeria-dot" data-idx="16" aria-label="Foto 17"></button>
+        <button class="galeria-dot" data-idx="17" aria-label="Foto 18"></button>
+        <button class="galeria-dot" data-idx="18" aria-label="Foto 19"></button>
+        <button class="galeria-dot" data-idx="19" aria-label="Foto 20"></button>
+        <button class="galeria-dot" data-idx="20" aria-label="Foto 21"></button>
+        <button class="galeria-dot" data-idx="21" aria-label="Foto 22"></button>
+        <button class="galeria-dot" data-idx="22" aria-label="Foto 23"></button>
+        <button class="galeria-dot" data-idx="23" aria-label="Foto 24"></button>
+        <button class="galeria-dot" data-idx="24" aria-label="Foto 25"></button>
+        <button class="galeria-dot" data-idx="25" aria-label="Foto 26"></button>
+        <button class="galeria-dot" data-idx="26" aria-label="Foto 27"></button>
+        <button class="galeria-dot" data-idx="27" aria-label="Foto 28"></button>
+        <button class="galeria-dot" data-idx="28" aria-label="Foto 29"></button>
+        <button class="galeria-dot" data-idx="29" aria-label="Foto 30"></button>
+        <button class="galeria-dot" data-idx="30" aria-label="Foto 31"></button>
+        <button class="galeria-dot" data-idx="31" aria-label="Foto 32"></button>
+      </div>
+      <button class="galeria-arrow next" aria-label="Próxima foto">&#10095;</button>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<!-- COMPANHIA AÉREA OFICIAL -->
+<section class="chapter pattern-dark" id="patrocinadores">
+  <div class="container">
+    <div class="chapter-header-inline centered">
+      <h2 class="chapter-title">COMPANHIA AÉREA OFICIAL</h2>
+    </div>
+
+    <div class="aerea-oficial-bloco">
+      <img class="azul-logo" src="photos/aerea-oficial-azul-branca.png" alt="Logo da Azul Linhas Aéreas">
+      <p class="azul-texto">
+        A <strong>Azul Linhas Aéreas</strong> foi a Companhia Aérea Oficial do <strong>Luxo de Festa 2026</strong>. Em breve, novidades sobre condições especiais para a edição 2027.
+      </p>
+      <a href="https://www.voeazul.com.br" target="_blank" rel="noopener" class="azul-cta">
+        Comprar passagem em voeazul.com.br
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOSPEDAGEM -->
+<section class="chapter pattern-light" id="hospedagem">
+  <div class="container">
+    <div class="chapter-header-inline centered">
+      <h2 class="chapter-title">HOSPEDAGEM OFICIAL DO CONGRESSO</h2>
+    </div>
+
+    <h3 class="hospedagem-hotel-nome">Jade Hotel</h3>
+    <p class="hospedagem-eyebrow">Hotel Oficial</p>
+    <div style="max-width: 760px; margin: 0 auto 28px;">
+      <div class="photo-card landscape single-frame" style="box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);">
+        <div class="photo-card-inner">
+          <img decoding="async" loading="lazy" src="photos/19-jade-hotel.jpg" alt="Fachada do Jade Hotel, em Brasília">
+        </div>
+      </div>
+    </div>
+
+    <p class="hospedagem-validade">Tarifas especiais para congressistas</p>
+    <div class="hospedagem-datas">
+      <div class="hospedagem-data">
+        <span class="rotulo">Período</span>
+        <span class="valor">8 a 12 de novembro de 2027</span>
+      </div>
+      <div class="hospedagem-data">
+        <span class="rotulo">Código para reserva</span>
+        <span class="valor">LUXO2027</span>
+      </div>
+    </div>
+
+    <div class="lotes" role="tablist" aria-label="Lotes de tarifa">
+      <button class="lote-btn" role="tab" data-lote="1"><span class="lote-nome">1º lote</span><span class="lote-periodo">até 31/03/2027</span></button>
+      <button class="lote-btn" role="tab" data-lote="2"><span class="lote-nome">2º lote</span><span class="lote-periodo">01/04 a 31/07/2027</span></button>
+      <button class="lote-btn" role="tab" data-lote="3"><span class="lote-nome">3º lote</span><span class="lote-periodo">01/08 a 08/11/2027</span></button>
+    </div>
+
+    <div class="quartos-grid" id="quartosGrid">
+      <div class="quarto-card">
+        <div class="quarto-nome">Quarto Deluxe</div>
+        <div class="quarto-tipo">1 cama de casal ou 2 camas de solteiro</div>
+        <ul class="quarto-precos">
+          <li><span class="reg">Individual</span> <span class="val" data-l1="R$ 459 + 13%" data-l2="R$ 499 + 13%">R$ 459 + 13%</span></li>
+          <li><span class="reg">Duplo</span> <span class="val" data-l1="R$ 599 + 13%" data-l2="R$ 639 + 13%">R$ 599 + 13%</span></li>
+          <li><span class="reg">Triplo</span> <span class="val" data-l1="R$ 739 + 13%" data-l2="R$ 779 + 13%">R$ 739 + 13%</span></li>
+        </ul>
+        <div class="quarto-obs">Triplo com cama extra.</div>
+      </div>
+
+      <div class="quarto-card">
+        <div class="quarto-nome">Suíte King Deluxe ou Quarto Superior</div>
+        <div class="quarto-tipo">1 cama de casal ou 2 camas de solteiro</div>
+        <ul class="quarto-precos">
+          <li><span class="reg">Individual</span> <span class="val" data-l1="R$ 589 + 13%" data-l2="R$ 629 + 13%">R$ 589 + 13%</span></li>
+          <li><span class="reg">Duplo</span> <span class="val" data-l1="R$ 709 + 13%" data-l2="R$ 749 + 13%">R$ 709 + 13%</span></li>
+          <li><span class="reg">Triplo</span> <span class="val" data-l1="R$ 859 + 13%" data-l2="R$ 899 + 13%">R$ 859 + 13%</span></li>
+        </ul>
+        <div class="quarto-obs">Suíte King Deluxe com cama de casal ou Quarto Superior com 2 camas de solteiro. Triplo com cama extra.</div>
+      </div>
+
+      <div class="quarto-card">
+        <div class="quarto-nome">Suíte King Deluxe Triplo</div>
+        <div class="quarto-tipo">3 camas de solteiro</div>
+        <ul class="quarto-precos">
+          <li><span class="reg">Até 3 pessoas</span> <span class="val" data-l1="R$ 979 + 13%" data-l2="R$ 1.019 + 13%">R$ 979 + 13%</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="lote-aviso" id="loteAviso" hidden>Os valores do 3º lote serão divulgados em breve.</p>
+    <p class="hospedagem-diaria">Valores por diária, acrescidos de 13% de taxas.</p>
+
+    <ul class="hospedagem-observacoes">
+      <li>Café da manhã, estacionamento com serviço de manobrista, wi-fi e acesso à área de lazer inclusos.</li>
+      <li>Check-in às 15h e check-out até às 12h.</li>
+      <li>Tarifa não reembolsável e irrevogável.</li>
+      <li>Pagamento de 50% no ato da reserva, como garantia.</li>
+    </ul>
+
+    <div class="hospedagem-reserva">
+      <div class="reserva-titulo">Faça sua reserva</div>
+      <div class="reserva-links">
+        <a href="https://whatsa.me/556132479071" target="_blank" rel="noopener" class="reserva-btn primario">WhatsApp</a>
+        <a href="mailto:reservas@jadehotel.com.br" class="reserva-btn">reservas@jadehotel.com.br</a>
+      </div>
+      <div class="hospedagem-conheca">
+        Conheça o hotel: <a href="https://www.jadehotel.com.br" target="_blank" rel="noopener">jadehotel.com.br</a>
+        &nbsp;·&nbsp;
+        <a href="https://jadehotel.com.br/acomodacoes/" target="_blank" rel="noopener">categorias de quartos</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.instagram.com/jadehotelbrasilia" target="_blank" rel="noopener">@jadehotelbrasilia</a>
+      </div>
+      <div class="hospedagem-mapa">
+        <p class="mapa-rotulo">Localização</p>
+        <p class="mapa-endereco">SQPS 102, Lote 15 — Setor Park Sul<br>Brasília/DF · CEP 71215-650</p>
+        <div class="mapa-frame">
+          <iframe
+            src="https://maps.google.com/maps?q=Jade%20Hotel%20SQPS%20102%20Park%20Sul%20Bras%C3%ADlia%20DF&z=16&output=embed"
+            title="Mapa do Jade Hotel, em Brasília"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+        <div class="mapa-btn-wrap">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Jade%20Hotel%20Bras%C3%ADlia&destination_place_id=ChIJl_KvLDAwWpMR_MfqipQ2jE4" target="_blank" rel="noopener" class="reserva-btn">Como chegar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERGUNTAS FREQUENTES -->
+<section class="chapter pattern-dark" id="faq">
+  <div class="container">
+    <div class="chapter-header-inline centered">
+      <h2 class="chapter-title">PERGUNTAS FREQUENTES</h2>
+    </div>
+    <div class="faq-lista">
+      <details class="faq-item">
+        <summary>Quando e onde acontece o congresso?</summary>
+        <p>Nos dias 8, 9 e 10 de novembro de 2027, no Unique Palace, em Brasília/DF (SCES Trecho 2, Conjunto 42).</p>
+      </details>
+      <details class="faq-item">
+        <summary>Como garanto minha participação?</summary>
+        <p>Pelo passaporte, à venda na página oficial de inscrição: <a href="https://codemy.party/l/start.luxodefesta2027" target="_blank" rel="noopener">garantir meu passaporte</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Para quem é o congresso?</summary>
+        <p>Para quem atua no mercado de festas e eventos: empresários e gestores, cerimonialistas, decoradores, produtores, fornecedores, profissionais de hotelaria e de <em>destination wedding</em>, de marketing e formadores de opinião do setor.</p>
+      </details>
+      <details class="faq-item">
+        <summary>O que está incluído no passaporte?</summary>
+        <p>Os três dias de palestras e painéis, a Feira de Negócios, o almoço e o coffee break. Bar e café ficam disponíveis durante todo o congresso.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quando sai a programação?</summary>
+        <p>Em breve, aqui no site e no Instagram <a href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener">@luxodefestaoficial</a>. A programação pode sofrer alterações.</p>
+      </details>
+      <details class="faq-item">
+        <summary>O que é a Feira de Negócios?</summary>
+        <p>São lounges montados dentro do congresso, em que hotéis, destinos e fornecedores apresentam seus espaços, serviços e condições para eventos. Ela funciona durante os três dias.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Existe hotel com tarifa especial?</summary>
+        <p>Sim. O Jade Hotel é o hotel oficial, com tarifas especiais de 8 a 12 de novembro de 2027 pelo código LUXO2027. Os valores, lotes e condições estão na seção <a href="#hospedagem">Hospedagem</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Há condições especiais de passagem aérea?</summary>
+        <p>A Azul foi a Companhia Aérea Oficial do Luxo de Festa 2026. As novidades sobre condições especiais para 2027 serão divulgadas em breve.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Como falo com a organização?</summary>
+        <p>Pelo WhatsApp <a href="https://wa.me/551152834125" target="_blank" rel="noopener">+55 11 5283-4125</a>, pelo e-mail <a href="mailto:contato@luxodefestabrasil.com">contato@luxodefestabrasil.com</a> ou pelo Instagram <a href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener">@luxodefestaoficial</a>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA DE FECHAMENTO -->
+<div class="fechamento-cta">
+  <div class="fechamento-titulo">Garanta sua presença no <span class="marca-luxo">Luxo de Festa</span> 2027</div>
+  <div class="fechamento-sub">8, 9 e 10 de novembro · Unique Palace · Brasília/DF</div>
+  <a href="https://codemy.party/l/start.luxodefesta2027" class="btn-primary" target="_blank" rel="noopener">Garantir meu passaporte</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <img decoding="async" loading="eager" fetchpriority="high" src="logos/logo_branca.png" alt="Luxo de Festa" class="footer-logo">
+  <div class="footer-contact">
+    <a href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener" class="inline-link"><strong>@luxodefestaoficial</strong></a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://instagram.com/cesarserra" target="_blank" rel="noopener" class="inline-link"><strong>@cesarserra</strong></a><br>
+    WhatsApp: <a href="https://wa.me/551152834125" target="_blank" rel="noopener">+55 11 5283-4125</a><br>
+    E-mail: <a href="mailto:contato@luxodefestabrasil.com">contato@luxodefestabrasil.com</a>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Início</a>
+    <a href="#apresentacao">Apresentação</a>
+    <a href="#curadoria">Curadoria</a>
+    <a href="#palestrantes">Palestrantes</a>
+    <a href="#embaixadores">Embaixadores</a>
+    <a href="#feira-negocios">Feira de Negócios</a>
+    <a href="#formato">Cronograma</a>
+    <a href="#publico">Público</a>
+    <a href="#case">Edição 2026</a>
+    <a href="#patrocinadores">Companhia Aérea</a>
+    <a href="#hospedagem">Hospedagem</a>
+    <a href="#faq">Dúvidas</a>
+    <a href="experience.html">Experience</a>
+    <a href="https://codemy.party/l/start.luxodefesta2027" target="_blank" rel="noopener">Garantir meu passaporte</a>
+  </div>
+  <div class="footer-share">
+    <span class="share-label">Compartilhar</span>
+    <a class="share-btn" id="shareWhatsFooter" target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp" title="Compartilhar no WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+    <a class="share-btn" id="shareFbFooter" target="_blank" rel="noopener" aria-label="Compartilhar no Facebook" title="Compartilhar no Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+    <a class="share-btn" href="https://instagram.com/luxodefestaoficial" target="_blank" rel="noopener" aria-label="Seguir no Instagram" title="Seguir no Instagram">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    </a>
+  </div>
+  <div class="copyright">© 2026 Luxo de Festa Brasil · Brasília/DF · Todos os direitos reservados</div>
+</footer>
+
+<script>
+  // Menu (☰): abre/fecha, troca o ícone e fecha ao escolher um item
+  (function () {
+    var btn = document.getElementById('menuToggle'), menu = document.getElementById('navLinks');
+    if (!btn || !menu) return;
+    function fechar() { menu.classList.remove('open'); btn.textContent = '☰'; btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-label', 'Abrir menu'); }
+    btn.addEventListener('click', function () {
+      var aberto = menu.classList.toggle('open');
+      btn.textContent = aberto ? '✕' : '☰';
+      btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+      btn.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+    });
+    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', fechar); });
+  })();
+  // Links de compartilhamento (WhatsApp / Facebook) — domínio oficial fixo
+  (function () {
+    var url = 'https://www.luxodefestabrasil.com/';
+    var titulo = 'Luxo de Festa 2027 — Congresso Nacional de Festas & Eventos · Brasília/DF';
+    var enc = encodeURIComponent(url);
+    var whats = 'https://api.whatsapp.com/send?text=' +
+                encodeURIComponent(titulo + ' ' + url);
+    var fb = 'https://www.facebook.com/sharer/sharer.php?u=' + enc;
+    ['shareWhats', 'shareWhatsFooter'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.href = whats;
+    });
+    ['shareFb', 'shareFbFooter'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.href = fb;
+    });
+  })();
+
+  // Scroll suave para anchors
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const id = this.getAttribute('href');
+      if (id.length > 1) {
+        const target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          document.getElementById('navLinks').classList.remove('open');
+        }
+      }
+    });
+  });
+
+  // Cronograma: troca de abas por dia
+  document.querySelectorAll('.dia-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const dia = btn.dataset.dia;
+      document.querySelectorAll('.dia-btn').forEach((b) => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.cronograma-painel').forEach((p) => p.classList.remove('active'));
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      const painel = document.getElementById('cronograma-' + dia);
+      if (painel) painel.classList.add('active');
+    });
+  });
+
+  // Carrosséis (suporta múltiplas instâncias na página, 5s, fade, indicadores)
+  document.querySelectorAll('.photo-card.carousel').forEach((carousel) => {
+    const imgs = carousel.querySelectorAll('.carousel-img');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    // Se houver só uma imagem, esconde os dots e não inicia o timer
+    if (imgs.length <= 1) {
+      carousel.querySelectorAll('.carousel-dots').forEach(d => d.style.display = 'none');
+      return;
+    }
+    let idx = 0;
+    let timer = null;
+    const INTERVAL = 5000;
+
+    function show(n) {
+      imgs.forEach((el, i) => el.classList.toggle('active', i === n));
+      dots.forEach((el, i) => el.classList.toggle('active', i === n));
+      idx = n;
+    }
+    function next() { show((idx + 1) % imgs.length); }
+    function start() { stop(); timer = setInterval(next, INTERVAL); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const i = parseInt(dot.dataset.idx, 10);
+        show(i);
+        start();
+      });
+    });
+    carousel.addEventListener('mouseenter', stop);
+    carousel.addEventListener('mouseleave', start);
+
+    start();
+  });
+  // Carrossel da galeria (32 fotos, autoplay 4s, setas + dots + contador)
+  // As fotos carregam sob demanda (lazy): só a atual e a seguinte são
+  // baixadas, evitando descarregar 32 imagens no load da página.
+  (function(){
+    const root = document.getElementById('galeriaCarousel');
+    if (!root) return;
+    const slides = root.querySelectorAll('.galeria-slide');
+    const dots = root.querySelectorAll('.galeria-dot');
+    const atual = root.querySelector('.galeria-atual');
+    const prev = root.querySelector('.galeria-arrow.prev');
+    const next = root.querySelector('.galeria-arrow.next');
+    let idx = 0, timer = null;
+    const INTERVAL = 4000;
+
+    function carregar(i) {
+      const s = slides[i];
+      if (s && !s.classList.contains('loaded')) {
+        const bg = s.getAttribute('data-bg');
+        if (bg) {
+          s.style.backgroundImage = "url('" + bg + "')";
+          s.classList.add('loaded');
+        }
+      }
+    }
+
+    function show(n) {
+      idx = (n + slides.length) % slides.length;
+      slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      if (atual) atual.textContent = idx + 1;
+      // carrega a atual, a anterior e a próxima
+      carregar(idx);
+      carregar((idx + 1) % slides.length);
+      carregar((idx - 1 + slides.length) % slides.length);
+    }
+    function start() { stop(); timer = setInterval(() => show(idx + 1), INTERVAL); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+    prev.addEventListener('click', () => { show(idx - 1); start(); });
+    next.addEventListener('click', () => { show(idx + 1); start(); });
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => { show(parseInt(dot.dataset.idx, 10)); start(); });
+    });
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+
+    show(0);
+    start();
+  })();
+
+  // Carrossel paginado de palestrantes — auto-pagina em grupos de 4.
+  // Os cards podem estar distribuídos em qualquer número de blocos no
+  // HTML; o JS reagrupa tudo, então adicionar/remover palestrante reflui.
+  (function(){
+    const root = document.getElementById('palestrantesCarousel');
+    if (!root) return;
+    const viewport = root.querySelector('.palestrantes-viewport');
+    const dotsWrap = root.querySelector('.palestrantes-dots');
+    const prev = root.querySelector('.palestrantes-arrow.prev');
+    const next = root.querySelector('.palestrantes-arrow.next');
+    const POR_PAGINA = 4;
+    const INTERVAL = 8000;
+
+    // coleta todos os cards na ordem do HTML
+    const cards = Array.from(viewport.querySelectorAll('.palestrante-card'));
+    // remove os blocos de página antigos
+    viewport.querySelectorAll('.palestrantes-pagina').forEach((p) => p.remove());
+
+    // reagrupa em páginas de 4
+    const paginas = [];
+    for (let i = 0; i < cards.length; i += POR_PAGINA) {
+      const pag = document.createElement('div');
+      pag.className = 'palestrantes-pagina';
+      cards.slice(i, i + POR_PAGINA).forEach((c) => pag.appendChild(c));
+      viewport.appendChild(pag);
+      paginas.push(pag);
+    }
+
+    // gera os dots conforme o número de páginas
+    dotsWrap.innerHTML = '';
+    const dots = [];
+    paginas.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'palestrantes-dot';
+      dot.setAttribute('aria-label', 'Página ' + (i + 1));
+      dot.dataset.idx = i;
+      dotsWrap.appendChild(dot);
+      dots.push(dot);
+    });
+
+    let idx = 0, timer = null;
+
+    function show(n) {
+      idx = (n + paginas.length) % paginas.length;
+      paginas.forEach((p, i) => p.classList.toggle('active', i === idx));
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }
+    function start() { stop(); timer = setInterval(() => show(idx + 1), INTERVAL); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+    prev.addEventListener('click', () => { show(idx - 1); start(); });
+    next.addEventListener('click', () => { show(idx + 1); start(); });
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => { show(parseInt(dot.dataset.idx, 10)); start(); });
+    });
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+
+    show(0);
+    start();
+  })();
+
+  // Carrossel paginado de embaixadores — mesma lógica auto-paginável
+  // dos palestrantes: reagrupa os cards em páginas de 4 e gera os dots.
+  (function(){
+    const root = document.getElementById('embaixadoresCarousel');
+    if (!root) return;
+    const viewport = root.querySelector('.embaixadores-viewport');
+    const dotsWrap = root.querySelector('.embaixadores-dots');
+    const prev = root.querySelector('.embaixadores-arrow.prev');
+    const next = root.querySelector('.embaixadores-arrow.next');
+    const POR_PAGINA = 4;
+    const INTERVAL = 8000;
+
+    const cards = Array.from(viewport.querySelectorAll('.embaixador-card'));
+    viewport.querySelectorAll('.embaixadores-pagina').forEach((p) => p.remove());
+
+    const paginas = [];
+    for (let i = 0; i < cards.length; i += POR_PAGINA) {
+      const pag = document.createElement('div');
+      pag.className = 'embaixadores-pagina';
+      cards.slice(i, i + POR_PAGINA).forEach((c) => pag.appendChild(c));
+      viewport.appendChild(pag);
+      paginas.push(pag);
+    }
+
+    dotsWrap.innerHTML = '';
+    const dots = [];
+    paginas.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'embaixadores-dot';
+      dot.setAttribute('aria-label', 'Página ' + (i + 1));
+      dot.dataset.idx = i;
+      dotsWrap.appendChild(dot);
+      dots.push(dot);
+    });
+
+    let idx = 0, timer = null;
+
+    function show(n) {
+      idx = (n + paginas.length) % paginas.length;
+      paginas.forEach((p, i) => p.classList.toggle('active', i === idx));
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }
+    function start() { stop(); timer = setInterval(() => show(idx + 1), INTERVAL); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+    prev.addEventListener('click', () => { show(idx - 1); start(); });
+    next.addEventListener('click', () => { show(idx + 1); start(); });
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => { show(parseInt(dot.dataset.idx, 10)); start(); });
+    });
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+
+    show(0);
+    start();
+  })();
+
+  // ===== Lightbox de fotos + Pop-up de palestrantes =====
+  (function(){
+    const ZOOM_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>';
+    const INSTA_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>';
+
+    // --- cria o overlay uma única vez ---
+    const overlay = document.createElement('div');
+    overlay.className = 'lf-overlay';
+    overlay.innerHTML = '<button class="lf-close" aria-label="Fechar">&times;</button><div class="lf-content"></div>';
+    document.body.appendChild(overlay);
+    const content = overlay.querySelector('.lf-content');
+    const closeBtn = overlay.querySelector('.lf-close');
+
+    function openOverlay(html){
+      content.innerHTML = html;
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeOverlay(){
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(() => { content.innerHTML = ''; }, 300);
+    }
+    closeBtn.addEventListener('click', closeOverlay);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeOverlay(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && overlay.classList.contains('open')) closeOverlay(); });
+
+    function escapeHtml(s){
+      return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    // --- abre uma imagem simples em tela cheia ---
+    function openImage(src, alt){
+      openOverlay('<img class="lf-image" src="' + src + '" alt="' + escapeHtml(alt) + '">');
+    }
+
+    // --- abre o pop-up de palestrante: foto + descrição ---
+    function openPalestrante(card){
+      const img = card.querySelector('.photo-card img');
+      const nome = (card.querySelector('.palestrante-nome') || {}).textContent || '';
+      const funcao = (card.querySelector('.palestrante-funcao') || {}).textContent || '';
+      const instaEl = card.querySelector('.palestrante-instagram');
+      const bio = card.getAttribute('data-bio') || '';
+      const bioHtml = bio.split('\n').map(p => '<p>' + escapeHtml(p.trim()) + '</p>').join('');
+      let instaHtml = '';
+      if (instaEl) {
+        const href = instaEl.getAttribute('href');
+        const handle = instaEl.textContent.trim();
+        instaHtml = '<a class="lf-palestrante-insta" href="' + href + '" target="_blank" rel="noopener">' + INSTA_ICON + handle + '</a>';
+      }
+      openOverlay(
+        '<div class="lf-palestrante">' +
+          '<div class="lf-palestrante-foto"><img decoding="async" loading="lazy" src="' + img.getAttribute('src') + '" alt="' + escapeHtml(nome) + '"></div>' +
+          '<div class="lf-palestrante-texto">' +
+            (funcao ? '<div class="lf-palestrante-funcao">' + escapeHtml(funcao) + '</div>' : '') +
+            '<div class="lf-palestrante-nome">' + escapeHtml(nome) + '</div>' +
+            '<div class="lf-palestrante-bio">' + bioHtml + '</div>' +
+            instaHtml +
+          '</div>' +
+        '</div>'
+      );
+    }
+
+    // --- zoom de retrato: foto ampliada com etiqueta + nome sobrepostos
+    //     no canto inferior esquerdo (igual ao card original) ---
+    function retratoHtml(src, eyebrow, nome){
+      return '<figure class="lf-retrato-fig">' +
+        '<img class="lf-retrato-img" src="' + src + '" alt="' + escapeHtml(nome || eyebrow) + '">' +
+        '<figcaption class="lf-retrato-cap">' +
+          (eyebrow ? '<span class="lf-retrato-eyebrow">' + escapeHtml(eyebrow) + '</span>' : '') +
+          (nome ? '<span class="lf-retrato-nome">' + escapeHtml(nome) + '</span>' : '') +
+        '</figcaption>' +
+      '</figure>';
+    }
+    // Retrato a partir de um .photo-card (lê .photo-card-label ou data-*)
+    function openRetrato(card, src){
+      const img = card.querySelector('img');
+      const label = card.querySelector('.photo-card-label');
+      let eyebrow = card.getAttribute('data-eyebrow') || '';
+      let nome = card.getAttribute('data-nome') || '';
+      if (label) {
+        if (!eyebrow) eyebrow = (label.querySelector('.eyebrow') || {}).textContent || '';
+        if (!nome) nome = (label.querySelector('.name') || {}).textContent || '';
+      }
+      openOverlay(retratoHtml(src || img.getAttribute('src'), eyebrow.trim(), nome.trim()));
+    }
+
+    // --- adiciona o botão de expandir a um wrapper de imagem ---
+    //     hoverTarget (opcional): elemento que dispara a exibição do botão
+    //     via JS, para casos em que o :hover do CSS não funciona (ex.: galeria
+    //     com slides absolutos empilhados sobre o viewport).
+    function addZoom(wrapper, onClick, hoverTarget){
+      if (wrapper.querySelector('.zoom-btn')) return;
+      wrapper.classList.add('has-zoom');
+      const btn = document.createElement('button');
+      btn.className = 'zoom-btn';
+      btn.type = 'button';
+      btn.setAttribute('aria-label', 'Ampliar imagem');
+      btn.innerHTML = ZOOM_ICON;
+      btn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); onClick(); });
+      wrapper.appendChild(btn);
+      if (hoverTarget) {
+        wrapper.classList.add('zoom-js-hover');
+        // mouseover/mouseout borbulham — funcionam mesmo quando há elementos
+        // filhos (slides absolutos) cobrindo o alvo.
+        hoverTarget.addEventListener('mouseover', () => wrapper.classList.add('zoom-visivel'));
+        hoverTarget.addEventListener('mouseout', (e) => {
+          // só esconde quando o ponteiro sai de fato do alvo
+          if (!hoverTarget.contains(e.relatedTarget)) {
+            wrapper.classList.remove('zoom-visivel');
+          }
+        });
+      }
+    }
+
+    // 1) Cards de palestrante -> pop-up com descrição
+    document.querySelectorAll('.palestrante-card[data-bio]').forEach((card) => {
+      const inner = card.querySelector('.photo-card-inner');
+      if (inner && inner.querySelector('img')) {
+        addZoom(inner, () => openPalestrante(card));
+      }
+    });
+
+    // 2) Carrossel da Apresentação: vários <img> empilhados no mesmo wrapper.
+    //    Abre a imagem ativa, com a etiqueta "Edição 2025" sobreposta.
+    document.querySelectorAll('.photo-card-inner').forEach((inner) => {
+      if (inner.closest('.palestrante-card')) return;
+      if (inner.closest('.embaixador-card')) return;
+      const imgs = inner.querySelectorAll('img.carousel-img');
+      if (imgs.length > 1) {
+        const card = inner.closest('.photo-card');
+        addZoom(inner, () => {
+          const atual = inner.querySelector('img.carousel-img.active') || imgs[0];
+          openRetrato(card, atual.getAttribute('src'));
+        });
+      }
+    });
+
+    // 3) Demais fotos do site
+    //    - Foto com etiqueta + nome (César, Chris, Paulo) -> retrato com legenda
+    //    - Demais fotos -> lightbox simples
+    document.querySelectorAll('.photo-card-inner').forEach((inner) => {
+      if (inner.closest('.palestrante-card')) return;
+      if (inner.closest('.embaixador-card')) return;
+      if (inner.querySelectorAll('img.carousel-img').length > 1) return; // já tratado em (2)
+      const img = inner.querySelector('img');
+      if (!img) return;
+      const card = inner.closest('.photo-card');
+      const temLegenda = card && (card.querySelector('.photo-card-label') ||
+                                  card.hasAttribute('data-eyebrow') ||
+                                  card.hasAttribute('data-nome'));
+      if (temLegenda) {
+        addZoom(inner, () => openRetrato(card));
+      } else {
+        addZoom(inner, () => openImage(img.getAttribute('src'), img.getAttribute('alt')));
+      }
+    });
+
+    // 4) Galeria 2025 -> um único botão de zoom no viewport.
+    //    O hover funciona em toda a imagem; o clique abre o slide ativo.
+    document.querySelectorAll('.galeria-viewport').forEach((viewport) => {
+      function srcDoSlideAtivo(){
+        const ativo = viewport.querySelector('.galeria-slide.active')
+                   || viewport.querySelector('.galeria-slide');
+        if (!ativo) return null;
+        // prioriza data-bg (imagem em resolução cheia, sempre presente)
+        const bg = ativo.getAttribute('data-bg');
+        if (bg) return bg;
+        const m = (ativo.style.backgroundImage || '').match(/url\(\s*['"]?([\s\S]+?)['"]?\s*\)/);
+        return m ? m[1] : null;
+      }
+      addZoom(viewport, () => {
+        const src = srcDoSlideAtivo();
+        if (src) openOverlay(retratoHtml(src, '', 'Edição 2026'));
+      }, viewport);
+    });
+
+    // 5) Cards da Feira -> foto grande com a logo da marca no canto inferior direito
+    document.querySelectorAll('.feira-card .feira-card-foto').forEach((foto) => {
+      const img = foto.querySelector('img');
+      if (!img) return; // ignora os cards sem foto ("Divulgação em breve")
+      const card = foto.closest('.feira-card');
+      const logoEl = card ? card.querySelector('.feira-card-logo') : null;
+      const logoSrc = logoEl ? logoEl.getAttribute('src') : '';
+      addZoom(foto, () => {
+        const alt = img.getAttribute('alt') || '';
+        openOverlay(
+          '<div class="lf-feira">' +
+            '<img class="lf-image" src="' + img.getAttribute('src') + '" alt="' + escapeHtml(alt) + '">' +
+            (logoSrc ? '<img class="lf-feira-logo" src="' + logoSrc + '" alt="' + escapeHtml(alt) + '">' : '') +
+          '</div>'
+        );
+      });
+    });
+  })();
+
+  /* ===== CONTADOR REGRESSIVO (somente dias) ===== */
+  (function(){
+    var el = document.getElementById('countdown');
+    if (!el) return;
+    var target = new Date(el.getAttribute('data-target')).getTime();
+    var elDias = el.querySelector('[data-dias]');
+    var lbl = el.querySelector('.countdown-label');
+    function tick(){
+      var dias = Math.ceil((target - Date.now()) / 86400000);
+      if (dias <= 0){
+        el.querySelector('.countdown-units').style.display = 'none';
+        if (lbl) lbl.textContent = 'O congresso começou';
+        return;
+      }
+      elDias.textContent = dias < 10 ? '0' + dias : String(dias);
+      var u = el.querySelector('.cd-lbl');
+      if (u) u.textContent = dias === 1 ? 'Dia' : 'Dias';
+      if (lbl) lbl.textContent = dias === 1 ? 'Falta' : 'Faltam';
+    }
+    tick();
+    setInterval(tick, 60000);
+  })();
+
+</script>
+<script>
+// Hospedagem: seletor de lotes. Abre no lote vigente pela data de hoje.
+(function(){
+  const btns = document.querySelectorAll('.lote-btn');
+  if (!btns.length) return;
+  const vals = document.querySelectorAll('#quartosGrid .val');
+  const aviso = document.getElementById('loteAviso');
+  function mostrar(n) {
+    btns.forEach(b => { const on = b.dataset.lote === String(n); b.classList.toggle('ativo', on); b.setAttribute('aria-selected', on); });
+    vals.forEach(v => {
+      const t = v.dataset['l' + n];
+      v.textContent = t || 'A definir';
+      v.classList.toggle('a-definir', !t);
+    });
+    aviso.hidden = n !== 3;
+  }
+  btns.forEach(b => b.addEventListener('click', () => mostrar(Number(b.dataset.lote))));
+  const hoje = new Date();
+  mostrar(hoje < new Date(2027, 3, 1) ? 1 : hoje < new Date(2027, 7, 1) ? 2 : 3);
+})();
+</script>
+</body>
+</html>
